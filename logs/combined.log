@@ -1,0 +1,352 @@
+[2025-12-11 16:08:32] INFO - Login attempt for username: tasya
+[2025-12-12 09:02:19] INFO - Login attempt for username: yay
+[2025-12-12 09:02:19] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:02:19] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 09:02:19] INFO - Get profile berhasil
+[2025-12-12 09:06:40] INFO - Login attempt for username: hafizh
+[2025-12-12 09:06:40] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:07:22] INFO - Get profile berhasil
+[2025-12-12 09:07:42] INFO - Login attempt for username: hafizh
+[2025-12-12 09:08:24] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:08:40] INFO - Login attempt for username: hafizh
+[2025-12-12 09:08:40] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:08:57] INFO - Login attempt for username: yay
+[2025-12-12 09:09:32] ERROR - Gagal update token untuk user ID 5: Lock wait timeout exceeded; try restarting transaction
+[2025-12-12 09:10:42] INFO - Get profile berhasil
+[2025-12-12 09:10:42] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:10:42] INFO - Get profile berhasil
+[2025-12-12 09:10:55] INFO - Login attempt for username: yay
+[2025-12-12 09:10:55] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:11:43] INFO - Login attempt for username: hafizh
+[2025-12-12 09:11:46] ERROR - Gagal update token untuk user ID 1: Lock wait timeout exceeded; try restarting transaction
+[2025-12-12 09:11:46] INFO - Get profile berhasil
+[2025-12-12 09:11:46] ERROR - DB error saat getByUsername: null
+[2025-12-12 09:12:37] ERROR - Gagal update token untuk user ID 5: Lock wait timeout exceeded; try restarting transaction
+[2025-12-12 09:12:37] INFO - Get profile berhasil
+[2025-12-12 09:16:40] INFO - Login attempt for username: yay
+[2025-12-12 09:17:31] ERROR - Gagal update token untuk user ID 1: Lock wait timeout exceeded; try restarting transaction
+[2025-12-12 09:18:02] INFO - Get profile berhasil
+[2025-12-12 09:26:59] INFO - Login attempt for username: yay
+[2025-12-12 09:26:59] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 09:26:59] INFO - Get profile berhasil
+[2025-12-12 09:27:20] INFO - Login attempt for username: hafizh
+[2025-12-12 09:27:20] INFO - Token login diperbarui untuk user ID 5
+[2025-12-12 09:27:20] INFO - Get profile berhasil
+[2025-12-12 11:17:59] INFO - Login attempt for username: udean
+[2025-12-12 11:17:59] WARN - Login gagal: username 'udean' tidak ditemukan
+[2025-12-12 11:18:12] INFO - Login attempt for username: udean
+[2025-12-12 11:18:12] WARN - Login gagal: username 'udean' tidak ditemukan
+[2025-12-12 11:18:13] INFO - Login attempt for username: udean
+[2025-12-12 11:18:13] WARN - Login gagal: username 'udean' tidak ditemukan
+[2025-12-12 11:18:48] INFO - Login attempt for username: udean
+[2025-12-12 11:18:48] INFO - Token login diperbarui untuk user ID 6
+[2025-12-12 11:18:48] INFO - Get profile berhasil
+[2025-12-12 11:18:58] INFO - Get profile berhasil
+[2025-12-12 11:18:58] INFO - Get profile berhasil
+[2025-12-12 11:19:00] INFO - Get profile berhasil
+[2025-12-12 11:34:54] INFO - Get profile berhasil
+[2025-12-12 12:47:16] INFO - Login attempt for username: yay
+[2025-12-12 12:47:16] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 12:47:16] INFO - Get profile berhasil
+[2025-12-12 12:47:19] INFO - Get profile berhasil
+[2025-12-12 12:47:19] INFO - Get profile berhasil
+[2025-12-12 12:47:22] INFO - Get profile berhasil
+[2025-12-12 12:47:30] INFO - Get profile berhasil
+[2025-12-12 12:47:38] INFO - Get profile berhasil
+[2025-12-12 12:47:42] INFO - Get profile berhasil
+[2025-12-12 12:56:52] INFO - Login attempt for username: yay
+[2025-12-12 12:56:52] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 12:56:53] INFO - Get profile berhasil
+[2025-12-12 12:56:55] INFO - Get profile berhasil
+[2025-12-12 12:56:55] INFO - Get profile berhasil
+[2025-12-12 12:56:57] INFO - Get profile berhasil
+[2025-12-12 12:57:32] INFO - Login attempt for username: yay
+[2025-12-12 12:57:33] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 12:57:33] INFO - Get profile berhasil
+[2025-12-12 12:57:35] INFO - Get profile berhasil
+[2025-12-12 12:57:35] INFO - Get profile berhasil
+[2025-12-12 12:57:37] INFO - Get profile berhasil
+[2025-12-12 13:06:35] INFO - Get profile berhasil
+[2025-12-12 13:48:50] INFO - Get profile berhasil
+[2025-12-12 13:50:14] INFO - Login attempt for username: yay
+[2025-12-12 13:50:14] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 13:50:14] INFO - Get profile berhasil
+[2025-12-12 13:50:16] INFO - Get profile berhasil
+[2025-12-12 13:50:16] INFO - Get profile berhasil
+[2025-12-12 13:50:18] INFO - Get profile berhasil
+[2025-12-12 14:03:49] INFO - Get profile berhasil
+[2025-12-12 14:04:22] INFO - Login attempt for username: yay
+[2025-12-12 14:04:22] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:04:23] INFO - Get profile berhasil
+[2025-12-12 14:04:26] INFO - Get profile berhasil
+[2025-12-12 14:04:26] INFO - Get profile berhasil
+[2025-12-12 14:05:20] INFO - Login attempt for username: dhimas
+[2025-12-12 14:05:20] INFO - Token login diperbarui untuk user ID 2
+[2025-12-12 14:05:20] INFO - Get profile berhasil
+[2025-12-12 14:05:22] INFO - Get profile berhasil
+[2025-12-12 14:05:22] INFO - Get profile berhasil
+[2025-12-12 14:05:26] INFO - Get profile berhasil
+[2025-12-12 14:11:06] INFO - Get profile berhasil
+[2025-12-12 14:11:08] INFO - Get profile berhasil
+[2025-12-12 14:11:47] INFO - Login attempt for username: dhimas
+[2025-12-12 14:11:47] INFO - Token login diperbarui untuk user ID 2
+[2025-12-12 14:11:48] INFO - Get profile berhasil
+[2025-12-12 14:11:51] INFO - Get profile berhasil
+[2025-12-12 14:11:51] INFO - Get profile berhasil
+[2025-12-12 14:11:54] INFO - Get profile berhasil
+[2025-12-12 14:13:07] INFO - Login attempt for username: yay
+[2025-12-12 14:13:07] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:13:07] INFO - Get profile berhasil
+[2025-12-12 14:13:10] INFO - Get profile berhasil
+[2025-12-12 14:13:10] INFO - Get profile berhasil
+[2025-12-12 14:26:23] INFO - Login attempt for username: YAY
+[2025-12-12 14:26:23] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:26:24] INFO - Get profile berhasil
+[2025-12-12 14:26:26] INFO - Get profile berhasil
+[2025-12-12 14:26:26] INFO - Get profile berhasil
+[2025-12-12 14:26:29] INFO - Get profile berhasil
+[2025-12-12 14:26:51] INFO - Login attempt for username: yay
+[2025-12-12 14:26:51] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:26:52] INFO - Get profile berhasil
+[2025-12-12 14:26:53] INFO - Get profile berhasil
+[2025-12-12 14:26:53] INFO - Get profile berhasil
+[2025-12-12 14:26:55] INFO - Get profile berhasil
+[2025-12-12 14:29:36] INFO - Login attempt for username: YAY
+[2025-12-12 14:29:36] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:29:36] INFO - Get profile berhasil
+[2025-12-12 14:29:39] INFO - Get profile berhasil
+[2025-12-12 14:29:39] INFO - Get profile berhasil
+[2025-12-12 14:29:40] INFO - Get profile berhasil
+[2025-12-12 14:31:20] INFO - Login attempt for username: yay
+[2025-12-12 14:31:21] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:31:21] INFO - Get profile berhasil
+[2025-12-12 14:31:23] INFO - Get profile berhasil
+[2025-12-12 14:31:23] INFO - Get profile berhasil
+[2025-12-12 14:31:25] INFO - Get profile berhasil
+[2025-12-12 14:31:32] INFO - Get profile berhasil
+[2025-12-12 14:31:45] INFO - Login attempt for username: hafizh
+[2025-12-12 14:31:45] INFO - Token login diperbarui untuk user ID 5
+[2025-12-12 14:31:45] INFO - Get profile berhasil
+[2025-12-12 14:31:48] INFO - Get profile berhasil
+[2025-12-12 14:31:48] INFO - Get profile berhasil
+[2025-12-12 14:31:52] INFO - Get profile berhasil
+[2025-12-12 14:33:19] INFO - Login attempt for username: yay
+[2025-12-12 14:33:19] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 14:33:20] INFO - Get profile berhasil
+[2025-12-12 14:33:23] INFO - Get profile berhasil
+[2025-12-12 14:33:23] INFO - Get profile berhasil
+[2025-12-12 14:33:24] INFO - Get profile berhasil
+[2025-12-12 14:33:33] INFO - Login attempt for username: HAFIZH
+[2025-12-12 14:33:33] INFO - Token login diperbarui untuk user ID 5
+[2025-12-12 14:33:33] INFO - Get profile berhasil
+[2025-12-12 14:33:36] INFO - Get profile berhasil
+[2025-12-12 14:33:36] INFO - Get profile berhasil
+[2025-12-12 14:33:38] INFO - Get profile berhasil
+[2025-12-12 14:36:47] INFO - Login attempt for username: hafizh
+[2025-12-12 14:36:47] INFO - Token login diperbarui untuk user ID 5
+[2025-12-12 14:36:48] INFO - Get profile berhasil
+[2025-12-12 14:36:50] INFO - Get profile berhasil
+[2025-12-12 14:36:50] INFO - Get profile berhasil
+[2025-12-12 14:36:52] INFO - Get profile berhasil
+[2025-12-12 14:37:16] INFO - Login attempt for username: dhimas
+[2025-12-12 14:37:16] INFO - Token login diperbarui untuk user ID 2
+[2025-12-12 14:37:16] INFO - Get profile berhasil
+[2025-12-12 14:37:20] INFO - Get profile berhasil
+[2025-12-12 14:37:20] INFO - Get profile berhasil
+[2025-12-12 14:37:22] INFO - Get profile berhasil
+[2025-12-12 14:37:27] INFO - Get profile berhasil
+[2025-12-12 14:43:21] INFO - Get profile berhasil
+[2025-12-12 16:06:52] INFO - Get profile berhasil
+[2025-12-12 16:07:06] INFO - Login attempt for username: yay
+[2025-12-12 16:07:06] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 16:07:07] INFO - Get profile berhasil
+[2025-12-12 16:08:00] INFO - Get profile berhasil
+[2025-12-12 16:08:00] INFO - Get profile berhasil
+[2025-12-12 16:27:04] INFO - Get profile berhasil
+[2025-12-12 16:27:11] INFO - Get profile berhasil
+[2025-12-12 16:27:14] INFO - Get profile berhasil
+[2025-12-12 16:28:35] INFO - Login attempt for username: yay
+[2025-12-12 16:28:35] INFO - Token login diperbarui untuk user ID 1
+[2025-12-12 16:28:36] INFO - Get profile berhasil
+[2025-12-12 16:28:41] INFO - Get profile berhasil
+[2025-12-12 16:28:41] INFO - Get profile berhasil
+[2025-12-12 16:30:59] INFO - Get profile berhasil
+[2025-12-13 08:33:39] INFO - Login attempt for username: yay
+[2025-12-13 08:33:39] INFO - Token login diperbarui untuk user ID 1
+[2025-12-13 08:33:39] INFO - Get profile berhasil
+[2025-12-13 08:33:59] INFO - Get profile berhasil
+[2025-12-13 09:20:12] INFO - Request getProfile
+[2025-12-13 09:20:12] ERROR - DB Error saat getProfile
+[2025-12-13 09:20:12] INFO - Request list user
+[2025-12-13 09:20:12] INFO - List user berhasil diambil
+[2025-12-13 09:24:12] INFO - Request getProfile
+[2025-12-13 09:24:12] ERROR - DB Error saat getProfile
+[2025-12-13 09:27:16] INFO - Request getProfile
+[2025-12-13 09:27:16] INFO - Get profile berhasil
+[2025-12-13 09:27:18] INFO - Request getProfile
+[2025-12-13 09:27:18] INFO - Get profile berhasil
+[2025-12-13 09:27:19] INFO - Request getProfile
+[2025-12-13 09:27:19] INFO - Get profile berhasil
+[2025-12-13 09:27:19] INFO - Request getProfile
+[2025-12-13 09:27:19] INFO - Get profile berhasil
+[2025-12-13 09:27:21] INFO - Request getProfile
+[2025-12-13 09:27:21] INFO - Request list user
+[2025-12-13 09:27:21] INFO - Get profile berhasil
+[2025-12-13 09:27:21] INFO - List user berhasil diambil
+[2025-12-13 09:27:39] INFO - Login attempt for username: udean
+[2025-12-13 09:37:10] INFO - Login attempt
+[2025-12-13 09:37:11] INFO - Login berhasil
+[2025-12-13 09:37:11] INFO - Request getProfile
+[2025-12-13 09:37:11] INFO - Get profile berhasil
+[2025-12-13 09:37:13] INFO - Request getProfile
+[2025-12-13 09:37:13] INFO - Get profile berhasil
+[2025-12-13 09:37:15] INFO - Request getProfile
+[2025-12-13 09:37:15] INFO - Get profile berhasil
+[2025-12-13 09:37:15] INFO - Request getProfile
+[2025-12-13 09:37:15] INFO - Get profile berhasil
+[2025-12-13 09:37:16] INFO - Request getProfile
+[2025-12-13 09:37:16] INFO - Get profile berhasil
+[2025-12-13 10:17:41] INFO - Login attempt
+[2025-12-13 10:17:41] INFO - Login berhasil
+[2025-12-13 10:17:42] INFO - Request getProfile
+[2025-12-13 10:17:42] INFO - Get profile berhasil
+[2025-12-13 10:17:44] INFO - Request getProfile
+[2025-12-13 10:17:44] INFO - Get profile berhasil
+[2025-12-13 10:17:44] INFO - Request getProfile
+[2025-12-13 10:17:44] INFO - Get profile berhasil
+[2025-12-13 10:17:46] INFO - Request getProfile
+[2025-12-13 10:17:46] INFO - Get profile berhasil
+[2025-12-13 10:17:54] INFO - Request getProfile
+[2025-12-13 10:17:54] INFO - Get profile berhasil
+[2025-12-13 10:26:48] INFO - Request getProfile
+[2025-12-13 10:26:48] INFO - Get profile berhasil
+[2025-12-13 10:57:35] ERROR - Get my orders buyer error
+[2025-12-13 11:00:21] INFO - Login attempt
+[2025-12-13 11:00:21] INFO - Login berhasil
+[2025-12-13 11:00:22] INFO - Request getProfile
+[2025-12-13 11:00:22] INFO - Get profile berhasil
+[2025-12-13 11:00:28] INFO - Request getProfile
+[2025-12-13 11:00:28] INFO - Get profile berhasil
+[2025-12-13 11:00:28] INFO - Request getProfile
+[2025-12-13 11:00:28] INFO - Get profile berhasil
+[2025-12-13 11:00:34] INFO - Request getProfile
+[2025-12-13 11:00:34] INFO - Get profile berhasil
+[2025-12-13 11:48:05] INFO - Login attempt
+[2025-12-13 11:48:05] INFO - Login berhasil
+[2025-12-13 11:48:05] INFO - Request getProfile
+[2025-12-13 11:48:05] INFO - Get profile berhasil
+[2025-12-13 11:48:11] INFO - Request getProfile
+[2025-12-13 11:48:11] INFO - Get profile berhasil
+[2025-12-13 11:48:11] INFO - Request getProfile
+[2025-12-13 11:48:11] INFO - Get profile berhasil
+[2025-12-13 11:49:12] INFO - Login attempt
+[2025-12-13 11:49:12] INFO - Login berhasil
+[2025-12-13 11:49:12] INFO - Request getProfile
+[2025-12-13 11:49:12] INFO - Get profile berhasil
+[2025-12-13 11:49:15] INFO - Request getProfile
+[2025-12-13 11:49:15] INFO - Get profile berhasil
+[2025-12-13 11:49:15] INFO - Request getProfile
+[2025-12-13 11:49:15] INFO - Get profile berhasil
+[2025-12-13 12:00:54] INFO - Login attempt
+[2025-12-13 12:00:54] INFO - Login berhasil
+[2025-12-13 12:00:54] INFO - Request getProfile
+[2025-12-13 12:00:54] INFO - Get profile berhasil
+[2025-12-13 12:00:57] INFO - Request getProfile
+[2025-12-13 12:00:57] INFO - Get profile berhasil
+[2025-12-13 12:00:57] INFO - Request getProfile
+[2025-12-13 12:00:57] INFO - Get profile berhasil
+[2025-12-13 12:02:15] INFO - Login attempt
+[2025-12-13 12:02:15] INFO - Login berhasil
+[2025-12-13 12:02:16] INFO - Request getProfile
+[2025-12-13 12:02:16] INFO - Get profile berhasil
+[2025-12-13 12:02:18] INFO - Request getProfile
+[2025-12-13 12:02:18] INFO - Get profile berhasil
+[2025-12-13 12:02:18] INFO - Request getProfile
+[2025-12-13 12:02:18] INFO - Get profile berhasil
+[2025-12-13 12:02:18] ERROR - Get my orders buyer error
+[2025-12-13 12:02:18] ERROR - Get my orders buyer error
+[2025-12-13 12:24:06] INFO - Request getProfile
+[2025-12-13 12:24:06] INFO - Get profile berhasil
+[2025-12-13 12:24:06] ERROR - Get my orders buyer error
+[2025-12-13 12:24:12] INFO - Request getProfile
+[2025-12-13 12:24:12] INFO - Get profile berhasil
+[2025-12-13 12:24:12] ERROR - Get my orders buyer error
+[2025-12-13 12:25:32] INFO - Request getProfile
+[2025-12-13 12:25:32] INFO - Get profile berhasil
+[2025-12-13 12:25:32] ERROR - Get my orders buyer error
+[2025-12-13 12:51:15] ERROR - Get my orders buyer error
+[2025-12-13 13:07:46] INFO - Request getProfile
+[2025-12-13 13:07:46] INFO - Get profile berhasil
+[2025-12-13 13:07:46] ERROR - Get my orders buyer error
+[2025-12-13 13:07:56] INFO - Request getProfile
+[2025-12-13 13:07:56] INFO - Get profile berhasil
+[2025-12-13 13:07:56] ERROR - Get my orders buyer error
+[2025-12-13 13:08:08] ERROR - Get my orders buyer error
+[2025-12-13 13:08:08] ERROR - Get my orders buyer error
+[2025-12-13 13:08:08] ERROR - Get my orders buyer error
+[2025-12-13 13:08:08] ERROR - Get my orders buyer error
+[2025-12-13 13:08:09] ERROR - Get my orders buyer error
+[2025-12-13 13:08:09] ERROR - Get my orders buyer error
+[2025-12-13 13:08:09] ERROR - Get my orders buyer error
+[2025-12-13 13:10:02] ERROR - Get my orders buyer error
+[2025-12-13 13:10:02] ERROR - Get my orders buyer error
+[2025-12-13 13:10:02] ERROR - Get my orders buyer error
+[2025-12-13 13:10:13] ERROR - Get my orders buyer error
+[2025-12-13 13:10:16] ERROR - Get my orders buyer error
+[2025-12-13 13:10:17] ERROR - Get my orders buyer error
+[2025-12-13 13:10:17] ERROR - Get my orders buyer error
+[2025-12-13 13:12:07] ERROR - Get my orders buyer error
+[2025-12-13 13:12:07] ERROR - Get my orders buyer error
+[2025-12-13 13:12:07] ERROR - Get my orders buyer error
+[2025-12-13 13:12:07] ERROR - Get my orders buyer error
+[2025-12-13 13:12:08] ERROR - Get my orders buyer error
+[2025-12-13 13:12:08] ERROR - Get my orders buyer error
+[2025-12-13 13:12:23] ERROR - Get my orders buyer error
+[2025-12-13 13:12:24] ERROR - Get my orders buyer error
+[2025-12-13 13:12:24] ERROR - Get my orders buyer error
+[2025-12-13 13:12:24] ERROR - Get my orders buyer error
+[2025-12-13 13:14:17] INFO - Request getProfile
+[2025-12-13 13:14:32] INFO - Login attempt
+[2025-12-13 13:15:04] INFO - Login attempt
+[2025-12-13 13:22:08] INFO - Login attempt
+[2025-12-13 13:23:02] INFO - Login attempt
+[2025-12-13 13:27:27] INFO - Login attempt
+[2025-12-13 13:32:56] INFO - Login attempt
+[2025-12-13 13:32:56] INFO - Login berhasil
+[2025-12-13 13:33:02] INFO - Request getProfile
+[2025-12-13 13:33:02] INFO - Get profile berhasil
+[2025-12-13 13:33:05] INFO - Request getProfile
+[2025-12-13 13:33:05] INFO - Get profile berhasil
+[2025-12-13 13:33:05] INFO - Request getProfile
+[2025-12-13 13:33:05] INFO - Get profile berhasil
+[2025-12-13 13:33:11] INFO - Request getProfile
+[2025-12-13 13:33:11] INFO - Get profile berhasil
+[2025-12-13 13:43:11] ERROR - Get my orders buyer error
+[2025-12-13 13:44:24] INFO - Request getProfile
+[2025-12-13 13:44:24] INFO - Get profile berhasil
+[2025-12-13 13:45:02] INFO - Request getProfile
+[2025-12-13 13:45:02] INFO - Get profile berhasil
+[2025-12-13 13:47:50] INFO - Request getProfile
+[2025-12-13 13:47:50] INFO - Get profile berhasil
+[2025-12-13 13:49:16] INFO - Request getProfile
+[2025-12-13 13:49:16] INFO - Get profile berhasil
+[2025-12-13 13:49:34] INFO - Login attempt
+[2025-12-13 13:49:34] INFO - Login berhasil
+[2025-12-13 13:49:34] INFO - Request getProfile
+[2025-12-13 13:49:34] INFO - Get profile berhasil
+[2025-12-13 13:49:37] INFO - Request getProfile
+[2025-12-13 13:49:37] INFO - Get profile berhasil
+[2025-12-13 13:49:37] INFO - Request getProfile
+[2025-12-13 13:49:37] INFO - Get profile berhasil
+[2025-12-13 13:49:41] INFO - Request getProfile
+[2025-12-13 13:49:41] INFO - Get profile berhasil
+[2025-12-13 13:49:42] INFO - Request getProfile
+[2025-12-13 13:49:42] INFO - Get profile berhasil
+[2025-12-13 13:49:49] INFO - Request getProfile
+[2025-12-13 13:49:49] INFO - Get profile berhasil
+[2025-12-13 13:50:30] INFO - Request getProfile
+[2025-12-13 13:50:30] INFO - Get profile berhasil
+[2025-12-13 13:55:49] INFO - Request getProfile
+[2025-12-13 13:55:49] INFO - Get profile berhasil
+[2025-12-13 13:55:51] INFO - Request getProfile
+[2025-12-13 13:55:51] INFO - Get profile berhasil
