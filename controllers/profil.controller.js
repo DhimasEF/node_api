@@ -147,7 +147,7 @@ exports.uploadAvatar = async (req, res) => {
         const filepath = path.join(folder, filename);
         fs.writeFileSync(filepath, buffer);
 
-        const url = `uploads/avatar/${filename}`;
+        const url = filename;
 
         const updated = await User.updateUser(id_user, { avatar: url });
 
