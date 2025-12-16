@@ -78,11 +78,8 @@ const Order = {
   getOrderDetail: async (id_order) => {
     const [rows] = await db.query(`
       SELECT 
-        o.id_order,
-        o.id_buyer,
-        o.total_price,
-        o.order_status,
-        a.id_artwork,
+        o.*,
+        a.*,
         a.title AS artwork_title,
         a.status AS artwork_status,
         GROUP_CONCAT(ai.preview_url SEPARATOR ',') AS images
@@ -104,11 +101,8 @@ const Order = {
   getOrdersByCreator: async (id_creator) => {
     const [rows] = await db.query(`
       SELECT 
-        o.id_order,
-        o.id_buyer,
-        o.total_price,
-        o.order_status,
-        a.id_artwork,
+        o.*,
+        a.*,
         a.title AS artwork_title,
         a.status AS artwork_status,
         GROUP_CONCAT(ai.preview_url SEPARATOR ',') AS images
@@ -148,7 +142,21 @@ const Order = {
     `, [amount, file, id_order]);
 
     return result.affectedRows > 0;
-  }
+  },
+
+  // ===============================
+  // UPDATE STATUS ORDER
+  // ===============================
+  updateStatus: async (id_order, status) => {
+    const [result] = await db.query(
+      `UPDATE orders 
+       SET payment_status = ?, updated_at = NOW() 
+       WHERE id_order = ?`,
+      [status, id_order]
+    );
+
+    return result.affectedRows > 0;
+  },
 
 };
 

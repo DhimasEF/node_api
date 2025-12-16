@@ -189,14 +189,78 @@ exports.detail = async (req, res) => {
 // UPLOAD PAYMENT
 // =======================
 exports.uploadPayment = async (req, res) => {
-    try {
-        const { id_order, amount } = req.body;
-        const file = req.file;
+  try {
+    const { id_order, amount } = req.body;
+    const file = req.file;
 
-        if (!id_order || !amount || !file) {
+    if (!id_order || !amount) {
+      return res.status(400).json({
+        status: false,
+        message: "Data tidak lengkap",
+      });
+    }
+
+    if (!file) {
+      return res.status(400).json({
+        status: false,
+        message: "Bukti pembayaran wajib diupload",
+      });
+    }
+
+    const order = await Order.getOrder(id_order);
+    if (!order) {
+      return res.status(404).json({
+        status: false,
+        message: "Order tidak ditemukan",
+      });
+    }
+
+    // simpan filename saja (tanpa path)
+    const filename = file.filename;
+
+    await Order.updatePaymentProof(
+      id_order,
+      amount,
+      filename
+    );
+
+    logger.info("Upload bukti pembayaran berhasil", {
+      id_order,
+      amount,
+      file: filename,
+    });
+
+    return res.json({
+      status: true,
+      message: "Bukti pembayaran berhasil diupload",
+      data: {
+        id_order,
+        amount,
+        bukti: filename,
+      },
+    });
+
+  } catch (error) {
+    logger.error("Upload payment error", {
+      message: error.message,
+      stack: error.stack,
+    });
+
+    return res.status(500).json({
+      status: false,
+      message: "Server error",
+    });
+  }
+};
+
+exports.acceptPayment = async (req, res) => {
+    try {
+        const { id_order } = req.body;
+
+        if (!id_order) {
             return res.json({
                 status: false,
-                message: "Data tidak lengkap"
+                message: "id_order tidak boleh kosong"
             });
         }
 
@@ -208,26 +272,59 @@ exports.uploadPayment = async (req, res) => {
             });
         }
 
-        const filename = file.filename;
+        await Order.updateStatus(id_order, 'paid');
 
-        const update = await Order.updatePaymentProof(
-            id_order,
-            amount,
-            filename
-        );
-
-        logger.info("Upload bukti pembayaran berhasil", { id_order, amount });
+        logger.info("Pembayaran di-ACC", { id_order });
 
         res.json({
             status: true,
-            message: "Bukti pembayaran berhasil diupload"
+            message: "Pembayaran berhasil di-ACC"
         });
 
     } catch (error) {
-        logger.error("Upload payment error", { error });
+        logger.error("Accept payment error", { error });
         res.status(500).json({
             status: false,
             message: "Server error"
         });
     }
 };
+
+exports.rejectPayment = async (req, res) => {
+    try {
+        const { id_order } = req.body;
+
+        if (!id_order) {
+            return res.json({
+                status: false,
+                message: "id_order tidak boleh kosong"
+            });
+        }
+
+        const order = await Order.getOrder(id_order);
+        if (!order) {
+            return res.json({
+                status: false,
+                message: "Order tidak ditemukan"
+            });
+        }
+
+        await Order.updateStatus(id_order, 'rejected');
+
+        logger.info("Pembayaran ditolak", { id_order });
+
+        res.json({
+            status: true,
+            message: "Pembayaran berhasil ditolak"
+        });
+
+    } catch (error) {
+        logger.error("Reject payment error", { error });
+        res.status(500).json({
+            status: false,
+            message: "Server error"
+        });
+    }
+};
+
+
