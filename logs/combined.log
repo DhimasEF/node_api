@@ -1141,3 +1141,389 @@
 [2025-12-19 11:45:16] INFO - Get profile berhasil
 [2025-12-19 11:45:26] INFO - Request getProfile
 [2025-12-19 11:45:26] INFO - Get profile berhasil
+[2025-12-19 14:02:42] INFO - Login attempt
+[2025-12-19 14:02:42] INFO - Login berhasil
+[2025-12-19 14:02:42] INFO - Request getProfile
+[2025-12-19 14:02:42] INFO - Get profile berhasil
+[2025-12-19 14:02:48] INFO - Request getProfile
+[2025-12-19 14:02:48] INFO - Request getProfile
+[2025-12-19 14:02:48] INFO - Get profile berhasil
+[2025-12-19 14:02:48] INFO - Get profile berhasil
+[2025-12-19 14:02:53] INFO - Request getProfile
+[2025-12-19 14:02:53] INFO - Get profile berhasil
+[2025-12-19 14:02:56] INFO - Request getProfile
+[2025-12-19 14:02:56] INFO - Get profile berhasil
+[2025-12-19 14:03:07] INFO - Login attempt
+[2025-12-19 14:03:07] INFO - Login berhasil
+[2025-12-19 14:03:07] INFO - Request getProfile
+[2025-12-19 14:03:07] INFO - Get profile berhasil
+[2025-12-19 14:03:12] INFO - Request getProfile
+[2025-12-19 14:03:12] INFO - Request getProfile
+[2025-12-19 14:03:12] INFO - Get profile berhasil
+[2025-12-19 14:03:12] INFO - Get profile berhasil
+[2025-12-19 14:03:15] INFO - Request getProfile
+[2025-12-19 14:03:15] INFO - Request list user
+[2025-12-19 14:03:15] INFO - Get profile berhasil
+[2025-12-19 14:03:15] INFO - List user berhasil diambil
+[2025-12-19 14:03:18] INFO - Request getProfile
+[2025-12-19 14:03:18] INFO - Get profile berhasil
+[2025-12-19 14:03:19] INFO - Request getProfile
+[2025-12-19 14:03:19] INFO - Get profile berhasil
+[2025-12-19 14:03:23] INFO - Request getProfile
+[2025-12-19 14:03:23] INFO - Get profile berhasil
+[2025-12-19 14:03:31] INFO - Login attempt
+[2025-12-19 14:03:31] INFO - Login berhasil
+[2025-12-19 14:03:31] INFO - Request getProfile
+[2025-12-19 14:03:31] INFO - Get profile berhasil
+[2025-12-19 14:03:33] INFO - Request getProfile
+[2025-12-19 14:03:33] INFO - Request getProfile
+[2025-12-19 14:03:33] INFO - Get profile berhasil
+[2025-12-19 14:03:33] INFO - Get profile berhasil
+[2025-12-19 14:03:39] INFO - Request getProfile
+[2025-12-19 14:03:39] INFO - Get profile berhasil
+[2025-12-19 14:03:44] INFO - Request getProfile
+[2025-12-19 14:03:44] INFO - Get profile berhasil
+[2025-12-19 14:03:50] INFO - Request getProfile
+[2025-12-19 14:03:50] INFO - Get profile berhasil
+[2025-12-19 14:05:31] INFO - Login attempt
+[2025-12-19 14:05:31] INFO - Login berhasil
+[2025-12-19 14:05:31] INFO - Request getProfile
+[2025-12-19 14:05:31] INFO - Get profile berhasil
+[2025-12-19 14:05:33] INFO - Request getProfile
+[2025-12-19 14:05:33] INFO - Request getProfile
+[2025-12-19 14:05:33] INFO - Get profile berhasil
+[2025-12-19 14:05:33] INFO - Get profile berhasil
+[2025-12-19 14:05:50] INFO - Request getProfile
+[2025-12-19 14:05:50] INFO - Get profile berhasil
+[2025-12-19 14:05:52] INFO - Request getProfile
+[2025-12-19 14:05:52] INFO - Get profile berhasil
+[2025-12-19 14:23:41] INFO - Login attempt
+[2025-12-19 14:23:41] INFO - Login berhasil
+[2025-12-19 14:23:41] INFO - Request getProfile
+[2025-12-19 14:23:41] INFO - Get profile berhasil
+[2025-12-19 14:23:44] INFO - Request getProfile
+[2025-12-19 14:23:44] INFO - Request getProfile
+[2025-12-19 14:23:44] INFO - Get profile berhasil
+[2025-12-19 14:23:44] INFO - Get profile berhasil
+[2025-12-19 14:34:38] INFO - Request getProfile
+[2025-12-19 14:34:38] INFO - Request list user
+[2025-12-19 14:34:38] INFO - Get profile berhasil
+[2025-12-19 14:34:38] INFO - List user berhasil diambil
+[2025-12-19 14:34:41] INFO - Request getProfile
+[2025-12-19 14:34:41] INFO - Get profile berhasil
+[2025-12-19 14:34:47] INFO - Request getProfile
+[2025-12-19 14:34:47] INFO - Get profile berhasil
+[2025-12-19 14:34:53] INFO - Request list user
+[2025-12-19 14:34:53] INFO - Request getProfile
+[2025-12-19 14:34:53] INFO - List user berhasil diambil
+[2025-12-19 14:34:53] INFO - Get profile berhasil
+[2025-12-19 14:34:56] INFO - Request getProfile
+[2025-12-19 14:34:56] INFO - Get profile berhasil
+[2025-12-19 14:35:05] INFO - Login attempt
+[2025-12-19 14:35:05] INFO - Login berhasil
+[2025-12-19 14:35:05] INFO - Request getProfile
+[2025-12-19 14:35:05] INFO - Get profile berhasil
+[2025-12-19 14:35:09] INFO - Request getProfile
+[2025-12-19 14:35:09] INFO - Get profile berhasil
+[2025-12-19 14:35:11] INFO - Request getProfile
+[2025-12-19 14:35:11] INFO - Request getProfile
+[2025-12-19 14:35:11] INFO - Get profile berhasil
+[2025-12-19 14:35:11] INFO - Get profile berhasil
+[2025-12-19 14:35:17] INFO - Request getProfile
+[2025-12-19 14:35:17] INFO - Get profile berhasil
+[2025-12-19 14:35:18] INFO - Request getProfile
+[2025-12-19 14:35:18] INFO - Get profile berhasil
+[2025-12-19 14:35:25] INFO - Request getProfile
+[2025-12-19 14:35:25] INFO - Get profile berhasil
+[2025-12-19 14:35:34] INFO - Request getProfile
+[2025-12-19 14:35:34] INFO - Get profile berhasil
+[2025-12-19 14:35:35] INFO - Request getProfile
+[2025-12-19 14:35:35] INFO - Get profile berhasil
+[2025-12-19 16:07:20] INFO - Login attempt
+[2025-12-19 16:07:20] INFO - Login berhasil
+[2025-12-19 16:07:20] INFO - Request getProfile
+[2025-12-19 16:07:20] INFO - Get profile berhasil
+[2025-12-19 16:07:23] INFO - Request getProfile
+[2025-12-19 16:07:23] INFO - Request getProfile
+[2025-12-19 16:07:23] INFO - Get profile berhasil
+[2025-12-19 16:07:23] INFO - Get profile berhasil
+[2025-12-19 16:07:24] INFO - Request getProfile
+[2025-12-19 16:07:24] INFO - Get profile berhasil
+[2025-12-19 16:07:33] INFO - Request getProfile
+[2025-12-19 16:07:33] INFO - Get profile berhasil
+[2025-12-19 16:07:44] INFO - Login attempt
+[2025-12-19 16:07:45] INFO - Login berhasil
+[2025-12-19 16:07:45] INFO - Request getProfile
+[2025-12-19 16:07:45] INFO - Get profile berhasil
+[2025-12-19 16:07:47] INFO - Request getProfile
+[2025-12-19 16:07:47] INFO - Request getProfile
+[2025-12-19 16:07:47] INFO - Get profile berhasil
+[2025-12-19 16:07:47] INFO - Get profile berhasil
+[2025-12-19 16:08:02] INFO - Request getProfile
+[2025-12-19 16:08:02] INFO - Get profile berhasil
+[2025-12-19 16:08:08] INFO - Request getProfile
+[2025-12-19 16:08:08] INFO - Request getProfile
+[2025-12-19 16:08:08] INFO - Get profile berhasil
+[2025-12-19 16:08:08] INFO - Get profile berhasil
+[2025-12-19 16:08:09] INFO - Request getProfile
+[2025-12-19 16:08:09] INFO - Get profile berhasil
+[2025-12-19 16:09:26] INFO - Request getProfile
+[2025-12-19 16:09:26] INFO - Get profile berhasil
+[2025-12-19 16:09:37] INFO - Login attempt
+[2025-12-19 16:09:37] INFO - Login berhasil
+[2025-12-19 16:09:37] INFO - Request getProfile
+[2025-12-19 16:09:37] INFO - Get profile berhasil
+[2025-12-19 16:09:41] INFO - Request getProfile
+[2025-12-19 16:09:41] INFO - Request getProfile
+[2025-12-19 16:09:41] INFO - Get profile berhasil
+[2025-12-19 16:09:41] INFO - Get profile berhasil
+[2025-12-19 16:09:44] INFO - Request getProfile
+[2025-12-19 16:09:44] INFO - Get profile berhasil
+[2025-12-19 16:09:48] INFO - Request getProfile
+[2025-12-19 16:09:48] INFO - Get profile berhasil
+[2025-12-19 16:09:49] INFO - Request getProfile
+[2025-12-19 16:09:49] INFO - Get profile berhasil
+[2025-12-20 09:23:23] INFO - Login attempt
+[2025-12-20 09:23:23] INFO - Login attempt
+[2025-12-20 09:23:24] INFO - Login berhasil
+[2025-12-20 09:23:24] INFO - Login berhasil
+[2025-12-20 09:23:25] INFO - Request getProfile
+[2025-12-20 09:23:25] INFO - Get profile berhasil
+[2025-12-20 09:23:25] INFO - Request getProfile
+[2025-12-20 09:23:25] INFO - Get profile berhasil
+[2025-12-20 09:23:32] INFO - Request getProfile
+[2025-12-20 09:23:32] INFO - Get profile berhasil
+[2025-12-20 09:23:32] INFO - Request getProfile
+[2025-12-20 09:23:32] INFO - Get profile berhasil
+[2025-12-20 09:23:35] INFO - Request getProfile
+[2025-12-20 09:23:35] INFO - Get profile berhasil
+[2025-12-20 09:23:42] INFO - Request getProfile
+[2025-12-20 09:23:42] INFO - Get profile berhasil
+[2025-12-20 10:07:30] INFO - Login attempt
+[2025-12-20 10:07:30] INFO - Login berhasil
+[2025-12-20 10:07:30] INFO - Request getProfile
+[2025-12-20 10:07:30] INFO - Get profile berhasil
+[2025-12-20 10:07:32] INFO - Request getProfile
+[2025-12-20 10:07:32] INFO - Get profile berhasil
+[2025-12-20 10:07:32] INFO - Request getProfile
+[2025-12-20 10:07:32] INFO - Get profile berhasil
+[2025-12-20 10:07:34] INFO - Request getProfile
+[2025-12-20 10:07:34] INFO - Get profile berhasil
+[2025-12-20 10:11:26] INFO - Request getProfile
+[2025-12-20 10:11:26] INFO - Get profile berhasil
+[2025-12-20 10:22:33] INFO - Request getProfile
+[2025-12-20 10:22:33] INFO - Get profile berhasil
+[2025-12-20 10:22:48] INFO - Request getProfile
+[2025-12-20 10:22:48] INFO - Get profile berhasil
+[2025-12-20 10:23:32] INFO - Request getProfile
+[2025-12-20 10:23:32] INFO - Get profile berhasil
+[2025-12-20 10:24:50] INFO - Login attempt
+[2025-12-20 10:24:50] INFO - Login berhasil
+[2025-12-20 10:24:50] INFO - Request getProfile
+[2025-12-20 10:24:50] INFO - Get profile berhasil
+[2025-12-20 10:24:53] INFO - Request getProfile
+[2025-12-20 10:24:53] INFO - Get profile berhasil
+[2025-12-20 10:24:53] INFO - Request getProfile
+[2025-12-20 10:24:53] INFO - Get profile berhasil
+[2025-12-20 10:24:54] INFO - Request getProfile
+[2025-12-20 10:24:54] INFO - Get profile berhasil
+[2025-12-20 10:26:44] INFO - Request getProfile
+[2025-12-20 10:26:44] INFO - Get profile berhasil
+[2025-12-20 10:32:39] INFO - Request getProfile
+[2025-12-20 10:32:39] INFO - Get profile berhasil
+[2025-12-20 10:50:10] INFO - Login attempt
+[2025-12-20 10:50:10] INFO - Login berhasil
+[2025-12-20 10:50:11] INFO - Request getProfile
+[2025-12-20 10:50:11] INFO - Get profile berhasil
+[2025-12-20 10:50:20] INFO - Request getProfile
+[2025-12-20 10:50:20] INFO - Get profile berhasil
+[2025-12-20 10:50:20] INFO - Request getProfile
+[2025-12-20 10:50:20] INFO - Get profile berhasil
+[2025-12-20 10:50:26] INFO - Request getProfile
+[2025-12-20 10:50:26] INFO - Get profile berhasil
+[2025-12-20 11:35:10] INFO - Login attempt
+[2025-12-20 11:35:10] INFO - Login berhasil
+[2025-12-20 11:35:11] INFO - Request getProfile
+[2025-12-20 11:35:11] INFO - Get profile berhasil
+[2025-12-20 11:35:14] INFO - Request getProfile
+[2025-12-20 11:35:14] INFO - Get profile berhasil
+[2025-12-20 11:35:14] INFO - Request getProfile
+[2025-12-20 11:35:14] INFO - Get profile berhasil
+[2025-12-20 11:35:18] INFO - Request getProfile
+[2025-12-20 11:35:18] INFO - Get profile berhasil
+[2025-12-20 11:35:33] INFO - Request getProfile
+[2025-12-20 11:35:33] INFO - Get profile berhasil
+[2025-12-20 11:35:35] INFO - Request getProfile
+[2025-12-20 11:35:35] INFO - Get profile berhasil
+[2025-12-20 11:35:35] INFO - Request getProfile
+[2025-12-20 11:35:35] INFO - Request list user
+[2025-12-20 11:35:35] INFO - Get profile berhasil
+[2025-12-20 11:35:35] INFO - List user berhasil diambil
+[2025-12-20 11:35:35] INFO - Request list user
+[2025-12-20 11:35:35] INFO - List user berhasil diambil
+[2025-12-20 11:35:38] INFO - Request getProfile
+[2025-12-20 11:35:38] INFO - Get profile berhasil
+[2025-12-20 11:36:16] INFO - Login attempt
+[2025-12-20 11:36:16] INFO - Login berhasil
+[2025-12-20 11:36:17] INFO - Request getProfile
+[2025-12-20 11:36:17] INFO - Get profile berhasil
+[2025-12-20 11:36:21] INFO - Request getProfile
+[2025-12-20 11:36:21] INFO - Get profile berhasil
+[2025-12-20 11:36:21] INFO - Request getProfile
+[2025-12-20 11:36:21] INFO - Get profile berhasil
+[2025-12-20 11:39:48] INFO - Login attempt
+[2025-12-20 11:39:48] INFO - Login berhasil
+[2025-12-20 11:39:49] INFO - Request getProfile
+[2025-12-20 11:39:49] INFO - Get profile berhasil
+[2025-12-20 11:39:52] INFO - Request getProfile
+[2025-12-20 11:39:52] INFO - Get profile berhasil
+[2025-12-20 11:39:52] INFO - Request getProfile
+[2025-12-20 11:39:52] INFO - Get profile berhasil
+[2025-12-20 11:40:02] INFO - Login attempt
+[2025-12-20 11:40:03] INFO - Login berhasil
+[2025-12-20 11:40:03] INFO - Request getProfile
+[2025-12-20 11:40:03] INFO - Get profile berhasil
+[2025-12-20 11:40:06] INFO - Request getProfile
+[2025-12-20 11:40:06] INFO - Get profile berhasil
+[2025-12-20 11:40:06] INFO - Request getProfile
+[2025-12-20 11:40:06] INFO - Get profile berhasil
+[2025-12-20 11:40:09] INFO - Request getProfile
+[2025-12-20 11:40:09] INFO - Get profile berhasil
+[2025-12-20 11:42:47] INFO - Login attempt
+[2025-12-20 11:42:47] INFO - Login berhasil
+[2025-12-20 11:42:47] INFO - Request getProfile
+[2025-12-20 11:42:47] INFO - Get profile berhasil
+[2025-12-20 11:42:54] INFO - Request getProfile
+[2025-12-20 11:42:54] INFO - Get profile berhasil
+[2025-12-20 11:42:54] INFO - Request getProfile
+[2025-12-20 11:42:54] INFO - Get profile berhasil
+[2025-12-20 11:42:56] INFO - Request getProfile
+[2025-12-20 11:42:56] INFO - Get profile berhasil
+[2025-12-20 11:45:09] INFO - Login attempt
+[2025-12-20 11:45:09] INFO - Login berhasil
+[2025-12-20 11:45:10] INFO - Request getProfile
+[2025-12-20 11:45:10] INFO - Get profile berhasil
+[2025-12-20 11:45:13] INFO - Request getProfile
+[2025-12-20 11:45:13] INFO - Get profile berhasil
+[2025-12-20 11:45:13] INFO - Request getProfile
+[2025-12-20 11:45:13] INFO - Get profile berhasil
+[2025-12-20 12:00:18] INFO - Login attempt
+[2025-12-20 12:00:19] INFO - Login berhasil
+[2025-12-20 12:00:20] INFO - Request getProfile
+[2025-12-20 12:00:20] INFO - Get profile berhasil
+[2025-12-20 12:00:23] INFO - Request getProfile
+[2025-12-20 12:00:24] INFO - Get profile berhasil
+[2025-12-20 12:00:24] INFO - Request getProfile
+[2025-12-20 12:00:24] INFO - Get profile berhasil
+[2025-12-20 12:04:22] INFO - Request getProfile
+[2025-12-20 12:04:22] INFO - Get profile berhasil
+[2025-12-20 12:04:24] INFO - Request getProfile
+[2025-12-20 12:04:24] INFO - Get profile berhasil
+[2025-12-20 12:06:05] INFO - Login attempt
+[2025-12-20 12:06:05] INFO - Login berhasil
+[2025-12-20 12:06:05] INFO - Request getProfile
+[2025-12-20 12:06:05] INFO - Get profile berhasil
+[2025-12-20 12:06:09] INFO - Request getProfile
+[2025-12-20 12:06:09] INFO - Get profile berhasil
+[2025-12-20 12:06:09] INFO - Request getProfile
+[2025-12-20 12:06:09] INFO - Get profile berhasil
+[2025-12-20 12:06:12] INFO - Request getProfile
+[2025-12-20 12:06:12] INFO - Get profile berhasil
+[2025-12-20 12:11:11] INFO - Request getProfile
+[2025-12-20 12:11:11] INFO - Request list user
+[2025-12-20 12:11:11] INFO - Get profile berhasil
+[2025-12-20 12:11:11] INFO - List user berhasil diambil
+[2025-12-20 12:11:13] INFO - Request getProfile
+[2025-12-20 12:11:13] INFO - Get profile berhasil
+[2025-12-20 12:11:14] INFO - Request getProfile
+[2025-12-20 12:11:14] INFO - Get profile berhasil
+[2025-12-20 12:11:24] INFO - Request getProfile
+[2025-12-20 12:11:24] INFO - Get profile berhasil
+[2025-12-20 12:25:59] INFO - Login attempt
+[2025-12-20 12:25:59] INFO - Login berhasil
+[2025-12-20 12:26:00] INFO - Request getProfile
+[2025-12-20 12:26:00] INFO - Get profile berhasil
+[2025-12-20 12:26:03] INFO - Request getProfile
+[2025-12-20 12:26:03] INFO - Get profile berhasil
+[2025-12-20 12:26:03] INFO - Request getProfile
+[2025-12-20 12:26:03] INFO - Get profile berhasil
+[2025-12-20 12:26:05] INFO - Request getProfile
+[2025-12-20 12:26:05] INFO - Get profile berhasil
+[2025-12-20 12:30:22] INFO - Login attempt
+[2025-12-20 12:30:22] INFO - Login berhasil
+[2025-12-20 12:30:23] INFO - Request getProfile
+[2025-12-20 12:30:23] INFO - Get profile berhasil
+[2025-12-20 12:30:26] INFO - Request getProfile
+[2025-12-20 12:30:26] INFO - Get profile berhasil
+[2025-12-20 12:30:26] INFO - Request getProfile
+[2025-12-20 12:30:26] INFO - Get profile berhasil
+[2025-12-20 12:30:28] INFO - Request getProfile
+[2025-12-20 12:30:28] INFO - Get profile berhasil
+[2025-12-20 12:36:56] INFO - Request getProfile
+[2025-12-20 12:36:56] INFO - Get profile berhasil
+[2025-12-20 12:37:01] INFO - Request getProfile
+[2025-12-20 12:37:01] INFO - Get profile berhasil
+[2025-12-20 12:56:58] INFO - Login attempt
+[2025-12-20 12:56:58] INFO - Login berhasil
+[2025-12-20 12:56:59] INFO - Request getProfile
+[2025-12-20 12:56:59] INFO - Get profile berhasil
+[2025-12-20 12:57:02] INFO - Request getProfile
+[2025-12-20 12:57:02] INFO - Get profile berhasil
+[2025-12-20 12:57:02] INFO - Request getProfile
+[2025-12-20 12:57:02] INFO - Get profile berhasil
+[2025-12-20 12:57:06] INFO - Request getProfile
+[2025-12-20 12:57:06] INFO - Get profile berhasil
+[2025-12-20 12:57:22] INFO - Login attempt
+[2025-12-20 12:57:23] INFO - Login berhasil
+[2025-12-20 12:57:23] INFO - Request getProfile
+[2025-12-20 12:57:23] INFO - Get profile berhasil
+[2025-12-20 12:57:26] INFO - Request getProfile
+[2025-12-20 12:57:26] INFO - Get profile berhasil
+[2025-12-20 12:57:29] INFO - Request getProfile
+[2025-12-20 12:57:29] INFO - Get profile berhasil
+[2025-12-20 12:57:29] INFO - Request getProfile
+[2025-12-20 12:57:29] INFO - Get profile berhasil
+[2025-12-20 12:57:31] INFO - Request getProfile
+[2025-12-20 12:57:31] INFO - Get profile berhasil
+[2025-12-20 13:02:01] INFO - Request getProfile
+[2025-12-20 13:02:01] INFO - Get profile berhasil
+[2025-12-20 13:02:05] INFO - Request getProfile
+[2025-12-20 13:02:05] INFO - Get profile berhasil
+[2025-12-20 13:02:05] INFO - Request getProfile
+[2025-12-20 13:02:05] INFO - Get profile berhasil
+[2025-12-20 13:13:54] INFO - Login attempt
+[2025-12-20 13:13:54] INFO - Login berhasil
+[2025-12-20 13:13:54] INFO - Request getProfile
+[2025-12-20 13:13:54] INFO - Get profile berhasil
+[2025-12-20 13:13:59] INFO - Request getProfile
+[2025-12-20 13:13:59] INFO - Request getProfile
+[2025-12-20 13:13:59] INFO - Get profile berhasil
+[2025-12-20 13:13:59] INFO - Get profile berhasil
+[2025-12-20 13:14:00] INFO - Request getProfile
+[2025-12-20 13:14:00] INFO - Get profile berhasil
+[2025-12-20 13:14:38] INFO - Upload bukti pembayaran berhasil
+[2025-12-20 13:14:49] INFO - Request getProfile
+[2025-12-20 13:14:49] INFO - Get profile berhasil
+[2025-12-20 13:15:01] INFO - Login attempt
+[2025-12-20 13:15:01] INFO - Login berhasil
+[2025-12-20 13:15:01] INFO - Request getProfile
+[2025-12-20 13:15:01] INFO - Get profile berhasil
+[2025-12-20 13:15:06] INFO - Request getProfile
+[2025-12-20 13:15:06] INFO - Request getProfile
+[2025-12-20 13:15:06] INFO - Get profile berhasil
+[2025-12-20 13:15:06] INFO - Get profile berhasil
+[2025-12-20 13:15:07] INFO - Request getProfile
+[2025-12-20 13:15:07] INFO - Get profile berhasil
+[2025-12-20 13:15:12] INFO - Pembayaran di-ACC
+[2025-12-20 13:15:21] INFO - Request getProfile
+[2025-12-20 13:15:21] INFO - Get profile berhasil
+[2025-12-20 13:15:34] INFO - Login attempt
+[2025-12-20 13:15:34] INFO - Login berhasil
+[2025-12-20 13:15:34] INFO - Request getProfile
+[2025-12-20 13:15:34] INFO - Get profile berhasil
+[2025-12-20 13:15:36] INFO - Request getProfile
+[2025-12-20 13:15:36] INFO - Request getProfile
+[2025-12-20 13:15:36] INFO - Get profile berhasil
+[2025-12-20 13:15:36] INFO - Get profile berhasil
+[2025-12-20 13:15:39] INFO - Request getProfile
+[2025-12-20 13:15:39] INFO - Get profile berhasil

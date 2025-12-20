@@ -16,6 +16,7 @@ const upload = multer({ storage });
 router.post("/create", orderCtrl.create);
 router.get("/my-buyer", orderCtrl.myAsBuyer);
 router.get("/my-creator", orderCtrl.myAsCreator);
+router.get("/all-order", orderCtrl.getAllOrdersAdmin);
 router.get("/detail", orderCtrl.detail);
 router.post('/accept-payment', orderCtrl.acceptPayment);
 router.post('/reject-payment', orderCtrl.rejectPayment);

@@ -118,6 +118,24 @@ const Order = {
     return rows;
   },
 
+  getAllOrders: async () => {
+    const [rows] = await db.query(`
+        SELECT 
+            o.*,
+            a.*,
+            a.title AS artwork_title,
+        a.status AS artwork_status,
+        GROUP_CONCAT(ai.preview_url SEPARATOR ',') AS images
+        FROM orders o
+        JOIN order_items oi ON oi.id_order = o.id_order
+        JOIN artworks a ON a.id_artwork = oi.id_artwork
+        LEFT JOIN artwork_images ai ON ai.id_artwork = a.id_artwork
+        GROUP BY o.id_order, a.id_artwork
+        ORDER BY o.id_order DESC
+     `);
+      return rows;
+  },
+
   // ============================
   // GET SINGLE ORDER
   // ============================

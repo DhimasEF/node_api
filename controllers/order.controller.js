@@ -116,6 +116,32 @@ exports.myAsBuyer = async (req, res) => {
 };
 
 // =======================
+// MY ORDER AS ADMIN
+// =======================
+exports.getAllOrdersAdmin = async (req, res) => {
+    try {
+        const orders = await Order.getAllOrders();
+
+        orders.forEach(o => {
+            o.images = o.images ? o.images.split(",") : [];
+        });
+
+        res.json({
+            status: true,
+            data: orders
+        });
+
+    } catch (error) {
+        logger.error("Get all orders admin error", { error });
+        res.status(500).json({
+            status: false,
+            message: "Server error"
+        });
+    }
+};
+
+
+// =======================
 // MY ORDER AS CREATOR
 // =======================
 exports.myAsCreator = async (req, res) => {
