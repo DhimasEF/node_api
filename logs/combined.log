@@ -1527,3 +1527,720 @@
 [2025-12-20 13:15:36] INFO - Get profile berhasil
 [2025-12-20 13:15:39] INFO - Request getProfile
 [2025-12-20 13:15:39] INFO - Get profile berhasil
+[2025-12-22 10:55:00] INFO - Test grok berhasil
+[2025-12-22 14:52:23] INFO - Login attempt
+[2025-12-22 14:52:23] INFO - Login berhasil
+[2025-12-22 14:52:23] INFO - Request getProfile
+[2025-12-22 14:52:23] INFO - Get profile berhasil
+[2025-12-22 14:53:30] INFO - Request getProfile
+[2025-12-22 14:53:30] INFO - Request getProfile
+[2025-12-22 14:53:30] INFO - Get profile berhasil
+[2025-12-22 14:53:30] INFO - Get profile berhasil
+[2025-12-22 15:05:58] INFO - [2025-12-22 08:05:58] INFO - ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 15:10:53] INFO - Login attempt
+[2025-12-22 15:10:53] INFO - [2025-12-22 08:10:53] INFO - ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 15:11:10] INFO - ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 15:11:10] INFO - Login attempt
+[2025-12-22 15:11:10] INFO - Login berhasil
+[2025-12-22 15:11:10] INFO - ip=127.0.0.1 method=GET endpoint=/profil/get/2
+[2025-12-22 15:11:10] INFO - Request getProfile
+[2025-12-22 15:11:10] INFO - Get profile berhasil
+[2025-12-22 15:11:10] INFO - ip=127.0.0.1 method=GET endpoint=/uploads/avatar/avatar_2_1763001737.png
+[2025-12-22 15:12:08] INFO - ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 15:12:08] INFO - Login attempt
+[2025-12-22 15:12:08] INFO - Login berhasil
+[2025-12-22 15:12:08] INFO - ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 15:12:08] INFO - Request getProfile
+[2025-12-22 15:12:08] INFO - Get profile berhasil
+[2025-12-22 15:12:08] INFO - ip=127.0.0.1 method=GET endpoint=/uploads/avatar/avatar_5_1765959870718.png
+[2025-12-22 15:21:43] INFO - request_id=e69d8ec9-a9b8-49e3-b327-f00522e30b30 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 15:21:43] INFO - Login attempt
+[2025-12-22 15:21:43] INFO - Login berhasil
+[2025-12-22 15:21:44] INFO - request_id=233d25e7-1450-4b8c-94d8-34d9b9737b9b ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-22 15:21:44] INFO - request_id=233d25e7-1450-4b8c-94d8-34d9b9737b9b action=getProfile status=start userId=1
+[2025-12-22 15:21:44] INFO - request_id=233d25e7-1450-4b8c-94d8-34d9b9737b9b action=getProfile status=success userId=1 username=yay
+[2025-12-22 16:11:18] INFO - request_id=eeb98f93-ffc6-45d9-b3ee-a49a7a68436b ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 16:11:18] INFO - request_id=eeb98f93-ffc6-45d9-b3ee-a49a7a68436b action=login status=start username=hafizh
+[2025-12-22 16:11:19] INFO - request_id=eeb98f93-ffc6-45d9-b3ee-a49a7a68436b action=login status=success userId=5 role=user
+[2025-12-22 16:11:19] INFO - request_id=6751e059-a796-455e-85de-edf68e5acae8 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:19] INFO - request_id=6751e059-a796-455e-85de-edf68e5acae8 action=getProfile status=start userId=5
+[2025-12-22 16:11:19] INFO - request_id=6751e059-a796-455e-85de-edf68e5acae8 action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:11:21] INFO - request_id=37ec9eaf-2081-4d86-9e6b-f1316cacef04 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:21] INFO - request_id=37ec9eaf-2081-4d86-9e6b-f1316cacef04 action=getProfile status=start userId=5
+[2025-12-22 16:11:21] INFO - request_id=9669938a-0f9c-462a-8688-e83df3365906 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:21] INFO - request_id=9669938a-0f9c-462a-8688-e83df3365906 action=getProfile status=start userId=5
+[2025-12-22 16:11:21] INFO - request_id=39208dde-4bee-4129-93b9-c2b83619348f ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-22 16:11:21] INFO - request_id=39208dde-4bee-4129-93b9-c2b83619348f action=myOrderBuyer status=start id_buyer=5
+[2025-12-22 16:11:21] INFO - request_id=e9e9792e-5c19-45f9-af9b-e5e7d74bb072 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-22 16:11:21] INFO - request_id=e9e9792e-5c19-45f9-af9b-e5e7d74bb072 action=myOrderBuyer status=start id_buyer=5
+[2025-12-22 16:11:21] INFO - request_id=37ec9eaf-2081-4d86-9e6b-f1316cacef04 action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:11:21] INFO - request_id=9669938a-0f9c-462a-8688-e83df3365906 action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:11:21] INFO - request_id=e9e9792e-5c19-45f9-af9b-e5e7d74bb072 action=myOrderBuyer status=success total=1
+[2025-12-22 16:11:21] INFO - request_id=39208dde-4bee-4129-93b9-c2b83619348f action=myOrderBuyer status=success total=1
+[2025-12-22 16:11:21] INFO - request_id=716c579b-5ef1-4b6f-81f7-72f9ccd73a98 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-22 16:11:21] INFO - request_id=716c579b-5ef1-4b6f-81f7-72f9ccd73a98 action=getArtworkAll status=start
+[2025-12-22 16:11:21] INFO - request_id=55e61c65-ea87-45b9-afcf-c3fe3f274875 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-22 16:11:21] INFO - request_id=55e61c65-ea87-45b9-afcf-c3fe3f274875 action=getArtworkAll status=start
+[2025-12-22 16:11:22] INFO - request_id=55e61c65-ea87-45b9-afcf-c3fe3f274875 action=getArtworkAll status=success total=1
+[2025-12-22 16:11:22] INFO - request_id=716c579b-5ef1-4b6f-81f7-72f9ccd73a98 action=getArtworkAll status=success total=1
+[2025-12-22 16:11:24] INFO - request_id=f2063c44-94d3-4a80-bca3-aee89fd61a6e ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:24] INFO - request_id=f2063c44-94d3-4a80-bca3-aee89fd61a6e action=getProfile status=start userId=5
+[2025-12-22 16:11:24] INFO - request_id=f2063c44-94d3-4a80-bca3-aee89fd61a6e action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:11:27] INFO - request_id=da462239-09b5-4ed0-ada3-1486e5ebe7f4 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:27] INFO - request_id=da462239-09b5-4ed0-ada3-1486e5ebe7f4 action=getProfile status=start userId=5
+[2025-12-22 16:11:27] INFO - request_id=da462239-09b5-4ed0-ada3-1486e5ebe7f4 action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:11:27] INFO - request_id=dd50001b-cd0e-41d1-883f-45ef9b73270f ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-22 16:11:27] INFO - request_id=dd50001b-cd0e-41d1-883f-45ef9b73270f action=myOrderBuyer status=start id_buyer=5
+[2025-12-22 16:11:27] INFO - request_id=dd50001b-cd0e-41d1-883f-45ef9b73270f action=myOrderBuyer status=success total=1
+[2025-12-22 16:11:28] INFO - request_id=a63fcd44-8433-461a-b6dc-ff9fc329794f ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-22 16:11:28] INFO - request_id=a63fcd44-8433-461a-b6dc-ff9fc329794f action=getProfile status=start userId=5
+[2025-12-22 16:11:28] INFO - request_id=a63fcd44-8433-461a-b6dc-ff9fc329794f action=getProfile status=success userId=5 username=hafizh
+[2025-12-22 16:18:41] INFO - request_id=1e96b546-9d31-42a4-a827-0e23445dbe08 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-22 16:18:41] INFO - request_id=1e96b546-9d31-42a4-a827-0e23445dbe08 action=login status=start username=tasya
+[2025-12-22 16:18:41] INFO - request_id=1e96b546-9d31-42a4-a827-0e23445dbe08 action=login status=success userId=3 role=creator
+[2025-12-22 16:18:41] INFO - request_id=efad1277-27c3-4b9a-ab42-dda5e70f8cda ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-22 16:18:41] INFO - request_id=efad1277-27c3-4b9a-ab42-dda5e70f8cda action=getProfile status=start userId=3
+[2025-12-22 16:18:41] INFO - request_id=efad1277-27c3-4b9a-ab42-dda5e70f8cda action=getProfile status=success userId=3 username=tasya
+[2025-12-22 16:18:45] INFO - request_id=ea3cf4a0-f971-40cd-aaff-0e9626686916 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-22 16:18:45] INFO - request_id=ea3cf4a0-f971-40cd-aaff-0e9626686916 action=getProfile status=start userId=3
+[2025-12-22 16:18:45] INFO - request_id=494ee3fe-6db3-4147-82df-4ccdd627d4fe ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-22 16:18:45] INFO - request_id=494ee3fe-6db3-4147-82df-4ccdd627d4fe action=getProfile status=start userId=3
+[2025-12-22 16:18:45] INFO - request_id=d2878166-030f-4cbf-98b2-2c785c23ced4 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-22 16:18:45] INFO - request_id=d2878166-030f-4cbf-98b2-2c785c23ced4 action=getArtworkAll status=start
+[2025-12-22 16:18:45] INFO - request_id=eb5f3ffe-3351-4c2c-a0fd-d0e1815b6901 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-22 16:18:45] INFO - request_id=eb5f3ffe-3351-4c2c-a0fd-d0e1815b6901 action=getArtworkAll status=start
+[2025-12-22 16:18:45] INFO - request_id=ea3cf4a0-f971-40cd-aaff-0e9626686916 action=getProfile status=success userId=3 username=tasya
+[2025-12-22 16:18:45] INFO - request_id=494ee3fe-6db3-4147-82df-4ccdd627d4fe action=getProfile status=success userId=3 username=tasya
+[2025-12-22 16:18:45] INFO - request_id=eb5f3ffe-3351-4c2c-a0fd-d0e1815b6901 action=getArtworkAll status=success total=1
+[2025-12-22 16:18:45] INFO - request_id=d2878166-030f-4cbf-98b2-2c785c23ced4 action=getArtworkAll status=success total=1
+[2025-12-22 16:18:45] INFO - request_id=1564e6d0-7b23-4c8d-b56a-a88beda5b4b8 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-22 16:18:45] INFO - request_id=1564e6d0-7b23-4c8d-b56a-a88beda5b4b8 action=getArtworkByUser status=start id_user=3
+[2025-12-22 16:18:45] INFO - request_id=8d8cba90-8f7d-46eb-a6f7-b6808184725f ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-22 16:18:45] INFO - request_id=8d8cba90-8f7d-46eb-a6f7-b6808184725f action=getArtworkByUser status=start id_user=3
+[2025-12-22 16:18:45] INFO - request_id=1564e6d0-7b23-4c8d-b56a-a88beda5b4b8 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-22 16:18:45] INFO - request_id=8d8cba90-8f7d-46eb-a6f7-b6808184725f action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-22 16:18:46] INFO - request_id=76450b2b-3089-4db9-99a1-f471164fbdfe ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-22 16:18:46] INFO - request_id=76450b2b-3089-4db9-99a1-f471164fbdfe action=getProfile status=start userId=3
+[2025-12-22 16:18:46] INFO - request_id=76450b2b-3089-4db9-99a1-f471164fbdfe action=getProfile status=success userId=3 username=tasya
+[2025-12-22 16:19:56] INFO - request_id=5f57e7a9-96b2-414f-9b4f-5daf7f7aa310 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-22 16:19:56] INFO - request_id=5f57e7a9-96b2-414f-9b4f-5daf7f7aa310 action=getProfile status=start userId=3
+[2025-12-22 16:19:56] INFO - request_id=5f57e7a9-96b2-414f-9b4f-5daf7f7aa310 action=getProfile status=success userId=3 username=tasya
+[2025-12-22 16:20:04] INFO - request_id=3e9136dd-8e0f-4525-bde7-7dcc72e17da7 ip=127.0.0.1 method=GET endpoint=/user/uplofile/2
+[2025-12-22 16:20:04] INFO - request_id=3e9136dd-8e0f-4525-bde7-7dcc72e17da7 action=uplofile status=start userId=2
+[2025-12-22 16:20:04] INFO - request_id=3e9136dd-8e0f-4525-bde7-7dcc72e17da7 action=uplofile status=success userId=2 totalArtwork=1
+[2025-12-22 16:24:24] INFO - request_id=70484d88-d5f2-4209-8595-8e9cb2801539 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 11:21:43] INFO - request_id=a5087e66-e7f2-4599-a750-b273389cadfb ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 11:21:43] INFO - request_id=a5087e66-e7f2-4599-a750-b273389cadfb action=login status=start username=tasya
+[2025-12-23 11:21:44] INFO - request_id=a5087e66-e7f2-4599-a750-b273389cadfb action=login status=success userId=3 role=creator
+[2025-12-23 11:21:44] INFO - request_id=43dac1b5-1c74-47fd-ae4a-f909dfd4adf2 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:21:44] INFO - request_id=43dac1b5-1c74-47fd-ae4a-f909dfd4adf2 action=getProfile status=start userId=3
+[2025-12-23 11:21:44] INFO - request_id=43dac1b5-1c74-47fd-ae4a-f909dfd4adf2 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:21:47] INFO - request_id=b935ce04-35a4-4112-b3d9-06073f953d57 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:21:47] INFO - request_id=b935ce04-35a4-4112-b3d9-06073f953d57 action=getProfile status=start userId=3
+[2025-12-23 11:21:47] INFO - request_id=ef8b39a9-23cc-434c-ab3e-6435c958cdac ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:21:47] INFO - request_id=ef8b39a9-23cc-434c-ab3e-6435c958cdac action=getProfile status=start userId=3
+[2025-12-23 11:21:47] INFO - request_id=fcd27963-12d1-4940-a2e9-63593acc9ae3 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 11:21:47] INFO - request_id=fcd27963-12d1-4940-a2e9-63593acc9ae3 action=getArtworkAll status=start
+[2025-12-23 11:21:47] INFO - request_id=c9c3754a-2725-4ac3-a8af-0ff49677360c ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 11:21:47] INFO - request_id=c9c3754a-2725-4ac3-a8af-0ff49677360c action=getArtworkAll status=start
+[2025-12-23 11:21:47] INFO - request_id=b935ce04-35a4-4112-b3d9-06073f953d57 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:21:47] INFO - request_id=ef8b39a9-23cc-434c-ab3e-6435c958cdac action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:21:47] INFO - request_id=c9c3754a-2725-4ac3-a8af-0ff49677360c action=getArtworkAll status=success total=1
+[2025-12-23 11:21:47] INFO - request_id=fcd27963-12d1-4940-a2e9-63593acc9ae3 action=getArtworkAll status=success total=1
+[2025-12-23 11:21:47] INFO - request_id=c998c38d-18e3-4b66-84f4-5c537d8c507b ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 11:21:47] INFO - request_id=c998c38d-18e3-4b66-84f4-5c537d8c507b action=getArtworkByUser status=start id_user=3
+[2025-12-23 11:21:47] INFO - request_id=58f72760-f024-4ac9-9fd0-cc9287a37320 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 11:21:47] INFO - request_id=58f72760-f024-4ac9-9fd0-cc9287a37320 action=getArtworkByUser status=start id_user=3
+[2025-12-23 11:21:47] INFO - request_id=c998c38d-18e3-4b66-84f4-5c537d8c507b action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 11:21:47] INFO - request_id=58f72760-f024-4ac9-9fd0-cc9287a37320 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 11:22:36] INFO - request_id=2a3a7f53-62d6-4485-b3a4-2bad9db19c32 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 11:22:36] INFO - request_id=2a3a7f53-62d6-4485-b3a4-2bad9db19c32 action=uploadArtwork status=start id_user=3
+[2025-12-23 11:22:36] ERROR - request_id=2a3a7f53-62d6-4485-b3a4-2bad9db19c32 action=uploadArtwork status=error error=Data truncated for column 'status' at row 1
+[2025-12-23 11:22:41] INFO - request_id=85294209-5f9d-4ded-ab16-089a38c87476 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 11:22:41] INFO - request_id=85294209-5f9d-4ded-ab16-089a38c87476 action=uploadArtwork status=start id_user=3
+[2025-12-23 11:22:41] ERROR - request_id=85294209-5f9d-4ded-ab16-089a38c87476 action=uploadArtwork status=error error=Data truncated for column 'status' at row 1
+[2025-12-23 11:27:09] INFO - request_id=9bfa59c7-ca41-4e9b-83c8-bd2ca16b1917 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 11:27:09] INFO - request_id=9bfa59c7-ca41-4e9b-83c8-bd2ca16b1917 action=uploadArtwork status=start id_user=3
+[2025-12-23 11:29:32] INFO - request_id=1786a843-df3b-46e7-ba3e-2bce388b5b81 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:29:32] INFO - request_id=1786a843-df3b-46e7-ba3e-2bce388b5b81 action=getProfile status=start userId=3
+[2025-12-23 11:29:32] INFO - request_id=1786a843-df3b-46e7-ba3e-2bce388b5b81 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:30:12] INFO - request_id=77702a03-6e9a-4d7a-b347-cec865e159dc ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 11:30:12] INFO - request_id=77702a03-6e9a-4d7a-b347-cec865e159dc action=login status=start username=tasya
+[2025-12-23 11:30:12] INFO - request_id=77702a03-6e9a-4d7a-b347-cec865e159dc action=login status=success userId=3 role=creator
+[2025-12-23 11:30:12] INFO - request_id=16299fd7-be26-4290-b2dc-87c3610b1eb1 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:30:12] INFO - request_id=16299fd7-be26-4290-b2dc-87c3610b1eb1 action=getProfile status=start userId=3
+[2025-12-23 11:30:12] INFO - request_id=16299fd7-be26-4290-b2dc-87c3610b1eb1 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:30:29] INFO - request_id=775b15b1-7a21-4067-bc77-6f7217af4045 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:30:29] INFO - request_id=775b15b1-7a21-4067-bc77-6f7217af4045 action=getProfile status=start userId=3
+[2025-12-23 11:30:29] INFO - request_id=d81f2d12-b2e6-473b-8905-f5d253ef2830 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:30:29] INFO - request_id=d81f2d12-b2e6-473b-8905-f5d253ef2830 action=getProfile status=start userId=3
+[2025-12-23 11:30:29] INFO - request_id=a1034444-f20b-4858-a1a4-c78a5a2eab3d ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 11:30:29] INFO - request_id=a1034444-f20b-4858-a1a4-c78a5a2eab3d action=getArtworkAll status=start
+[2025-12-23 11:30:29] INFO - request_id=9fc9d86a-1631-44fb-94d5-3dfd08113b40 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 11:30:29] INFO - request_id=9fc9d86a-1631-44fb-94d5-3dfd08113b40 action=getArtworkAll status=start
+[2025-12-23 11:30:29] INFO - request_id=d81f2d12-b2e6-473b-8905-f5d253ef2830 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:30:29] INFO - request_id=775b15b1-7a21-4067-bc77-6f7217af4045 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:30:29] INFO - request_id=a1034444-f20b-4858-a1a4-c78a5a2eab3d action=getArtworkAll status=success total=1
+[2025-12-23 11:30:29] INFO - request_id=9fc9d86a-1631-44fb-94d5-3dfd08113b40 action=getArtworkAll status=success total=1
+[2025-12-23 11:30:29] INFO - request_id=ab3d4b3d-23a3-45d3-9f45-4b8795976a12 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 11:30:29] INFO - request_id=ab3d4b3d-23a3-45d3-9f45-4b8795976a12 action=getArtworkByUser status=start id_user=3
+[2025-12-23 11:30:29] INFO - request_id=45881457-3980-4756-ba9b-57ce25c04d24 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 11:30:29] INFO - request_id=45881457-3980-4756-ba9b-57ce25c04d24 action=getArtworkByUser status=start id_user=3
+[2025-12-23 11:30:29] INFO - request_id=ab3d4b3d-23a3-45d3-9f45-4b8795976a12 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 11:30:29] INFO - request_id=45881457-3980-4756-ba9b-57ce25c04d24 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 11:32:02] INFO - request_id=443455a2-f806-4d52-949e-31a7b06ffcd5 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 11:34:58] INFO - request_id=dd333e0d-ffdd-4a1a-ae2f-32375f52993c ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 11:34:58] INFO - request_id=dd333e0d-ffdd-4a1a-ae2f-32375f52993c action=getProfile status=start userId=3
+[2025-12-23 11:34:58] INFO - request_id=dd333e0d-ffdd-4a1a-ae2f-32375f52993c action=getProfile status=success userId=3 username=tasya
+[2025-12-23 11:34:59] INFO - request_id=443455a2-f806-4d52-949e-31a7b06ffcd5 action=uploadArtwork status=start id_user=3
+[2025-12-23 12:06:57] INFO - request_id=2e86f92b-7fb9-4601-b62e-05e44b8c0c51 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 12:07:33] INFO - request_id=2e86f92b-7fb9-4601-b62e-05e44b8c0c51 action=login status=start username=tasya
+[2025-12-23 12:26:02] INFO - request_id=6bc6c18d-fe49-49f0-8102-c4d5cbb4ddc4 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 12:26:02] INFO - request_id=6bc6c18d-fe49-49f0-8102-c4d5cbb4ddc4 action=login status=start username=tasya
+[2025-12-23 12:26:03] INFO - request_id=6bc6c18d-fe49-49f0-8102-c4d5cbb4ddc4 action=login status=success userId=3 role=creator
+[2025-12-23 12:26:03] INFO - request_id=bcd1bee0-31a5-49d5-b18f-de1b07424fbc ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 12:26:03] INFO - request_id=bcd1bee0-31a5-49d5-b18f-de1b07424fbc action=getProfile status=start userId=3
+[2025-12-23 12:26:03] INFO - request_id=bcd1bee0-31a5-49d5-b18f-de1b07424fbc action=getProfile status=success userId=3 username=tasya
+[2025-12-23 12:26:06] INFO - request_id=0d9b496f-7b83-4c10-bc32-bf85eaeb4fc0 ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 12:26:06] INFO - request_id=0d9b496f-7b83-4c10-bc32-bf85eaeb4fc0 action=getProfile status=start userId=3
+[2025-12-23 12:26:06] INFO - request_id=b2734e3c-89a1-4a08-8d16-2d5f0e8acc9c ip=127.0.0.1 method=GET endpoint=/profil/get/3
+[2025-12-23 12:26:06] INFO - request_id=b2734e3c-89a1-4a08-8d16-2d5f0e8acc9c action=getProfile status=start userId=3
+[2025-12-23 12:26:06] INFO - request_id=d105a546-7f63-4ce3-a637-f7d05ca13b54 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 12:26:06] INFO - request_id=d105a546-7f63-4ce3-a637-f7d05ca13b54 action=getArtworkAll status=start
+[2025-12-23 12:26:06] INFO - request_id=a22106d8-9c0d-4242-ba7b-9dad48d9204f ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 12:26:06] INFO - request_id=a22106d8-9c0d-4242-ba7b-9dad48d9204f action=getArtworkAll status=start
+[2025-12-23 12:26:06] INFO - request_id=0d9b496f-7b83-4c10-bc32-bf85eaeb4fc0 action=getProfile status=success userId=3 username=tasya
+[2025-12-23 12:26:06] INFO - request_id=b2734e3c-89a1-4a08-8d16-2d5f0e8acc9c action=getProfile status=success userId=3 username=tasya
+[2025-12-23 12:26:06] INFO - request_id=a22106d8-9c0d-4242-ba7b-9dad48d9204f action=getArtworkAll status=success total=1
+[2025-12-23 12:26:06] INFO - request_id=d105a546-7f63-4ce3-a637-f7d05ca13b54 action=getArtworkAll status=success total=1
+[2025-12-23 12:26:06] INFO - request_id=fe904f1c-8e8d-46f7-845c-d81039a51791 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 12:26:06] INFO - request_id=fe904f1c-8e8d-46f7-845c-d81039a51791 action=getArtworkByUser status=start id_user=3
+[2025-12-23 12:26:06] INFO - request_id=45511b42-2082-4ca0-b23c-12c859788451 ip=127.0.0.1 method=GET endpoint=/artwork/my/3
+[2025-12-23 12:26:06] INFO - request_id=45511b42-2082-4ca0-b23c-12c859788451 action=getArtworkByUser status=start id_user=3
+[2025-12-23 12:26:06] INFO - request_id=45511b42-2082-4ca0-b23c-12c859788451 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 12:26:06] INFO - request_id=fe904f1c-8e8d-46f7-845c-d81039a51791 action=getArtworkByUser status=success id_user=3 total=0
+[2025-12-23 12:39:45] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 ip=127.0.0.1 method=POST endpoint=/artwork/upload
+[2025-12-23 12:39:45] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 action=uploadArtwork status=start id_user=3
+[2025-12-23 12:39:46] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 step=insert_artwork id_artwork=24
+[2025-12-23 12:39:46] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 step=process_images count=1
+[2025-12-23 12:39:48] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 step=process_tags count=2
+[2025-12-23 12:39:48] INFO - request_id=bb7e789f-b636-43a1-bca7-8a3310b97d16 action=uploadArtwork status=success id_artwork=24
+[2025-12-23 12:44:13] INFO - request_id=5ecf3b4e-3e2b-4295-8265-7b7c528597b0 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 12:44:13] INFO - request_id=5ecf3b4e-3e2b-4295-8265-7b7c528597b0 action=login status=start username=yay
+[2025-12-23 12:44:13] INFO - request_id=5ecf3b4e-3e2b-4295-8265-7b7c528597b0 action=login status=success userId=1 role=admin
+[2025-12-23 12:44:13] INFO - request_id=e47a440e-2eb1-4b35-8d3a-47c00ee2e302 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:44:13] INFO - request_id=e47a440e-2eb1-4b35-8d3a-47c00ee2e302 action=getProfile status=start userId=1
+[2025-12-23 12:44:13] INFO - request_id=e47a440e-2eb1-4b35-8d3a-47c00ee2e302 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:44:16] INFO - request_id=8090438b-9205-48e7-b164-9d76919ba505 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:44:16] INFO - request_id=8090438b-9205-48e7-b164-9d76919ba505 action=getProfile status=start userId=1
+[2025-12-23 12:44:16] INFO - request_id=3e119e16-cc14-4afd-8daf-af820c09dc32 ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:44:16] INFO - request_id=3e119e16-cc14-4afd-8daf-af820c09dc32 action=getArtworkAllAdmin status=start
+[2025-12-23 12:44:16] INFO - request_id=d4865f32-5d21-4c24-a60f-304e23d23b49 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:44:16] INFO - request_id=d4865f32-5d21-4c24-a60f-304e23d23b49 action=getProfile status=start userId=1
+[2025-12-23 12:44:16] INFO - request_id=94b57818-479b-4de4-a25f-7fa6f1f2d589 ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:44:16] INFO - request_id=94b57818-479b-4de4-a25f-7fa6f1f2d589 action=getArtworkAllAdmin status=start
+[2025-12-23 12:44:16] INFO - request_id=8090438b-9205-48e7-b164-9d76919ba505 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:44:16] INFO - request_id=d4865f32-5d21-4c24-a60f-304e23d23b49 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:44:17] INFO - request_id=3e119e16-cc14-4afd-8daf-af820c09dc32 action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:44:17] INFO - request_id=94b57818-479b-4de4-a25f-7fa6f1f2d589 action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:44:20] INFO - request_id=74589b54-5948-42fa-b063-3825732342cc ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:44:20] INFO - request_id=74589b54-5948-42fa-b063-3825732342cc action=getProfile status=start userId=1
+[2025-12-23 12:44:20] INFO - request_id=74589b54-5948-42fa-b063-3825732342cc action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:44:23] INFO - request_id=1050b0aa-17bd-4efb-8cff-5ac72fee635e ip=127.0.0.1 method=POST endpoint=/artwork/updateStatus
+[2025-12-23 12:44:23] INFO - request_id=1050b0aa-17bd-4efb-8cff-5ac72fee635e action=updateArtworkStatus status=start id_artwork=24 new_status=published
+[2025-12-23 12:44:23] INFO - request_id=1050b0aa-17bd-4efb-8cff-5ac72fee635e action=updateArtworkStatus status=success id_artwork=24
+[2025-12-23 12:54:55] INFO - request_id=a0b7a943-014d-4a48-9cc2-72a720fda243 ip=127.0.0.1 method=POST endpoint=/artwork/updateStatus
+[2025-12-23 12:57:08] INFO - request_id=a0b7a943-014d-4a48-9cc2-72a720fda243 action=updateArtworkStatus status=start id_artwork=24 new_status=published
+[2025-12-23 12:57:08] INFO - request_id=f3bbba67-9b9d-4c57-8b7b-0268b60995fa ip=127.0.0.1 method=POST endpoint=/artwork/updateStatus
+[2025-12-23 12:57:08] INFO - request_id=f3bbba67-9b9d-4c57-8b7b-0268b60995fa action=updateArtworkStatus status=start id_artwork=24 new_status=published
+[2025-12-23 12:57:08] INFO - request_id=1d0b3b8a-2590-46c7-b5fa-540961036f35 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:08] INFO - request_id=1d0b3b8a-2590-46c7-b5fa-540961036f35 action=getProfile status=start userId=1
+[2025-12-23 12:57:08] INFO - request_id=c8f0d9ec-aac0-4278-a80d-90f1ae8cedc5 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:08] INFO - request_id=c8f0d9ec-aac0-4278-a80d-90f1ae8cedc5 action=getProfile status=start userId=1
+[2025-12-23 12:57:08] INFO - request_id=a0b7a943-014d-4a48-9cc2-72a720fda243 action=updateArtworkStatus status=success id_artwork=24
+[2025-12-23 12:57:08] INFO - request_id=f3bbba67-9b9d-4c57-8b7b-0268b60995fa action=updateArtworkStatus status=success id_artwork=24
+[2025-12-23 12:57:08] INFO - request_id=1d0b3b8a-2590-46c7-b5fa-540961036f35 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:08] INFO - request_id=c8f0d9ec-aac0-4278-a80d-90f1ae8cedc5 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:13] INFO - request_id=d761e626-37a2-487a-a2f9-ca380690b582 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:13] INFO - request_id=d761e626-37a2-487a-a2f9-ca380690b582 action=getProfile status=start userId=1
+[2025-12-23 12:57:13] INFO - request_id=322872d0-2258-4f45-bd37-302c6daf153e ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:57:13] INFO - request_id=322872d0-2258-4f45-bd37-302c6daf153e action=getArtworkAllAdmin status=start
+[2025-12-23 12:57:13] INFO - request_id=5bde8820-2bd1-41fa-949a-e51088cfa569 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:13] INFO - request_id=5bde8820-2bd1-41fa-949a-e51088cfa569 action=getProfile status=start userId=1
+[2025-12-23 12:57:13] INFO - request_id=5e2c2eab-3772-4716-9fcb-4d2ad01348e9 ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:57:13] INFO - request_id=5e2c2eab-3772-4716-9fcb-4d2ad01348e9 action=getArtworkAllAdmin status=start
+[2025-12-23 12:57:13] INFO - request_id=d761e626-37a2-487a-a2f9-ca380690b582 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:13] INFO - request_id=5bde8820-2bd1-41fa-949a-e51088cfa569 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:13] INFO - request_id=5e2c2eab-3772-4716-9fcb-4d2ad01348e9 action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:57:13] INFO - request_id=322872d0-2258-4f45-bd37-302c6daf153e action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:57:36] INFO - request_id=2f0b410a-e95f-4462-b306-9c31202228a2 ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:57:36] INFO - request_id=2f0b410a-e95f-4462-b306-9c31202228a2 action=getArtworkAllAdmin status=start
+[2025-12-23 12:57:36] INFO - request_id=4f0e7fb4-be99-46b8-8cfd-b4b97759ffc7 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:36] INFO - request_id=4f0e7fb4-be99-46b8-8cfd-b4b97759ffc7 action=getProfile status=start userId=1
+[2025-12-23 12:57:36] INFO - request_id=4f0e7fb4-be99-46b8-8cfd-b4b97759ffc7 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:36] INFO - request_id=2f0b410a-e95f-4462-b306-9c31202228a2 action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:57:37] INFO - request_id=9677f0b0-136e-4fb9-bf29-7a8c68d79361 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:37] INFO - request_id=9677f0b0-136e-4fb9-bf29-7a8c68d79361 action=getProfile status=start userId=1
+[2025-12-23 12:57:37] INFO - request_id=9677f0b0-136e-4fb9-bf29-7a8c68d79361 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:57:39] INFO - request_id=3b57725a-6e1e-4146-a8a6-0d088a83271d ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:57:39] INFO - request_id=3b57725a-6e1e-4146-a8a6-0d088a83271d action=getProfile status=start userId=1
+[2025-12-23 12:57:39] INFO - request_id=3b57725a-6e1e-4146-a8a6-0d088a83271d action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:58:58] INFO - request_id=b62b3c7b-bec9-4156-99fb-074f32226815 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:58:58] INFO - request_id=b62b3c7b-bec9-4156-99fb-074f32226815 action=getProfile status=start userId=1
+[2025-12-23 12:58:58] INFO - request_id=b62b3c7b-bec9-4156-99fb-074f32226815 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:02] INFO - request_id=3255b976-cf37-411a-adcc-bec9f0b62804 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:02] INFO - request_id=3255b976-cf37-411a-adcc-bec9f0b62804 action=getProfile status=start userId=1
+[2025-12-23 12:59:02] INFO - request_id=62edc809-35ef-4ce2-847b-bbf5ab24891e ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:59:02] INFO - request_id=62edc809-35ef-4ce2-847b-bbf5ab24891e action=getArtworkAllAdmin status=start
+[2025-12-23 12:59:02] INFO - request_id=31fed460-d8d0-492d-adfd-c9ed6d8e22d5 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:02] INFO - request_id=31fed460-d8d0-492d-adfd-c9ed6d8e22d5 action=getProfile status=start userId=1
+[2025-12-23 12:59:02] INFO - request_id=1d895de2-f5d0-471c-80d2-87b2efea25de ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:59:02] INFO - request_id=1d895de2-f5d0-471c-80d2-87b2efea25de action=getArtworkAllAdmin status=start
+[2025-12-23 12:59:02] INFO - request_id=3255b976-cf37-411a-adcc-bec9f0b62804 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:02] INFO - request_id=31fed460-d8d0-492d-adfd-c9ed6d8e22d5 action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:02] INFO - request_id=1d895de2-f5d0-471c-80d2-87b2efea25de action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:59:02] INFO - request_id=62edc809-35ef-4ce2-847b-bbf5ab24891e action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:59:48] INFO - request_id=91d3f5a0-1ca2-4a5d-8e9b-20bc904c52ab ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:48] INFO - request_id=91d3f5a0-1ca2-4a5d-8e9b-20bc904c52ab action=getProfile status=start userId=1
+[2025-12-23 12:59:48] INFO - request_id=91d3f5a0-1ca2-4a5d-8e9b-20bc904c52ab action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:53] INFO - request_id=20a8c754-f89d-469f-83ea-864b5d837b1a ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:53] INFO - request_id=20a8c754-f89d-469f-83ea-864b5d837b1a action=getProfile status=start userId=1
+[2025-12-23 12:59:53] INFO - request_id=6f29d3fd-6dd9-46b5-8f2f-6e0a177ad73e ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:59:53] INFO - request_id=6f29d3fd-6dd9-46b5-8f2f-6e0a177ad73e action=getArtworkAllAdmin status=start
+[2025-12-23 12:59:53] INFO - request_id=4c721c03-68b3-4714-bac8-c896471247bd ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:53] INFO - request_id=4c721c03-68b3-4714-bac8-c896471247bd action=getProfile status=start userId=1
+[2025-12-23 12:59:53] INFO - request_id=a14136a0-b0bb-4c3a-897c-3980dbddfdba ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 12:59:53] INFO - request_id=a14136a0-b0bb-4c3a-897c-3980dbddfdba action=getArtworkAllAdmin status=start
+[2025-12-23 12:59:53] INFO - request_id=20a8c754-f89d-469f-83ea-864b5d837b1a action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:53] INFO - request_id=4c721c03-68b3-4714-bac8-c896471247bd action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:53] INFO - request_id=6f29d3fd-6dd9-46b5-8f2f-6e0a177ad73e action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:59:53] INFO - request_id=a14136a0-b0bb-4c3a-897c-3980dbddfdba action=getArtworkAllAdmin status=success total=2
+[2025-12-23 12:59:55] INFO - request_id=7b2f4b77-bb9a-429e-84a2-4796d78ab1bb ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 12:59:55] INFO - request_id=7b2f4b77-bb9a-429e-84a2-4796d78ab1bb action=getProfile status=start userId=1
+[2025-12-23 12:59:55] INFO - request_id=7b2f4b77-bb9a-429e-84a2-4796d78ab1bb action=getProfile status=success userId=1 username=yay
+[2025-12-23 12:59:56] INFO - request_id=bbfa29f4-4793-426f-8c87-a7593fb3193d ip=127.0.0.1 method=POST endpoint=/artwork/updateStatus
+[2025-12-23 12:59:56] INFO - request_id=bbfa29f4-4793-426f-8c87-a7593fb3193d action=updateArtworkStatus status=start id_artwork=24 new_status=published
+[2025-12-23 12:59:56] INFO - request_id=bbfa29f4-4793-426f-8c87-a7593fb3193d action=updateArtworkStatus status=success id_artwork=24
+[2025-12-23 13:10:46] INFO - request_id=ba9dfe9c-6588-4860-9df4-16066dfe7979 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:10:46] INFO - request_id=ba9dfe9c-6588-4860-9df4-16066dfe7979 action=getProfile status=start userId=1
+[2025-12-23 13:10:46] INFO - request_id=0fe66b40-1420-4516-980d-db4a965a211f ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 13:10:46] INFO - request_id=0fe66b40-1420-4516-980d-db4a965a211f action=getArtworkAllAdmin status=start
+[2025-12-23 13:10:46] INFO - request_id=ba9dfe9c-6588-4860-9df4-16066dfe7979 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:10:46] INFO - request_id=0fe66b40-1420-4516-980d-db4a965a211f action=getArtworkAllAdmin status=success total=2
+[2025-12-23 13:10:50] INFO - request_id=9088d81e-4067-4c90-a4d9-e0281c456544 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:10:50] INFO - request_id=9088d81e-4067-4c90-a4d9-e0281c456544 action=getProfile status=start userId=1
+[2025-12-23 13:10:50] INFO - request_id=9088d81e-4067-4c90-a4d9-e0281c456544 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:10:52] INFO - request_id=cc03c232-d592-4d9f-8be4-4d98c0f5528c ip=127.0.0.1 method=POST endpoint=/artwork/updateStatus
+[2025-12-23 13:10:52] INFO - request_id=cc03c232-d592-4d9f-8be4-4d98c0f5528c action=updateArtworkStatus status=start id_artwork=24 new_status=published
+[2025-12-23 13:10:52] INFO - request_id=cc03c232-d592-4d9f-8be4-4d98c0f5528c action=updateArtworkStatus status=success id_artwork=24
+[2025-12-23 13:11:01] INFO - request_id=825e2a7f-5ad8-4147-aa9c-a9fa61931a36 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:11:01] INFO - request_id=825e2a7f-5ad8-4147-aa9c-a9fa61931a36 action=getProfile status=start userId=1
+[2025-12-23 13:11:01] INFO - request_id=825e2a7f-5ad8-4147-aa9c-a9fa61931a36 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:11:03] INFO - request_id=c9d6e0bb-9b87-4523-b1e5-39a447e6bbce ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:11:03] INFO - request_id=c9d6e0bb-9b87-4523-b1e5-39a447e6bbce action=getProfile status=start userId=1
+[2025-12-23 13:11:03] INFO - request_id=3cd7fbb9-f1f6-4a3d-b85b-62b34543c298 ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 13:11:03] INFO - request_id=3cd7fbb9-f1f6-4a3d-b85b-62b34543c298 action=getArtworkAllAdmin status=start
+[2025-12-23 13:11:03] INFO - request_id=b66a2fa7-b101-4f76-a861-b2bb8b8450c1 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:11:03] INFO - request_id=b66a2fa7-b101-4f76-a861-b2bb8b8450c1 action=getProfile status=start userId=1
+[2025-12-23 13:11:03] INFO - request_id=c9d6e0bb-9b87-4523-b1e5-39a447e6bbce action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:11:03] INFO - request_id=05242ae9-5bb3-4112-80bf-f49b036ba07a ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 13:11:03] INFO - request_id=05242ae9-5bb3-4112-80bf-f49b036ba07a action=getArtworkAllAdmin status=start
+[2025-12-23 13:11:03] INFO - request_id=b66a2fa7-b101-4f76-a861-b2bb8b8450c1 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:11:03] INFO - request_id=3cd7fbb9-f1f6-4a3d-b85b-62b34543c298 action=getArtworkAllAdmin status=success total=2
+[2025-12-23 13:11:03] INFO - request_id=05242ae9-5bb3-4112-80bf-f49b036ba07a action=getArtworkAllAdmin status=success total=2
+[2025-12-23 13:11:04] INFO - request_id=39a021e1-62bb-4515-ab83-8ac654894e30 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:11:04] INFO - request_id=39a021e1-62bb-4515-ab83-8ac654894e30 action=getProfile status=start userId=1
+[2025-12-23 13:11:04] INFO - request_id=39a021e1-62bb-4515-ab83-8ac654894e30 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:11:15] INFO - request_id=e32ab4fd-74d7-45e7-82b3-fca3a6dba1ae ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 13:11:15] INFO - request_id=e32ab4fd-74d7-45e7-82b3-fca3a6dba1ae action=login status=start username=hafizh
+[2025-12-23 13:11:16] INFO - request_id=e32ab4fd-74d7-45e7-82b3-fca3a6dba1ae action=login status=success userId=5 role=user
+[2025-12-23 13:11:16] INFO - request_id=ee945195-621b-4c81-bd7f-153b842c9144 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:11:16] INFO - request_id=ee945195-621b-4c81-bd7f-153b842c9144 action=getProfile status=start userId=5
+[2025-12-23 13:11:16] INFO - request_id=ee945195-621b-4c81-bd7f-153b842c9144 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:11:18] INFO - request_id=e184b1bc-c35c-48e0-93e7-c969a6ad3985 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:11:18] INFO - request_id=e184b1bc-c35c-48e0-93e7-c969a6ad3985 action=getProfile status=start userId=5
+[2025-12-23 13:11:18] INFO - request_id=28af4520-efde-4b94-ad70-f54410f89c7b ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:11:18] INFO - request_id=28af4520-efde-4b94-ad70-f54410f89c7b action=getProfile status=start userId=5
+[2025-12-23 13:11:18] INFO - request_id=bae6def5-a6bb-448e-946a-07e2be3d6b87 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:11:18] INFO - request_id=bae6def5-a6bb-448e-946a-07e2be3d6b87 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:11:18] INFO - request_id=fd0b5c2b-fbf1-41c5-9b1d-3da584594328 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:11:18] INFO - request_id=fd0b5c2b-fbf1-41c5-9b1d-3da584594328 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:11:18] INFO - request_id=e184b1bc-c35c-48e0-93e7-c969a6ad3985 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:11:18] INFO - request_id=28af4520-efde-4b94-ad70-f54410f89c7b action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:11:18] INFO - request_id=fd0b5c2b-fbf1-41c5-9b1d-3da584594328 action=myOrderBuyer status=success total=1
+[2025-12-23 13:11:18] INFO - request_id=bae6def5-a6bb-448e-946a-07e2be3d6b87 action=myOrderBuyer status=success total=1
+[2025-12-23 13:11:18] INFO - request_id=ca924560-da08-4720-96b1-a51be9a50317 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:11:18] INFO - request_id=ca924560-da08-4720-96b1-a51be9a50317 action=getArtworkAll status=start
+[2025-12-23 13:11:18] INFO - request_id=922f9f88-0a9a-4824-9eb6-58ac9c50c9e4 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:11:18] INFO - request_id=922f9f88-0a9a-4824-9eb6-58ac9c50c9e4 action=getArtworkAll status=start
+[2025-12-23 13:11:18] INFO - request_id=ca924560-da08-4720-96b1-a51be9a50317 action=getArtworkAll status=success total=2
+[2025-12-23 13:11:18] INFO - request_id=922f9f88-0a9a-4824-9eb6-58ac9c50c9e4 action=getArtworkAll status=success total=2
+[2025-12-23 13:11:19] INFO - request_id=e57c8f0c-a874-4198-a2c5-23ea6e5a55ad ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:11:19] INFO - request_id=e57c8f0c-a874-4198-a2c5-23ea6e5a55ad action=getProfile status=start userId=5
+[2025-12-23 13:11:19] INFO - request_id=e57c8f0c-a874-4198-a2c5-23ea6e5a55ad action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:12:55] INFO - request_id=34847d93-dfcb-48d8-b571-4ced9a415266 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:12:55] INFO - request_id=34847d93-dfcb-48d8-b571-4ced9a415266 action=getProfile status=start userId=5
+[2025-12-23 13:12:55] INFO - request_id=34847d93-dfcb-48d8-b571-4ced9a415266 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:28:54] INFO - request_id=30412927-52a9-48d6-9c8a-983f001984f1 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:28:54] INFO - request_id=30412927-52a9-48d6-9c8a-983f001984f1 action=getProfile status=start userId=5
+[2025-12-23 13:28:54] INFO - request_id=30412927-52a9-48d6-9c8a-983f001984f1 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:28:54] INFO - request_id=36e8aafb-d454-411d-bb1e-0d07d4249b91 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:28:54] INFO - request_id=36e8aafb-d454-411d-bb1e-0d07d4249b91 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:28:54] INFO - request_id=36e8aafb-d454-411d-bb1e-0d07d4249b91 action=myOrderBuyer status=success total=1
+[2025-12-23 13:28:56] INFO - request_id=1d885f14-22e9-48dd-b82f-24452febf4ff ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:28:56] INFO - request_id=1d885f14-22e9-48dd-b82f-24452febf4ff action=getProfile status=start userId=5
+[2025-12-23 13:28:56] INFO - request_id=1d885f14-22e9-48dd-b82f-24452febf4ff action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:29:03] INFO - request_id=35720780-84aa-4a7c-b96e-498b0f955e97 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 13:29:03] INFO - request_id=35720780-84aa-4a7c-b96e-498b0f955e97 action=login status=start username=yay
+[2025-12-23 13:29:04] INFO - request_id=35720780-84aa-4a7c-b96e-498b0f955e97 action=login status=success userId=1 role=admin
+[2025-12-23 13:29:04] INFO - request_id=65fd4361-c623-458e-9004-6c2a49c79799 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:04] INFO - request_id=65fd4361-c623-458e-9004-6c2a49c79799 action=getProfile status=start userId=1
+[2025-12-23 13:29:04] INFO - request_id=65fd4361-c623-458e-9004-6c2a49c79799 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:29:06] INFO - request_id=b07e131b-3800-402b-9940-37f7c6ab092d ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:06] INFO - request_id=b07e131b-3800-402b-9940-37f7c6ab092d action=getProfile status=start userId=1
+[2025-12-23 13:29:06] INFO - request_id=d3814f63-2538-48b7-a286-141acb6ec971 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:06] INFO - request_id=d3814f63-2538-48b7-a286-141acb6ec971 action=getProfile status=start userId=1
+[2025-12-23 13:29:06] INFO - request_id=b07e131b-3800-402b-9940-37f7c6ab092d action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:29:06] INFO - request_id=d3814f63-2538-48b7-a286-141acb6ec971 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:29:06] INFO - request_id=1f03e7e2-b0af-4149-9c1b-8229dd919304 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:29:06] INFO - request_id=1f03e7e2-b0af-4149-9c1b-8229dd919304 action=listOrderAdmin status=start
+[2025-12-23 13:29:06] INFO - request_id=0460e92f-48de-4814-be59-b2f7681d9028 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:29:06] INFO - request_id=0460e92f-48de-4814-be59-b2f7681d9028 action=listOrderAdmin status=start
+[2025-12-23 13:29:06] INFO - request_id=1f03e7e2-b0af-4149-9c1b-8229dd919304 action=listOrderAdmin status=success total=1
+[2025-12-23 13:29:06] INFO - request_id=0460e92f-48de-4814-be59-b2f7681d9028 action=listOrderAdmin status=success total=1
+[2025-12-23 13:29:07] INFO - request_id=3404327c-7bc8-4748-9e29-996797ea3390 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:07] INFO - request_id=3404327c-7bc8-4748-9e29-996797ea3390 action=getProfile status=start userId=1
+[2025-12-23 13:29:07] INFO - request_id=3404327c-7bc8-4748-9e29-996797ea3390 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:29:11] INFO - request_id=49b40754-0e60-4b30-9194-192c3d78c1a4 ip=127.0.0.1 method=POST endpoint=/order/accept-payment
+[2025-12-23 13:29:11] INFO - request_id=49b40754-0e60-4b30-9194-192c3d78c1a4 action=acceptPayment status=start id_order=1
+[2025-12-23 13:29:11] INFO - request_id=49b40754-0e60-4b30-9194-192c3d78c1a4 action=acceptPayment status=success id_order=1
+[2025-12-23 13:29:18] INFO - request_id=9c829e6d-472c-4ad0-95d0-3aa481579fed ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:18] INFO - request_id=9c829e6d-472c-4ad0-95d0-3aa481579fed action=getProfile status=start userId=1
+[2025-12-23 13:29:18] INFO - request_id=9c829e6d-472c-4ad0-95d0-3aa481579fed action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:29:18] INFO - request_id=3c5a184c-927d-40a9-a35b-ddbae4a9421a ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:29:18] INFO - request_id=3c5a184c-927d-40a9-a35b-ddbae4a9421a action=listOrderAdmin status=start
+[2025-12-23 13:29:18] INFO - request_id=3c5a184c-927d-40a9-a35b-ddbae4a9421a action=listOrderAdmin status=success total=1
+[2025-12-23 13:29:20] INFO - request_id=2f0170fa-2d8a-4fb7-aa5f-bc30c6a29050 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:29:20] INFO - request_id=2f0170fa-2d8a-4fb7-aa5f-bc30c6a29050 action=getProfile status=start userId=1
+[2025-12-23 13:29:20] INFO - request_id=2f0170fa-2d8a-4fb7-aa5f-bc30c6a29050 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:30:05] INFO - request_id=8a83cc0a-0255-4d62-b5ca-5748cfd02b65 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:30:05] INFO - request_id=8a83cc0a-0255-4d62-b5ca-5748cfd02b65 action=getProfile status=start userId=1
+[2025-12-23 13:30:05] INFO - request_id=63d78698-abef-44a4-bca5-9fbc83daf06b ip=127.0.0.1 method=GET endpoint=/artwork/all_admin
+[2025-12-23 13:30:05] INFO - request_id=63d78698-abef-44a4-bca5-9fbc83daf06b action=getArtworkAllAdmin status=start
+[2025-12-23 13:30:05] INFO - request_id=8a83cc0a-0255-4d62-b5ca-5748cfd02b65 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:30:05] INFO - request_id=63d78698-abef-44a4-bca5-9fbc83daf06b action=getArtworkAllAdmin status=success total=2
+[2025-12-23 13:30:07] INFO - request_id=ee8bf8b2-8075-46f0-9294-921cd1f39871 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:30:07] INFO - request_id=ee8bf8b2-8075-46f0-9294-921cd1f39871 action=getProfile status=start userId=1
+[2025-12-23 13:30:07] INFO - request_id=ee8bf8b2-8075-46f0-9294-921cd1f39871 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:30:09] INFO - request_id=9bb80d2f-1112-4796-936e-057fac71d6bb ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:30:09] INFO - request_id=9bb80d2f-1112-4796-936e-057fac71d6bb action=getProfile status=start userId=1
+[2025-12-23 13:30:09] INFO - request_id=9bb80d2f-1112-4796-936e-057fac71d6bb action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:30:12] INFO - request_id=0b67b26d-865f-4d0a-b38e-710fd70b36e6 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:30:12] INFO - request_id=0b67b26d-865f-4d0a-b38e-710fd70b36e6 action=getProfile status=start userId=1
+[2025-12-23 13:30:12] INFO - request_id=0b67b26d-865f-4d0a-b38e-710fd70b36e6 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:30:12] INFO - request_id=cd695023-f758-42fc-94cd-069d46e60ca0 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:30:12] INFO - request_id=cd695023-f758-42fc-94cd-069d46e60ca0 action=listOrderAdmin status=start
+[2025-12-23 13:30:13] INFO - request_id=cd695023-f758-42fc-94cd-069d46e60ca0 action=listOrderAdmin status=success total=1
+[2025-12-23 13:30:24] INFO - request_id=6e9db580-ae10-42d4-a1b2-2c9a387c5410 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 13:30:24] INFO - request_id=6e9db580-ae10-42d4-a1b2-2c9a387c5410 action=login status=start username=hafizh
+[2025-12-23 13:30:24] INFO - request_id=6e9db580-ae10-42d4-a1b2-2c9a387c5410 action=login status=success userId=5 role=user
+[2025-12-23 13:30:24] INFO - request_id=338ab89c-87bc-4e8c-bb90-bf923ca389be ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:30:24] INFO - request_id=338ab89c-87bc-4e8c-bb90-bf923ca389be action=getProfile status=start userId=5
+[2025-12-23 13:30:24] INFO - request_id=338ab89c-87bc-4e8c-bb90-bf923ca389be action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:30:26] INFO - request_id=b12e7a78-ed78-4208-9bd8-e5d7c264f9ed ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:30:26] INFO - request_id=b12e7a78-ed78-4208-9bd8-e5d7c264f9ed action=getProfile status=start userId=5
+[2025-12-23 13:30:26] INFO - request_id=36360fdc-fe48-46cc-a7da-7a6fcb43ce52 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:30:26] INFO - request_id=36360fdc-fe48-46cc-a7da-7a6fcb43ce52 action=getProfile status=start userId=5
+[2025-12-23 13:30:26] INFO - request_id=cd2099c5-8c6b-4267-9d89-26a2602dafd1 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:30:26] INFO - request_id=cd2099c5-8c6b-4267-9d89-26a2602dafd1 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:30:26] INFO - request_id=e609a1e0-90d3-40e5-8d03-fec5cfc4792e ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:30:26] INFO - request_id=e609a1e0-90d3-40e5-8d03-fec5cfc4792e action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:30:26] INFO - request_id=b12e7a78-ed78-4208-9bd8-e5d7c264f9ed action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:30:26] INFO - request_id=36360fdc-fe48-46cc-a7da-7a6fcb43ce52 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:30:26] INFO - request_id=e609a1e0-90d3-40e5-8d03-fec5cfc4792e action=myOrderBuyer status=success total=1
+[2025-12-23 13:30:26] INFO - request_id=cd2099c5-8c6b-4267-9d89-26a2602dafd1 action=myOrderBuyer status=success total=1
+[2025-12-23 13:30:26] INFO - request_id=484a79b3-b7b1-41d1-ac1e-f065d9ceac97 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:30:26] INFO - request_id=484a79b3-b7b1-41d1-ac1e-f065d9ceac97 action=getArtworkAll status=start
+[2025-12-23 13:30:26] INFO - request_id=07e28674-9e51-45ca-a97b-164059e9c8f2 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:30:26] INFO - request_id=07e28674-9e51-45ca-a97b-164059e9c8f2 action=getArtworkAll status=start
+[2025-12-23 13:30:26] INFO - request_id=484a79b3-b7b1-41d1-ac1e-f065d9ceac97 action=getArtworkAll status=success total=2
+[2025-12-23 13:30:26] INFO - request_id=07e28674-9e51-45ca-a97b-164059e9c8f2 action=getArtworkAll status=success total=2
+[2025-12-23 13:30:33] INFO - request_id=ae2222e7-b063-4bee-9483-19009a0806a3 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:30:33] INFO - request_id=ae2222e7-b063-4bee-9483-19009a0806a3 action=getProfile status=start userId=5
+[2025-12-23 13:30:33] INFO - request_id=ae2222e7-b063-4bee-9483-19009a0806a3 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:30:33] INFO - request_id=3a720c4b-31ae-4e29-b339-da9cebebaf33 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:30:33] INFO - request_id=3a720c4b-31ae-4e29-b339-da9cebebaf33 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:30:33] INFO - request_id=3a720c4b-31ae-4e29-b339-da9cebebaf33 action=myOrderBuyer status=success total=1
+[2025-12-23 13:30:34] INFO - request_id=98336b04-b2c8-4347-9d7e-5710e65d2164 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:30:34] INFO - request_id=98336b04-b2c8-4347-9d7e-5710e65d2164 action=getProfile status=start userId=5
+[2025-12-23 13:30:34] INFO - request_id=98336b04-b2c8-4347-9d7e-5710e65d2164 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:32:20] INFO - request_id=b4459ef3-e881-4603-850b-9093b1ecf6de ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:32:20] INFO - request_id=b4459ef3-e881-4603-850b-9093b1ecf6de action=getProfile status=start userId=5
+[2025-12-23 13:32:20] INFO - request_id=efd03f4d-3826-4f8b-9a45-62764f41dc68 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:32:20] INFO - request_id=efd03f4d-3826-4f8b-9a45-62764f41dc68 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:32:20] INFO - request_id=b4459ef3-e881-4603-850b-9093b1ecf6de action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:32:20] INFO - request_id=efd03f4d-3826-4f8b-9a45-62764f41dc68 action=myOrderBuyer status=success total=1
+[2025-12-23 13:32:20] INFO - request_id=52ad8293-9e47-4f9c-8596-5e5704d87a2e ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:32:20] INFO - request_id=52ad8293-9e47-4f9c-8596-5e5704d87a2e action=getArtworkAll status=start
+[2025-12-23 13:32:20] INFO - request_id=52ad8293-9e47-4f9c-8596-5e5704d87a2e action=getArtworkAll status=success total=2
+[2025-12-23 13:32:20] INFO - request_id=03671ad2-5175-4d23-8050-ee0c779f2e28 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:32:20] INFO - request_id=03671ad2-5175-4d23-8050-ee0c779f2e28 action=getProfile status=start userId=5
+[2025-12-23 13:32:20] INFO - request_id=03671ad2-5175-4d23-8050-ee0c779f2e28 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:32:22] INFO - request_id=e1d3143c-a40b-4de6-aaa5-a8b03409b9d6 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:32:22] INFO - request_id=e1d3143c-a40b-4de6-aaa5-a8b03409b9d6 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:32:22] ERROR - request_id=e1d3143c-a40b-4de6-aaa5-a8b03409b9d6 action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:32:35] INFO - request_id=180c19c1-38e8-46f9-a8b1-52bbc1b212b3 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:32:35] INFO - request_id=180c19c1-38e8-46f9-a8b1-52bbc1b212b3 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:32:35] ERROR - request_id=180c19c1-38e8-46f9-a8b1-52bbc1b212b3 action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:32:46] INFO - request_id=cfa03c60-23d3-4e05-8244-187e9dca7afa ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:32:46] INFO - request_id=cfa03c60-23d3-4e05-8244-187e9dca7afa action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:32:46] ERROR - request_id=cfa03c60-23d3-4e05-8244-187e9dca7afa action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:36:21] INFO - request_id=e94b9665-9137-4c70-8bae-cdb91c06a086 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:36:21] INFO - request_id=e94b9665-9137-4c70-8bae-cdb91c06a086 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:36:21] ERROR - request_id=e94b9665-9137-4c70-8bae-cdb91c06a086 action=createOrder status=error error=Field 'note' doesn't have a default value
+[2025-12-23 13:37:10] INFO - request_id=b8ced813-a1d0-4582-8bec-a8766cbdf069 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:37:10] INFO - request_id=b8ced813-a1d0-4582-8bec-a8766cbdf069 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:37:10] ERROR - request_id=b8ced813-a1d0-4582-8bec-a8766cbdf069 action=createOrder status=error error=Field 'note' doesn't have a default value
+[2025-12-23 13:37:44] INFO - request_id=992db0a4-772e-4cbf-b089-1001d3eef40d ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=992db0a4-772e-4cbf-b089-1001d3eef40d action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=35e35503-cb85-4c5c-b815-b356eb8276ec ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=35e35503-cb85-4c5c-b815-b356eb8276ec action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=ffd22275-759e-46bb-b3ee-f86765f00876 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=ffd22275-759e-46bb-b3ee-f86765f00876 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=49bb46bc-9d68-498d-ac9f-e18d2cd8b6a6 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=49bb46bc-9d68-498d-ac9f-e18d2cd8b6a6 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=0a78e337-4e5d-4d2e-bf09-8b1a708962bc ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=0a78e337-4e5d-4d2e-bf09-8b1a708962bc action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=a3f74eeb-7939-411e-972a-02793e7befa7 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:07] INFO - request_id=a3f74eeb-7939-411e-972a-02793e7befa7 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:07] INFO - request_id=2f559914-04fa-4081-bc50-a8653591fdb6 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:07] INFO - request_id=2f559914-04fa-4081-bc50-a8653591fdb6 action=getProfile status=start userId=5
+[2025-12-23 13:38:07] INFO - request_id=9dee21f6-8d9c-4b0e-8c05-f62b976c72ee ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=9dee21f6-8d9c-4b0e-8c05-f62b976c72ee action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=35e35503-cb85-4c5c-b815-b356eb8276ec action=createOrder status=success id_order=3 id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=992db0a4-772e-4cbf-b089-1001d3eef40d action=createOrder status=success id_order=2 id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=ffd22275-759e-46bb-b3ee-f86765f00876 action=createOrder status=success id_order=4 id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=49bb46bc-9d68-498d-ac9f-e18d2cd8b6a6 action=createOrder status=success id_order=5 id_buyer=5
+[2025-12-23 13:38:07] INFO - request_id=2f559914-04fa-4081-bc50-a8653591fdb6 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:07] WARN - request_id=0a78e337-4e5d-4d2e-bf09-8b1a708962bc action=createOrder status=exists id_order=3
+[2025-12-23 13:38:07] WARN - request_id=a3f74eeb-7939-411e-972a-02793e7befa7 action=createOrder status=exists id_order=3
+[2025-12-23 13:38:07] INFO - request_id=9dee21f6-8d9c-4b0e-8c05-f62b976c72ee action=myOrderBuyer status=success total=1
+[2025-12-23 13:38:07] INFO - request_id=21bc0b50-1a92-46d6-84b3-54f62a9a22d0 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:38:07] INFO - request_id=21bc0b50-1a92-46d6-84b3-54f62a9a22d0 action=getArtworkAll status=start
+[2025-12-23 13:38:07] INFO - request_id=21bc0b50-1a92-46d6-84b3-54f62a9a22d0 action=getArtworkAll status=success total=2
+[2025-12-23 13:38:09] INFO - request_id=8553bae2-8bb4-4a3d-8173-182fcf7df113 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:09] INFO - request_id=8553bae2-8bb4-4a3d-8173-182fcf7df113 action=getProfile status=start userId=5
+[2025-12-23 13:38:09] INFO - request_id=8553bae2-8bb4-4a3d-8173-182fcf7df113 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:11] INFO - request_id=7ea98ec0-28a4-45d8-8f51-c7e26ebf2b6e ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:11] INFO - request_id=7ea98ec0-28a4-45d8-8f51-c7e26ebf2b6e action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:11] WARN - request_id=7ea98ec0-28a4-45d8-8f51-c7e26ebf2b6e action=createOrder status=exists id_order=3
+[2025-12-23 13:38:43] INFO - request_id=cf6156e9-0275-4d63-a850-91a3f71189e2 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:43] INFO - request_id=cf6156e9-0275-4d63-a850-91a3f71189e2 action=getProfile status=start userId=5
+[2025-12-23 13:38:43] INFO - request_id=51c3382e-81d4-45ee-bf37-98df28895ddf ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:38:43] INFO - request_id=51c3382e-81d4-45ee-bf37-98df28895ddf action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:38:43] INFO - request_id=cf6156e9-0275-4d63-a850-91a3f71189e2 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:43] INFO - request_id=51c3382e-81d4-45ee-bf37-98df28895ddf action=myOrderBuyer status=success total=1
+[2025-12-23 13:38:43] INFO - request_id=a3e55925-518c-4407-be93-78f9127fcdd1 ip=127.0.0.1 method=GET endpoint=/artwork/all
+[2025-12-23 13:38:43] INFO - request_id=a3e55925-518c-4407-be93-78f9127fcdd1 action=getArtworkAll status=start
+[2025-12-23 13:38:43] INFO - request_id=a3e55925-518c-4407-be93-78f9127fcdd1 action=getArtworkAll status=success total=2
+[2025-12-23 13:38:44] INFO - request_id=59867762-d8b2-4104-af15-b6b75f989469 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:44] INFO - request_id=59867762-d8b2-4104-af15-b6b75f989469 action=getProfile status=start userId=5
+[2025-12-23 13:38:44] INFO - request_id=59867762-d8b2-4104-af15-b6b75f989469 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:47] INFO - request_id=818bd1ed-d36d-474c-844b-73f2650d53e1 ip=127.0.0.1 method=POST endpoint=/order/create
+[2025-12-23 13:38:47] INFO - request_id=818bd1ed-d36d-474c-844b-73f2650d53e1 action=createOrder status=start id_buyer=5 id_artwork=24
+[2025-12-23 13:38:47] INFO - request_id=818bd1ed-d36d-474c-844b-73f2650d53e1 action=createOrder status=success id_order=6 id_buyer=5
+[2025-12-23 13:38:52] INFO - request_id=92c25f3a-4306-4da5-826f-3d8ca56312c9 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:52] INFO - request_id=92c25f3a-4306-4da5-826f-3d8ca56312c9 action=getProfile status=start userId=5
+[2025-12-23 13:38:52] INFO - request_id=92c25f3a-4306-4da5-826f-3d8ca56312c9 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:52] INFO - request_id=bc29f2a3-a2f3-4893-a7c0-cb3c933a76fc ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:38:52] INFO - request_id=bc29f2a3-a2f3-4893-a7c0-cb3c933a76fc action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:38:52] INFO - request_id=bc29f2a3-a2f3-4893-a7c0-cb3c933a76fc action=myOrderBuyer status=success total=2
+[2025-12-23 13:38:54] INFO - request_id=90ba10cc-123c-4479-a20e-a26859cd1412 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:54] INFO - request_id=90ba10cc-123c-4479-a20e-a26859cd1412 action=getProfile status=start userId=5
+[2025-12-23 13:38:54] INFO - request_id=90ba10cc-123c-4479-a20e-a26859cd1412 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:38:59] INFO - request_id=f7fc4a44-97fc-48b5-ab8e-da78a9d5134a ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:38:59] INFO - request_id=f7fc4a44-97fc-48b5-ab8e-da78a9d5134a action=getProfile status=start userId=5
+[2025-12-23 13:38:59] INFO - request_id=f7fc4a44-97fc-48b5-ab8e-da78a9d5134a action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:39:11] INFO - request_id=aa1e2692-4209-4bc7-bf41-4c27cd62bfc2 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:39:11] INFO - request_id=aa1e2692-4209-4bc7-bf41-4c27cd62bfc2 action=getProfile status=start userId=5
+[2025-12-23 13:39:11] INFO - request_id=aa1e2692-4209-4bc7-bf41-4c27cd62bfc2 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:39:15] INFO - request_id=62a95be8-35c4-4f5b-afef-726944ced553 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:39:15] INFO - request_id=62a95be8-35c4-4f5b-afef-726944ced553 action=getProfile status=start userId=5
+[2025-12-23 13:39:15] INFO - request_id=62a95be8-35c4-4f5b-afef-726944ced553 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:39:20] INFO - request_id=74038e77-fdb8-4a83-9f4a-01fab6fd4b09 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:39:20] INFO - request_id=74038e77-fdb8-4a83-9f4a-01fab6fd4b09 action=getProfile status=start userId=5
+[2025-12-23 13:39:20] INFO - request_id=74038e77-fdb8-4a83-9f4a-01fab6fd4b09 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:39:20] INFO - request_id=2a6e5cbd-e9b3-4798-a214-5ca4d54b7b21 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:39:20] INFO - request_id=2a6e5cbd-e9b3-4798-a214-5ca4d54b7b21 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:39:20] INFO - request_id=2a6e5cbd-e9b3-4798-a214-5ca4d54b7b21 action=myOrderBuyer status=success total=2
+[2025-12-23 13:39:26] INFO - request_id=a9ddea61-fcd7-4c85-8cf5-f823d2de60d1 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:39:26] INFO - request_id=a9ddea61-fcd7-4c85-8cf5-f823d2de60d1 action=getProfile status=start userId=5
+[2025-12-23 13:39:26] INFO - request_id=a9ddea61-fcd7-4c85-8cf5-f823d2de60d1 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:39:32] INFO - request_id=fbbeeb21-4b78-4a50-845f-ccb800a488c3 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 13:39:32] INFO - request_id=fbbeeb21-4b78-4a50-845f-ccb800a488c3 action=login status=start username=yay
+[2025-12-23 13:39:33] INFO - request_id=fbbeeb21-4b78-4a50-845f-ccb800a488c3 action=login status=success userId=1 role=admin
+[2025-12-23 13:39:33] INFO - request_id=35b4e5c0-ef77-42ec-92c0-d013863da6cc ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:39:33] INFO - request_id=35b4e5c0-ef77-42ec-92c0-d013863da6cc action=getProfile status=start userId=1
+[2025-12-23 13:39:33] INFO - request_id=35b4e5c0-ef77-42ec-92c0-d013863da6cc action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:39:35] INFO - request_id=6739004c-bf4b-4c49-9941-d93d228c81e6 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:39:36] INFO - request_id=6739004c-bf4b-4c49-9941-d93d228c81e6 action=getProfile status=start userId=1
+[2025-12-23 13:39:36] INFO - request_id=ae6004aa-2719-4af7-80e2-0cae92e4e387 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:39:36] INFO - request_id=ae6004aa-2719-4af7-80e2-0cae92e4e387 action=getProfile status=start userId=1
+[2025-12-23 13:39:36] INFO - request_id=6739004c-bf4b-4c49-9941-d93d228c81e6 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:39:36] INFO - request_id=ae6004aa-2719-4af7-80e2-0cae92e4e387 action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:39:36] INFO - request_id=57809833-c799-47eb-bd2a-5a325f76dfbb ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:39:36] INFO - request_id=57809833-c799-47eb-bd2a-5a325f76dfbb action=listOrderAdmin status=start
+[2025-12-23 13:39:36] INFO - request_id=76f9abd0-1610-42d0-ad41-805497a28e45 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 13:39:36] INFO - request_id=76f9abd0-1610-42d0-ad41-805497a28e45 action=listOrderAdmin status=start
+[2025-12-23 13:39:36] INFO - request_id=76f9abd0-1610-42d0-ad41-805497a28e45 action=listOrderAdmin status=success total=2
+[2025-12-23 13:39:36] INFO - request_id=57809833-c799-47eb-bd2a-5a325f76dfbb action=listOrderAdmin status=success total=2
+[2025-12-23 13:39:37] INFO - request_id=6f33a321-879e-4f39-b038-8d8e1ebde32a ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:39:37] INFO - request_id=6f33a321-879e-4f39-b038-8d8e1ebde32a action=getProfile status=start userId=1
+[2025-12-23 13:39:37] INFO - request_id=6f33a321-879e-4f39-b038-8d8e1ebde32a action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:39:43] INFO - request_id=83fa26cc-9e13-401c-9ce0-2962d7cee0ad ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 13:39:43] INFO - request_id=83fa26cc-9e13-401c-9ce0-2962d7cee0ad action=getProfile status=start userId=1
+[2025-12-23 13:39:43] INFO - request_id=83fa26cc-9e13-401c-9ce0-2962d7cee0ad action=getProfile status=success userId=1 username=yay
+[2025-12-23 13:45:31] INFO - request_id=3a07e43f-4cc5-476f-8999-04f8178479b7 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 13:45:31] INFO - request_id=3a07e43f-4cc5-476f-8999-04f8178479b7 action=login status=start username=hafizh
+[2025-12-23 13:45:31] INFO - request_id=3a07e43f-4cc5-476f-8999-04f8178479b7 action=login status=success userId=5 role=user
+[2025-12-23 13:45:31] INFO - request_id=e535a469-847e-417a-9019-00b03bb42e15 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:45:31] INFO - request_id=e535a469-847e-417a-9019-00b03bb42e15 action=getProfile status=start userId=5
+[2025-12-23 13:45:31] INFO - request_id=e535a469-847e-417a-9019-00b03bb42e15 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:45:34] INFO - request_id=e20b7408-7067-491a-829f-4e782000b6e6 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:45:34] INFO - request_id=e20b7408-7067-491a-829f-4e782000b6e6 action=getProfile status=start userId=5
+[2025-12-23 13:45:34] INFO - request_id=6bc8f169-c77b-41b5-b675-78d147dbd4e1 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:45:34] INFO - request_id=6bc8f169-c77b-41b5-b675-78d147dbd4e1 action=getProfile status=start userId=5
+[2025-12-23 13:45:34] INFO - request_id=e20b7408-7067-491a-829f-4e782000b6e6 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:45:34] INFO - request_id=6bc8f169-c77b-41b5-b675-78d147dbd4e1 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 13:45:34] INFO - request_id=74089545-61be-455b-89c7-b38d22ef5f63 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:45:34] INFO - request_id=74089545-61be-455b-89c7-b38d22ef5f63 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:45:34] INFO - request_id=be879c95-e6a8-4670-9bf4-11c1d7323180 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 13:45:34] INFO - request_id=be879c95-e6a8-4670-9bf4-11c1d7323180 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 13:45:34] INFO - request_id=74089545-61be-455b-89c7-b38d22ef5f63 action=myOrderBuyer status=success total=2
+[2025-12-23 13:45:34] INFO - request_id=be879c95-e6a8-4670-9bf4-11c1d7323180 action=myOrderBuyer status=success total=2
+[2025-12-23 13:45:35] INFO - request_id=861f392e-1c07-4f20-93c3-22bb658cc9d4 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 13:45:35] INFO - request_id=861f392e-1c07-4f20-93c3-22bb658cc9d4 action=getProfile status=start userId=5
+[2025-12-23 13:45:35] INFO - request_id=861f392e-1c07-4f20-93c3-22bb658cc9d4 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:04:27] INFO - request_id=3d7ca76a-f455-45ef-a84d-c3afe69c52a3 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 14:04:27] INFO - request_id=3d7ca76a-f455-45ef-a84d-c3afe69c52a3 action=login status=start username=hafizh
+[2025-12-23 14:04:27] INFO - request_id=3d7ca76a-f455-45ef-a84d-c3afe69c52a3 action=login status=success userId=5 role=user
+[2025-12-23 14:04:27] INFO - request_id=23c0f819-d3cc-472d-8b21-b5bdcd08600e ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:04:27] INFO - request_id=23c0f819-d3cc-472d-8b21-b5bdcd08600e action=getProfile status=start userId=5
+[2025-12-23 14:04:27] INFO - request_id=23c0f819-d3cc-472d-8b21-b5bdcd08600e action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:04:31] INFO - request_id=0be13a29-b71f-4319-8184-7f6e9d497e56 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:04:31] INFO - request_id=0be13a29-b71f-4319-8184-7f6e9d497e56 action=getProfile status=start userId=5
+[2025-12-23 14:04:31] INFO - request_id=be4a2f88-227c-4ed9-8306-d2bdab410b85 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:04:31] INFO - request_id=be4a2f88-227c-4ed9-8306-d2bdab410b85 action=getProfile status=start userId=5
+[2025-12-23 14:04:31] INFO - request_id=0be13a29-b71f-4319-8184-7f6e9d497e56 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:04:31] INFO - request_id=be4a2f88-227c-4ed9-8306-d2bdab410b85 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:04:31] INFO - request_id=917333c0-6ebd-4099-86c5-239802637045 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:04:31] INFO - request_id=917333c0-6ebd-4099-86c5-239802637045 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:04:31] INFO - request_id=e78c6cd0-0873-4e98-8941-3106610bb1c2 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:04:31] INFO - request_id=e78c6cd0-0873-4e98-8941-3106610bb1c2 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:04:32] INFO - request_id=e78c6cd0-0873-4e98-8941-3106610bb1c2 action=myOrderBuyer status=success total=2
+[2025-12-23 14:04:32] INFO - request_id=917333c0-6ebd-4099-86c5-239802637045 action=myOrderBuyer status=success total=2
+[2025-12-23 14:04:32] INFO - request_id=34a66eb1-9c26-42ff-8159-099c01da8e69 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:04:32] INFO - request_id=34a66eb1-9c26-42ff-8159-099c01da8e69 action=getProfile status=start userId=5
+[2025-12-23 14:04:32] INFO - request_id=34a66eb1-9c26-42ff-8159-099c01da8e69 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:14:20] INFO - request_id=ac06aa58-195b-4669-a0d4-79568645310f ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 14:14:20] INFO - request_id=ac06aa58-195b-4669-a0d4-79568645310f action=login status=start username=hafizh
+[2025-12-23 14:14:20] INFO - request_id=ac06aa58-195b-4669-a0d4-79568645310f action=login status=success userId=5 role=user
+[2025-12-23 14:14:20] INFO - request_id=f7efa595-d200-4963-b4ce-0092f131d3ed ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:14:20] INFO - request_id=f7efa595-d200-4963-b4ce-0092f131d3ed action=getProfile status=start userId=5
+[2025-12-23 14:14:20] INFO - request_id=f7efa595-d200-4963-b4ce-0092f131d3ed action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:14:23] INFO - request_id=d2d4f0e9-852a-48d0-91b8-2085c07230b9 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:14:23] INFO - request_id=d2d4f0e9-852a-48d0-91b8-2085c07230b9 action=getProfile status=start userId=5
+[2025-12-23 14:14:23] INFO - request_id=f8bdb157-701f-4211-abe5-ed9bae4263a3 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:14:23] INFO - request_id=f8bdb157-701f-4211-abe5-ed9bae4263a3 action=getProfile status=start userId=5
+[2025-12-23 14:14:23] INFO - request_id=d2d4f0e9-852a-48d0-91b8-2085c07230b9 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:14:23] INFO - request_id=0d807716-e13c-41e6-9fe3-841f0044e045 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:14:23] INFO - request_id=0d807716-e13c-41e6-9fe3-841f0044e045 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:14:23] INFO - request_id=f8bdb157-701f-4211-abe5-ed9bae4263a3 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:14:23] INFO - request_id=4a0a7887-d403-4172-9ed6-8927bcf761d9 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:14:23] INFO - request_id=4a0a7887-d403-4172-9ed6-8927bcf761d9 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:14:23] INFO - request_id=4a0a7887-d403-4172-9ed6-8927bcf761d9 action=myOrderBuyer status=success total=2
+[2025-12-23 14:14:23] INFO - request_id=0d807716-e13c-41e6-9fe3-841f0044e045 action=myOrderBuyer status=success total=2
+[2025-12-23 14:14:24] INFO - request_id=b48bf7d6-cfad-417f-80f3-3c19221b282f ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:14:24] INFO - request_id=b48bf7d6-cfad-417f-80f3-3c19221b282f action=getProfile status=start userId=5
+[2025-12-23 14:14:24] INFO - request_id=b48bf7d6-cfad-417f-80f3-3c19221b282f action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:14:35] INFO - request_id=34541f5e-7723-4711-b5d4-6b056c3f2155 ip=127.0.0.1 method=POST endpoint=/order/upload-payment
+[2025-12-23 14:14:35] INFO - request_id=34541f5e-7723-4711-b5d4-6b056c3f2155 action=uploadPayment status=start id_order=6
+[2025-12-23 14:14:35] INFO - request_id=34541f5e-7723-4711-b5d4-6b056c3f2155 action=uploadPayment status=success id_order=6 amount=75000
+[2025-12-23 14:14:49] INFO - request_id=7a42c8ea-1493-415e-b4ea-0c80364c231d ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 14:14:49] INFO - request_id=7a42c8ea-1493-415e-b4ea-0c80364c231d action=login status=start username=yay
+[2025-12-23 14:14:50] INFO - request_id=7a42c8ea-1493-415e-b4ea-0c80364c231d action=login status=success userId=1 role=admin
+[2025-12-23 14:14:50] INFO - request_id=f37979e1-f34d-4e01-97a1-d5f6e54ba769 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:14:50] INFO - request_id=f37979e1-f34d-4e01-97a1-d5f6e54ba769 action=getProfile status=start userId=1
+[2025-12-23 14:14:50] INFO - request_id=f37979e1-f34d-4e01-97a1-d5f6e54ba769 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:14:52] INFO - request_id=e264b048-1e33-4d89-b109-608fbbc841b0 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:14:52] INFO - request_id=e264b048-1e33-4d89-b109-608fbbc841b0 action=getProfile status=start userId=1
+[2025-12-23 14:14:52] INFO - request_id=5f7a32c5-dc54-4c67-90cf-ebe91f81a7f7 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:14:52] INFO - request_id=5f7a32c5-dc54-4c67-90cf-ebe91f81a7f7 action=getProfile status=start userId=1
+[2025-12-23 14:14:52] INFO - request_id=e264b048-1e33-4d89-b109-608fbbc841b0 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:14:52] INFO - request_id=5f7a32c5-dc54-4c67-90cf-ebe91f81a7f7 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:14:52] INFO - request_id=9e077add-4acb-416e-9ec3-83b89fd68b42 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 14:14:52] INFO - request_id=9e077add-4acb-416e-9ec3-83b89fd68b42 action=listOrderAdmin status=start
+[2025-12-23 14:14:52] INFO - request_id=e53ac93e-6aca-4666-8b71-5e5c0605f327 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 14:14:52] INFO - request_id=e53ac93e-6aca-4666-8b71-5e5c0605f327 action=listOrderAdmin status=start
+[2025-12-23 14:14:52] INFO - request_id=9e077add-4acb-416e-9ec3-83b89fd68b42 action=listOrderAdmin status=success total=2
+[2025-12-23 14:14:52] INFO - request_id=e53ac93e-6aca-4666-8b71-5e5c0605f327 action=listOrderAdmin status=success total=2
+[2025-12-23 14:14:53] INFO - request_id=a64ac6aa-5199-413c-ae08-6a8cc5a60eb3 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:14:53] INFO - request_id=a64ac6aa-5199-413c-ae08-6a8cc5a60eb3 action=getProfile status=start userId=1
+[2025-12-23 14:14:53] INFO - request_id=a64ac6aa-5199-413c-ae08-6a8cc5a60eb3 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:14:58] INFO - request_id=6c4fc1fc-d325-47d0-b1c1-6c07c41035fb ip=127.0.0.1 method=POST endpoint=/order/accept-payment
+[2025-12-23 14:14:58] INFO - request_id=6c4fc1fc-d325-47d0-b1c1-6c07c41035fb action=acceptPayment status=start id_order=6
+[2025-12-23 14:14:58] INFO - request_id=6c4fc1fc-d325-47d0-b1c1-6c07c41035fb action=acceptPayment status=success id_order=6
+[2025-12-23 14:15:02] INFO - request_id=4089ccaa-70a3-48c9-b410-a500c16c8067 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:15:02] INFO - request_id=4089ccaa-70a3-48c9-b410-a500c16c8067 action=getProfile status=start userId=1
+[2025-12-23 14:15:02] INFO - request_id=453aed1c-8b73-4c21-9a75-71423e65bb1e ip=127.0.0.1 method=GET endpoint=/user/list
+[2025-12-23 14:15:02] INFO - request_id=453aed1c-8b73-4c21-9a75-71423e65bb1e action=listUser status=start
+[2025-12-23 14:15:02] INFO - request_id=4089ccaa-70a3-48c9-b410-a500c16c8067 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:15:02] INFO - request_id=453aed1c-8b73-4c21-9a75-71423e65bb1e action=listUser status=success total=4
+[2025-12-23 14:15:05] INFO - request_id=426ed956-32be-423a-bad1-613cf9db2d54 ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:15:05] INFO - request_id=426ed956-32be-423a-bad1-613cf9db2d54 action=getProfile status=start userId=1
+[2025-12-23 14:15:05] INFO - request_id=426ed956-32be-423a-bad1-613cf9db2d54 action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:15:05] INFO - request_id=d3e707da-a615-4c67-a942-1479a9b37819 ip=127.0.0.1 method=GET endpoint=/order/all-order
+[2025-12-23 14:15:05] INFO - request_id=d3e707da-a615-4c67-a942-1479a9b37819 action=listOrderAdmin status=start
+[2025-12-23 14:15:05] INFO - request_id=d3e707da-a615-4c67-a942-1479a9b37819 action=listOrderAdmin status=success total=2
+[2025-12-23 14:15:05] INFO - request_id=4bef944c-e21d-4f08-87d0-a8f74eabadbb ip=127.0.0.1 method=GET endpoint=/profil/get/1
+[2025-12-23 14:15:05] INFO - request_id=4bef944c-e21d-4f08-87d0-a8f74eabadbb action=getProfile status=start userId=1
+[2025-12-23 14:15:05] INFO - request_id=4bef944c-e21d-4f08-87d0-a8f74eabadbb action=getProfile status=success userId=1 username=yay
+[2025-12-23 14:15:15] INFO - request_id=b4f494e4-a79d-4cf1-b8a6-2aced6094577 ip=127.0.0.1 method=POST endpoint=/auth/login
+[2025-12-23 14:15:15] INFO - request_id=b4f494e4-a79d-4cf1-b8a6-2aced6094577 action=login status=start username=hafizh
+[2025-12-23 14:15:16] INFO - request_id=b4f494e4-a79d-4cf1-b8a6-2aced6094577 action=login status=success userId=5 role=user
+[2025-12-23 14:15:16] INFO - request_id=12e3629a-20a6-4dc9-8eec-fcb1d7dee970 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:15:16] INFO - request_id=12e3629a-20a6-4dc9-8eec-fcb1d7dee970 action=getProfile status=start userId=5
+[2025-12-23 14:15:16] INFO - request_id=12e3629a-20a6-4dc9-8eec-fcb1d7dee970 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:15:18] INFO - request_id=dc89c8f7-6724-4d9d-9140-93903c772f35 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:15:18] INFO - request_id=dc89c8f7-6724-4d9d-9140-93903c772f35 action=getProfile status=start userId=5
+[2025-12-23 14:15:18] INFO - request_id=9569c79e-b44f-4ce4-bd49-c4785249e5bc ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:15:18] INFO - request_id=9569c79e-b44f-4ce4-bd49-c4785249e5bc action=getProfile status=start userId=5
+[2025-12-23 14:15:18] INFO - request_id=dc89c8f7-6724-4d9d-9140-93903c772f35 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:15:18] INFO - request_id=9569c79e-b44f-4ce4-bd49-c4785249e5bc action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 14:15:18] INFO - request_id=d414fd9e-f2c4-40a4-9a36-09a2a82ce039 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:15:18] INFO - request_id=d414fd9e-f2c4-40a4-9a36-09a2a82ce039 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:15:18] INFO - request_id=3a62a133-bd95-4f15-9bcc-646384578d91 ip=127.0.0.1 method=GET endpoint=/order/my-buyer?id_buyer=5
+[2025-12-23 14:15:18] INFO - request_id=3a62a133-bd95-4f15-9bcc-646384578d91 action=myOrderBuyer status=start id_buyer=5
+[2025-12-23 14:15:18] INFO - request_id=d414fd9e-f2c4-40a4-9a36-09a2a82ce039 action=myOrderBuyer status=success total=2
+[2025-12-23 14:15:18] INFO - request_id=3a62a133-bd95-4f15-9bcc-646384578d91 action=myOrderBuyer status=success total=2
+[2025-12-23 14:15:19] INFO - request_id=79cbc548-37a3-47bf-aa78-c82da6275833 ip=127.0.0.1 method=GET endpoint=/profil/get/5
+[2025-12-23 14:15:19] INFO - request_id=79cbc548-37a3-47bf-aa78-c82da6275833 action=getProfile status=start userId=5
+[2025-12-23 14:15:19] INFO - request_id=79cbc548-37a3-47bf-aa78-c82da6275833 action=getProfile status=success userId=5 username=hafizh
+[2025-12-23 15:56:56] INFO - request_id=5079f1fa-d0f0-40a5-9e67-117323375a08 ip=182.9.1.18 method=POST endpoint=/auth/login
+[2025-12-23 15:56:56] INFO - request_id=5079f1fa-d0f0-40a5-9e67-117323375a08 action=login status=start username=yay
+[2025-12-23 15:56:56] INFO - request_id=5079f1fa-d0f0-40a5-9e67-117323375a08 action=login status=success userId=1 role=admin
+[2025-12-23 15:56:56] INFO - request_id=8f17cc5c-6589-4cc8-bee3-d01bac8de623 ip=182.9.1.18 method=GET endpoint=/profil/get/1
+[2025-12-23 15:56:56] INFO - request_id=8f17cc5c-6589-4cc8-bee3-d01bac8de623 action=getProfile status=start userId=1
+[2025-12-23 15:56:56] INFO - request_id=8f17cc5c-6589-4cc8-bee3-d01bac8de623 action=getProfile status=success userId=1 username=yay
+[2025-12-23 16:30:31] INFO - request_id=1a465e83-f283-495c-b4e4-f398513ff845 ip=182.9.1.18 device=Samsung SM-A156E platform=android method=GET endpoint=/profil/get/1
+[2025-12-23 16:30:31] INFO - request_id=1a465e83-f283-495c-b4e4-f398513ff845 action=getProfile status=start userId=1
+[2025-12-23 16:30:31] INFO - request_id=18d00215-f823-4706-a23c-28b5057f0cd7 ip=182.9.1.18 device=Samsung SM-A156E platform=android method=GET endpoint=/artwork/all_admin
+[2025-12-23 16:30:31] INFO - request_id=18d00215-f823-4706-a23c-28b5057f0cd7 action=getArtworkAllAdmin status=start
+[2025-12-23 16:30:31] INFO - request_id=661bfbd3-5835-4b5a-a577-7bd302b481b7 ip=182.9.1.18 device=Samsung SM-A156E platform=android method=GET endpoint=/profil/get/1
+[2025-12-23 16:30:31] INFO - request_id=661bfbd3-5835-4b5a-a577-7bd302b481b7 action=getProfile status=start userId=1
+[2025-12-23 16:30:31] INFO - request_id=8dc3f5f7-b5cf-48fd-9899-244d9dce4fbb ip=182.9.1.18 device=Samsung SM-A156E platform=android method=GET endpoint=/artwork/all_admin
+[2025-12-23 16:30:31] INFO - request_id=8dc3f5f7-b5cf-48fd-9899-244d9dce4fbb action=getArtworkAllAdmin status=start
+[2025-12-23 16:30:31] INFO - request_id=1a465e83-f283-495c-b4e4-f398513ff845 action=getProfile status=success userId=1 username=yay
+[2025-12-23 16:30:31] INFO - request_id=661bfbd3-5835-4b5a-a577-7bd302b481b7 action=getProfile status=success userId=1 username=yay
+[2025-12-23 16:30:32] INFO - request_id=8dc3f5f7-b5cf-48fd-9899-244d9dce4fbb action=getArtworkAllAdmin status=success total=2
+[2025-12-23 16:30:32] INFO - request_id=18d00215-f823-4706-a23c-28b5057f0cd7 action=getArtworkAllAdmin status=success total=2

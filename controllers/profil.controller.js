@@ -7,179 +7,188 @@ const logger = require('../utils/logger');
 // GET PROFILE BY ID
 // ====================
 exports.getProfile = async (req, res) => {
-    const userId = parseInt(req.params.id);
+  const userId = parseInt(req.params.id);
+  const rid = req.requestId;
 
-    logger.info("Request getProfile", { userId });
+  logger.info(
+    `request_id=${rid} action=getProfile status=start userId=${userId}`
+  );
 
-    try {
-        const user = await User.getUserById(userId);
+  try {
+    const user = await User.getUserById(userId);
 
-        if (!user) {
-            logger.warn("User tidak ditemukan (getProfile)", { userId });
-            return res.status(404).json({
-                status: false,
-                message: "User tidak ditemukan"
-            });
-        }
-
-        logger.info("Get profile berhasil", {
-            userId,
-            username: user.username
-        });
-
-        res.json({
-            status: true,
-            data: user
-        });
-
-    } catch (err) {
-        logger.error("DB Error saat getProfile", {
-            error: err.message,
-            stack: err.stack,
-            userId
-        });
-
-        res.status(500).json({
-            status: false,
-            message: "Database error"
-        });
+    if (!user) {
+      logger.warn(
+        `request_id=${rid} action=getProfile status=not_found userId=${userId}`
+      );
+      return res.status(404).json({
+        status: false,
+        message: "User tidak ditemukan"
+      });
     }
+
+    logger.info(
+      `request_id=${rid} action=getProfile status=success userId=${userId} username=${user.username}`
+    );
+
+    res.json({
+      status: true,
+      data: user
+    });
+
+  } catch (err) {
+    logger.error(
+      `request_id=${rid} action=getProfile status=error userId=${userId} error=${err.message}`
+    );
+
+    res.status(500).json({
+      status: false,
+      message: "Database error"
+    });
+  }
 };
 
 // ====================
 // UPDATE PROFILE
 // ====================
 exports.updateProfile = async (req, res) => {
-    const userId = parseInt(req.params.id);
-    const data = req.body;
+  const userId = parseInt(req.params.id);
+  const rid = req.requestId;
+  const data = req.body;
 
-    logger.info("Request updateProfile", { userId });
+  logger.info(
+    `request_id=${rid} action=updateProfile status=start userId=${userId}`
+  );
 
-    if (!data || Object.keys(data).length === 0) {
-        logger.warn("Update profile gagal: data kosong", { userId });
-        return res.status(400).json({
-            status: false,
-            message: "Data tidak valid"
-        });
+  if (!data || Object.keys(data).length === 0) {
+    logger.warn(
+      `request_id=${rid} action=updateProfile status=invalid userId=${userId} reason=empty_data`
+    );
+    return res.status(400).json({
+      status: false,
+      message: "Data tidak valid"
+    });
+  }
+
+  const updateData = {
+    username: data.username,
+    email: data.email,
+    name: data.name,
+    bio: data.bio
+  };
+
+  if (data.avatar) updateData.avatar = data.avatar;
+
+  try {
+    const updated = await User.updateUser(userId, updateData);
+
+    if (!updated) {
+      logger.warn(
+        `request_id=${rid} action=updateProfile status=not_updated userId=${userId}`
+      );
+      return res.status(400).json({
+        status: false,
+        message: "Profil gagal diperbarui"
+      });
     }
 
-    const updateData = {
-        username: data.username,
-        email: data.email,
-        name: data.name,
-        bio: data.bio
-    };
+    logger.info(
+      `request_id=${rid} action=updateProfile status=success userId=${userId}`
+    );
 
-    if (data.avatar) updateData.avatar = data.avatar;
+    res.json({
+      status: true,
+      message: "Profil berhasil diperbarui"
+    });
 
-    try {
-        const updated = await User.updateUser(userId, updateData);
+  } catch (err) {
+    logger.error(
+      `request_id=${rid} action=updateProfile status=error userId=${userId} error=${err.message}`
+    );
 
-        if (!updated) {
-            logger.warn("Update profile gagal (tidak ada row berubah)", {
-                userId,
-                updateData
-            });
-
-            return res.status(400).json({
-                status: false,
-                message: "Profil gagal diperbarui"
-            });
-        }
-
-        logger.info("Profil berhasil diperbarui", {
-            userId,
-            updateData
-        });
-
-        res.json({
-            status: true,
-            message: "Profil berhasil diperbarui"
-        });
-
-    } catch (err) {
-        logger.error("DB Error saat updateProfile", {
-            error: err.message,
-            stack: err.stack,
-            userId,
-            updateData
-        });
-
-        res.status(500).json({
-            status: false,
-            message: "Database error"
-        });
-    }
+    res.status(500).json({
+      status: false,
+      message: "Database error"
+    });
+  }
 };
 
 // ====================
 // UPLOAD AVATAR
 // ====================
 exports.uploadAvatar = async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  const rid = req.requestId;
 
-    if (req.method === 'OPTIONS') return res.sendStatus(200);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
 
-    try {
-        const { id_user, avatar_base64 } = req.body;
+  if (req.method === 'OPTIONS') return res.sendStatus(200);
 
-        if (!id_user || !avatar_base64) {
-            logger.warn("Upload avatar gagal: data tidak lengkap", { id_user });
-            return res.status(400).json({
-                status: false,
-                message: "Data tidak lengkap"
-            });
-        }
+  try {
+    const { id_user, avatar_base64 } = req.body;
 
-        const base64Data = avatar_base64.replace(/^data:image\/\w+;base64,/, '');
-        const buffer = Buffer.from(base64Data, 'base64');
+    logger.info(
+      `request_id=${rid} action=uploadAvatar status=start userId=${id_user}`
+    );
 
-        const filename = `avatar_${id_user}_${Date.now()}.png`;
-        const folder = path.join(__dirname, '../uploads/avatar');
-
-        if (!fs.existsSync(folder)) {
-            fs.mkdirSync(folder, { recursive: true });
-            logger.info("Folder avatar dibuat", { folder });
-        }
-
-        const filepath = path.join(folder, filename);
-        fs.writeFileSync(filepath, buffer);
-
-        const url = filename;
-
-        const updated = await User.updateUser(id_user, { avatar: url });
-
-        if (!updated) {
-            logger.warn("Avatar gagal disimpan ke DB", { id_user, url });
-            return res.status(500).json({
-                status: false,
-                message: "Gagal update avatar ke database"
-            });
-        }
-
-        logger.info("Avatar berhasil diunggah", {
-            id_user,
-            file: filename,
-            url
-        });
-
-        res.json({
-            status: true,
-            message: "Avatar berhasil diunggah",
-            avatar: url
-        });
-
-    } catch (err) {
-        logger.error("Gagal upload avatar", {
-            error: err.message,
-            stack: err.stack
-        });
-
-        res.status(500).json({
-            status: false,
-            message: "Gagal menyimpan avatar"
-        });
+    if (!id_user || !avatar_base64) {
+      logger.warn(
+        `request_id=${rid} action=uploadAvatar status=invalid userId=${id_user} reason=missing_data`
+      );
+      return res.status(400).json({
+        status: false,
+        message: "Data tidak lengkap"
+      });
     }
+
+    const base64Data = avatar_base64.replace(/^data:image\/\w+;base64,/, '');
+    const buffer = Buffer.from(base64Data, 'base64');
+
+    const filename = `avatar_${id_user}_${Date.now()}.png`;
+    const folder = path.join(__dirname, '../uploads/avatar');
+
+    if (!fs.existsSync(folder)) {
+      fs.mkdirSync(folder, { recursive: true });
+      logger.info(
+        `request_id=${rid} action=uploadAvatar status=folder_created folder=${folder}`
+      );
+    }
+
+    const filepath = path.join(folder, filename);
+    fs.writeFileSync(filepath, buffer);
+
+    const updated = await User.updateUser(id_user, { avatar: filename });
+
+    if (!updated) {
+      logger.warn(
+        `request_id=${rid} action=uploadAvatar status=db_failed userId=${id_user}`
+      );
+      return res.status(500).json({
+        status: false,
+        message: "Gagal update avatar ke database"
+      });
+    }
+
+    logger.info(
+      `request_id=${rid} action=uploadAvatar status=success userId=${id_user} file=${filename}`
+    );
+
+    res.json({
+      status: true,
+      message: "Avatar berhasil diunggah",
+      avatar: filename
+    });
+
+  } catch (err) {
+    logger.error(
+      `request_id=${rid} action=uploadAvatar status=error error=${err.message}`
+    );
+
+    res.status(500).json({
+      status: false,
+      message: "Gagal menyimpan avatar"
+    });
+  }
 };
+

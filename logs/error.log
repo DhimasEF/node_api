@@ -45,3 +45,10 @@
 [2025-12-17 12:29:21] ERROR - Login error
 [2025-12-17 12:37:29] ERROR - Login error
 [2025-12-17 15:24:50] ERROR - DB Error saat updateProfile
+[2025-12-23 11:22:36] ERROR - request_id=2a3a7f53-62d6-4485-b3a4-2bad9db19c32 action=uploadArtwork status=error error=Data truncated for column 'status' at row 1
+[2025-12-23 11:22:41] ERROR - request_id=85294209-5f9d-4ded-ab16-089a38c87476 action=uploadArtwork status=error error=Data truncated for column 'status' at row 1
+[2025-12-23 13:32:22] ERROR - request_id=e1d3143c-a40b-4de6-aaa5-a8b03409b9d6 action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:32:35] ERROR - request_id=180c19c1-38e8-46f9-a8b1-52bbc1b212b3 action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:32:46] ERROR - request_id=cfa03c60-23d3-4e05-8244-187e9dca7afa action=createOrder status=error error=Field 'total_paid' doesn't have a default value
+[2025-12-23 13:36:21] ERROR - request_id=e94b9665-9137-4c70-8bae-cdb91c06a086 action=createOrder status=error error=Field 'note' doesn't have a default value
+[2025-12-23 13:37:10] ERROR - request_id=b8ced813-a1d0-4582-8bec-a8766cbdf069 action=createOrder status=error error=Field 'note' doesn't have a default value

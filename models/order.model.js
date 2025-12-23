@@ -176,6 +176,54 @@ const Order = {
     return result.affectedRows > 0;
   },
 
+  updateAfterPaymentAccepted: async (id_order) => {
+    const conn = await db.getConnection();
+
+    try {
+      await conn.beginTransaction();
+
+      // 1. update order
+      const [orderResult] = await conn.query(
+        `UPDATE orders 
+        SET payment_status = 'paid',
+            order_status = 'completed',
+            updated_at = NOW()
+        WHERE id_order = ?`,
+        [id_order]
+      );
+
+      if (orderResult.affectedRows === 0) {
+        throw new Error("Order tidak ditemukan");
+      }
+
+      // 2. ambil artwork di order
+      const [items] = await conn.query(
+        `SELECT id_artwork 
+        FROM order_items 
+        WHERE id_order = ?`,
+        [id_order]
+      );
+
+      // 3. update artwork jadi sold
+      for (const item of items) {
+        await conn.query(
+          `UPDATE artworks 
+          SET status = 'sold'
+          WHERE id_artwork = ?`,
+          [item.id_artwork]
+        );
+      }
+
+      await conn.commit();
+      return true;
+
+    } catch (err) {
+      await conn.rollback();
+      throw err;
+    } finally {
+      conn.release();
+    }
+  }
 };
 
 module.exports = Order;

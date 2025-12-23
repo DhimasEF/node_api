@@ -3,6 +3,8 @@ const app = express();
 const PORT = 3000;
 const cors = require("cors");
 const db = require("./config/db"); // 🔥 INI WAJIB
+const { v4: uuidv4 } = require('uuid');
+const logger = require('./utils/logger');
 
 app.use(cors({
   origin: "*",
@@ -10,8 +12,41 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization", "Accept"]
 }));
 
+app.use((req, res, next) => {
+  req.requestId = uuidv4();
+  next();
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// 🔥 CLIENT CONTEXT (DARI FLUTTER HEADER)
+app.use((req, res, next) => {
+  req.context = {
+    ip: req.headers["x-client-ip"] || "unknown",
+    device: req.headers["x-client-device"] || "unknown",
+    platform: req.headers["x-client-platform"] || "unknown",
+  };
+  next();
+});
+
+
+app.use((req, res, next) => {
+  if (req.originalUrl.startsWith('/uploads')) {
+    return next();
+  }
+
+  const { ip, device, platform } = req.context;
+  const method = req.method;
+  const endpoint = req.originalUrl;
+
+  logger.info(
+    `request_id=${req.requestId} ip=${ip} device=${device} platform=${platform} method=${method} endpoint=${endpoint}`
+  );
+
+  next();
+});
+
 
 //routes
 const authRoutes = require("./routes/auth.routes");
