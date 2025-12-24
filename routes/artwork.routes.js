@@ -17,6 +17,7 @@ router.get("/draft", controller.getDraft);
 router.get("/detail/:id", controller.getDetail);
 router.get("/my/:id_user", controller.getByUser);
 router.get("/pending", controller.getPending);
+// router.get("/:id/download",controller.downloadArtwork);
 
 // upload multiple images
 router.post("/upload", upload.array("images", 10), controller.upload);

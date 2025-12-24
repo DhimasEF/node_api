@@ -401,3 +401,73 @@ exports.rejectPayment = async (req, res) => {
     });
   }
 };
+exports.downloadOrderArtwork= async (req, res) => {
+    const rid = req.requestId;
+    const id_order = req.params.id;
+
+    try {
+      logger.info(
+        `request_id=${rid} action=downloadOrderArtwork status=start id_order=${id_order}`
+      );
+
+      // 1️⃣ ambil id_artwork dari order
+      const orderItem = await Order.getOrderItemByOrder(id_order);
+
+      if (!orderItem) {
+        return res.status(404).json({
+          status: false,
+          message: "Order item not found",
+        });
+      }
+
+      const id_artwork = orderItem.id_artwork;
+
+      // 2️⃣ ambil semua image artwork
+      const images = await Artwork.getImagesByArtwork(id_artwork);
+
+      if (!images.length) {
+        return res.status(404).json({
+          status: false,
+          message: "No artwork images found",
+        });
+      }
+
+      // 3️⃣ header zip
+      res.setHeader(
+        "Content-Disposition",
+        `attachment; filename=order_${id_order}_artwork.zip`
+      );
+      res.setHeader("Content-Type", "application/zip");
+
+      const archive = archiver("zip", { zlib: { level: 9 } });
+      archive.pipe(res);
+
+      // 4️⃣ masukkan file ke zip
+      for (const img of images) {
+        const filePath = path.join(originalPath, img.image_url);
+
+        if (fs.existsSync(filePath)) {
+          archive.file(filePath, {
+            name: img.image_url,
+          });
+        }
+      }
+
+      await archive.finalize();
+
+      logger.info(
+        `request_id=${rid} action=downloadOrderArtwork status=success id_order=${id_order}`
+      );
+    } catch (err) {
+      logger.error(
+        `request_id=${rid} action=downloadOrderArtwork status=error error=${err.message}`
+      );
+
+      if (!res.headersSent) {
+        res.status(500).json({
+          status: false,
+          message: "Download failed",
+        });
+      }
+    }
+  };

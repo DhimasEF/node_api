@@ -223,7 +223,18 @@ const Order = {
     } finally {
       conn.release();
     }
-  }
+  },
+  getOrderItemByOrder: async (id_order) => {
+    const [rows] = await db.query(
+      `SELECT id_artwork
+      FROM order_items
+      WHERE id_order = ?
+      LIMIT 1`,
+      [id_order]
+    );
+
+    return rows[0];
+  },
 };
 
 module.exports = Order;

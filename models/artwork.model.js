@@ -205,4 +205,14 @@ module.exports = {
     );
     return true;
   },
+
+  getImagesByArtwork: async (id_artwork) => {
+    const [rows] = await db.query(
+      `SELECT image_url 
+       FROM artwork_images 
+       WHERE id_artwork = ?`,
+      [id_artwork]
+    );
+    return rows;
+  },
 };
