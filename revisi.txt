@@ -1,0 +1,12 @@
+1. Endpoint Full
+2. GET, POST, PUT, DELETE
+3. Payload
+	a. Get (http://host:port/endpoint/{id}/{asdasd}/{asdasdas})
+	b. POST (http://host:port/endpoint, body/parameter/payload : {"":""})
+	c. PUT (http://host:port/endpoint/{id}, body : {"":""})
+	d. DELETE (http://host:port/endpoint/{id})
+4. APIResponse
+	a. JSON
+5. ServerResponse
+	a. Full Response (Headers, UserAgent, UserHost, Referer, IPAddress)
+6. Appname

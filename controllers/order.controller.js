@@ -3,6 +3,7 @@ const Artwork = require("../models/artwork.model");
 const logger = require("../utils/logger");
 const path = require("path");
 const fs = require("fs");
+const archiver = require("archiver");
 
 // =======================
 // CREATE ORDER
@@ -401,73 +402,93 @@ exports.rejectPayment = async (req, res) => {
     });
   }
 };
-exports.downloadOrderArtwork= async (req, res) => {
-    const rid = req.requestId;
-    const id_order = req.params.id;
 
-    try {
-      logger.info(
-        `request_id=${rid} action=downloadOrderArtwork status=start id_order=${id_order}`
-      );
+exports.downloadOrderArtwork = async (req, res) => {
+  const rid = req.requestId;
+  const id_order = req.params.id;
 
-      // 1️⃣ ambil id_artwork dari order
-      const orderItem = await Order.getOrderItemByOrder(id_order);
+  try {
+    logger.info(
+      `request_id=${rid} action=downloadOrderArtwork status=start id_order=${id_order}`
+    );
 
-      if (!orderItem) {
-        return res.status(404).json({
-          status: false,
-          message: "Order item not found",
-        });
-      }
+    // 1️⃣ ambil order item
+    const orderItem = await Order.getOrderItemByOrder(id_order);
 
-      const id_artwork = orderItem.id_artwork;
+    if (!orderItem) {
+      return res.status(404).json({
+        status: false,
+        message: "Order item not found",
+      });
+    }
 
-      // 2️⃣ ambil semua image artwork
-      const images = await Artwork.getImagesByArtwork(id_artwork);
+    const id_artwork = orderItem.id_artwork;
 
-      if (!images.length) {
-        return res.status(404).json({
-          status: false,
-          message: "No artwork images found",
-        });
-      }
+    // 2️⃣ ambil image artwork
+    const images = await Artwork.getImagesByArtwork(id_artwork);
 
-      // 3️⃣ header zip
-      res.setHeader(
-        "Content-Disposition",
-        `attachment; filename=order_${id_order}_artwork.zip`
-      );
-      res.setHeader("Content-Type", "application/zip");
+    if (!images.length) {
+      return res.status(404).json({
+        status: false,
+        message: "No artwork images found",
+      });
+    }
 
-      const archive = archiver("zip", { zlib: { level: 9 } });
-      archive.pipe(res);
+    // 3️⃣ path ORIGINAL FILE
+    const originalPath = path.join(
+      __dirname,
+      "..",
+      "uploads",
+      "artworks",
+      "original"
+    );
 
-      // 4️⃣ masukkan file ke zip
-      for (const img of images) {
-        const filePath = path.join(originalPath, img.image_url);
+    // 4️⃣ header ZIP
+    res.setHeader(
+      "Content-Disposition",
+      `attachment; filename=order_${id_order}_artwork.zip`
+    );
+    res.setHeader("Content-Type", "application/zip");
 
-        if (fs.existsSync(filePath)) {
-          archive.file(filePath, {
-            name: img.image_url,
-          });
-        }
-      }
+    const archive = archiver("zip", { zlib: { level: 9 } });
+    archive.pipe(res);
 
-      await archive.finalize();
+    // 5️⃣ masukin file
+    for (const img of images) {
+      const filename = path.basename(img.image_url);
+      const filePath = path.join(originalPath, filename);
 
-      logger.info(
-        `request_id=${rid} action=downloadOrderArtwork status=success id_order=${id_order}`
-      );
-    } catch (err) {
-      logger.error(
-        `request_id=${rid} action=downloadOrderArtwork status=error error=${err.message}`
-      );
+      console.log("======== DEBUG ZIP ========");
+      console.log("DB filename :", filename);
+      console.log("OriginalPath:", originalPath);
+      console.log("Full path   :", filePath);
+      console.log("File exist? :", fs.existsSync(filePath));
+      console.log("===========================");
+      console.log("ZIP ADD:", filePath);
 
-      if (!res.headersSent) {
-        res.status(500).json({
-          status: false,
-          message: "Download failed",
-        });
+      if (fs.existsSync(filePath)) {
+        archive.file(filePath, { name: filename });
+      } else {
+        console.warn("FILE NOT FOUND:", filePath);
       }
     }
-  };
+
+    await archive.finalize();
+
+    logger.info(
+      `request_id=${rid} action=downloadOrderArtwork status=success id_order=${id_order}`
+    );
+
+  } catch (err) {
+    logger.error(
+      `request_id=${rid} action=downloadOrderArtwork status=error error=${err.message}`
+    );
+
+    if (!res.headersSent) {
+      res.status(500).json({
+        status: false,
+        message: "Download failed",
+      });
+    }
+  }
+};

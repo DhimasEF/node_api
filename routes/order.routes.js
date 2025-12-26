@@ -20,7 +20,7 @@ router.get("/all-order", orderCtrl.getAllOrdersAdmin);
 router.get("/detail", orderCtrl.detail);
 router.post('/accept-payment', orderCtrl.acceptPayment);
 router.post('/reject-payment', orderCtrl.rejectPayment);
-router.get("/orders/:id/download", orderCtrl.downloadOrderArtwork);
+router.get('/:id/download', orderCtrl.downloadOrderArtwork);
 
 
 router.post("/upload-payment", upload.single("bukti"), orderCtrl.uploadPayment);
