@@ -7,44 +7,56 @@ const logger = require('../utils/logger');
 // GET PROFILE BY ID
 // ====================
 exports.getProfile = async (req, res) => {
-  const userId = parseInt(req.params.id);
-  const rid = req.requestId;
+  const request_id = req.requestId;
+  const userId = Number(req.params.id);
 
-  logger.info(
-    `request_id=${rid} action=getProfile status=start userId=${userId}`
-  );
+  logger.info({
+    request_id,
+    action: "getProfile",
+    status: "start",
+    userId
+  });
 
   try {
     const user = await User.getUserById(userId);
 
     if (!user) {
-      logger.warn(
-        `request_id=${rid} action=getProfile status=not_found userId=${userId}`
-      );
-      return res.status(404).json({
-        status: false,
-        message: "User tidak ditemukan"
+      logger.warn({
+        request_id,
+        action: "getProfile",
+        status: "not_found",
+        userId
       });
+
+      return res.apiResponse(
+        { message: "User tidak ditemukan" },
+        404
+      );
     }
 
-    logger.info(
-      `request_id=${rid} action=getProfile status=success userId=${userId} username=${user.username}`
-    );
-
-    res.json({
-      status: true,
-      data: user
+    logger.info({
+      request_id,
+      action: "getProfile",
+      status: "success",
+      userId,
+      username: user.username
     });
 
-  } catch (err) {
-    logger.error(
-      `request_id=${rid} action=getProfile status=error userId=${userId} error=${err.message}`
-    );
+    return res.apiResponse({ data: user }, 200);
 
-    res.status(500).json({
-      status: false,
-      message: "Database error"
+  } catch (error) {
+    logger.error({
+      request_id,
+      action: "getProfile",
+      status: "error",
+      userId,
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Database error" },
+      500
+    );
   }
 };
 
@@ -52,22 +64,30 @@ exports.getProfile = async (req, res) => {
 // UPDATE PROFILE
 // ====================
 exports.updateProfile = async (req, res) => {
-  const userId = parseInt(req.params.id);
-  const rid = req.requestId;
+  const request_id = req.requestId;
+  const userId = Number(req.params.id);
   const data = req.body;
 
-  logger.info(
-    `request_id=${rid} action=updateProfile status=start userId=${userId}`
-  );
+  logger.info({
+    request_id,
+    action: "updateProfile",
+    status: "start",
+    userId
+  });
 
   if (!data || Object.keys(data).length === 0) {
-    logger.warn(
-      `request_id=${rid} action=updateProfile status=invalid userId=${userId} reason=empty_data`
-    );
-    return res.status(400).json({
-      status: false,
-      message: "Data tidak valid"
+    logger.warn({
+      request_id,
+      action: "updateProfile",
+      status: "invalid",
+      userId,
+      reason: "empty_payload"
     });
+
+    return res.apiResponse(
+      { message: "Data tidak valid" },
+      400
+    );
   }
 
   const updateData = {
@@ -83,33 +103,44 @@ exports.updateProfile = async (req, res) => {
     const updated = await User.updateUser(userId, updateData);
 
     if (!updated) {
-      logger.warn(
-        `request_id=${rid} action=updateProfile status=not_updated userId=${userId}`
-      );
-      return res.status(400).json({
-        status: false,
-        message: "Profil gagal diperbarui"
+      logger.warn({
+        request_id,
+        action: "updateProfile",
+        status: "not_updated",
+        userId
       });
+
+      return res.apiResponse(
+        { message: "Profil gagal diperbarui" },
+        400
+      );
     }
 
-    logger.info(
-      `request_id=${rid} action=updateProfile status=success userId=${userId}`
-    );
-
-    res.json({
-      status: true,
-      message: "Profil berhasil diperbarui"
+    logger.info({
+      request_id,
+      action: "updateProfile",
+      status: "success",
+      userId
     });
 
-  } catch (err) {
-    logger.error(
-      `request_id=${rid} action=updateProfile status=error userId=${userId} error=${err.message}`
+    return res.apiResponse(
+      { message: "Profil berhasil diperbarui" },
+      200
     );
 
-    res.status(500).json({
-      status: false,
-      message: "Database error"
+  } catch (error) {
+    logger.error({
+      request_id,
+      action: "updateProfile",
+      status: "error",
+      userId,
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Database error" },
+      500
+    );
   }
 };
 
@@ -117,42 +148,58 @@ exports.updateProfile = async (req, res) => {
 // UPLOAD AVATAR
 // ====================
 exports.uploadAvatar = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  // CORS (lebih baik di middleware global)
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
 
-  if (req.method === 'OPTIONS') return res.sendStatus(200);
+  if (req.method === "OPTIONS") return res.sendStatus(200);
 
   try {
     const { id_user, avatar_base64 } = req.body;
 
-    logger.info(
-      `request_id=${rid} action=uploadAvatar status=start userId=${id_user}`
-    );
+    logger.info({
+      request_id,
+      action: "uploadAvatar",
+      status: "start",
+      id_user
+    });
 
     if (!id_user || !avatar_base64) {
-      logger.warn(
-        `request_id=${rid} action=uploadAvatar status=invalid userId=${id_user} reason=missing_data`
-      );
-      return res.status(400).json({
-        status: false,
-        message: "Data tidak lengkap"
+      logger.warn({
+        request_id,
+        action: "uploadAvatar",
+        status: "invalid",
+        id_user,
+        reason: "missing_data"
       });
+
+      return res.apiResponse(
+        { message: "Data tidak lengkap" },
+        400
+      );
     }
 
-    const base64Data = avatar_base64.replace(/^data:image\/\w+;base64,/, '');
-    const buffer = Buffer.from(base64Data, 'base64');
+    const base64Data = avatar_base64.replace(
+      /^data:image\/\w+;base64,/,
+      ""
+    );
+    const buffer = Buffer.from(base64Data, "base64");
 
     const filename = `avatar_${id_user}_${Date.now()}.png`;
-    const folder = path.join(__dirname, '../uploads/avatar');
+    const folder = path.join(__dirname, "../uploads/avatar");
 
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder, { recursive: true });
-      logger.info(
-        `request_id=${rid} action=uploadAvatar status=folder_created folder=${folder}`
-      );
+
+      logger.info({
+        request_id,
+        action: "uploadAvatar",
+        status: "folder_created",
+        folder
+      });
     }
 
     const filepath = path.join(folder, filename);
@@ -161,34 +208,46 @@ exports.uploadAvatar = async (req, res) => {
     const updated = await User.updateUser(id_user, { avatar: filename });
 
     if (!updated) {
-      logger.warn(
-        `request_id=${rid} action=uploadAvatar status=db_failed userId=${id_user}`
-      );
-      return res.status(500).json({
-        status: false,
-        message: "Gagal update avatar ke database"
+      logger.warn({
+        request_id,
+        action: "uploadAvatar",
+        status: "db_failed",
+        id_user
       });
+
+      return res.apiResponse(
+        { message: "Gagal update avatar ke database" },
+        500
+      );
     }
 
-    logger.info(
-      `request_id=${rid} action=uploadAvatar status=success userId=${id_user} file=${filename}`
-    );
-
-    res.json({
-      status: true,
-      message: "Avatar berhasil diunggah",
-      avatar: filename
+    logger.info({
+      request_id,
+      action: "uploadAvatar",
+      status: "success",
+      id_user,
+      file: filename
     });
 
-  } catch (err) {
-    logger.error(
-      `request_id=${rid} action=uploadAvatar status=error error=${err.message}`
+    return res.apiResponse(
+      {
+        message: "Avatar berhasil diunggah",
+        avatar: filename
+      },
+      200
     );
 
-    res.status(500).json({
-      status: false,
-      message: "Gagal menyimpan avatar"
+  } catch (error) {
+    logger.error({
+      request_id,
+      action: "uploadAvatar",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Gagal menyimpan avatar" },
+      500
+    );
   }
 };
-

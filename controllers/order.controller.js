@@ -9,58 +9,92 @@ const archiver = require("archiver");
 // CREATE ORDER
 // =======================
 exports.create = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
 
   try {
     const { id_buyer, id_artwork } = req.body;
 
-    logger.info(
-      `request_id=${rid} action=createOrder status=start id_buyer=${id_buyer} id_artwork=${id_artwork}`
-    );
+    logger.info({
+      request_id,
+      action: "createOrder",
+      status: "start",
+      payload: { id_buyer, id_artwork }
+    });
 
+    /* =========================
+       VALIDATION
+    ========================= */
     if (!id_buyer || !id_artwork) {
-      logger.warn(
-        `request_id=${rid} action=createOrder status=invalid reason=missing_data`
-      );
-      return res.json({
-        status: false,
-        message: "Invalid request"
+      logger.warn({
+        request_id,
+        action: "createOrder",
+        status: "invalid",
+        reason: "missing_data"
       });
+
+      return res.apiResponse(
+        { message: "Invalid request data" },
+        400
+      );
     }
 
+    /* =========================
+       CHECK ARTWORK
+    ========================= */
     const art = await Artwork.getDetail(id_artwork);
     if (!art) {
-      logger.warn(
-        `request_id=${rid} action=createOrder status=not_found id_artwork=${id_artwork}`
-      );
-      return res.json({
-        status: false,
-        message: "Artwork not found"
+      logger.warn({
+        request_id,
+        action: "createOrder",
+        status: "not_found",
+        id_artwork
       });
+
+      return res.apiResponse(
+        { message: "Artwork not found" },
+        404
+      );
     }
 
     if (art.status === "sold") {
-      logger.warn(
-        `request_id=${rid} action=createOrder status=invalid reason=artwork_sold id_artwork=${id_artwork}`
-      );
-      return res.json({
-        status: false,
-        message: "Artwork already sold"
+      logger.warn({
+        request_id,
+        action: "createOrder",
+        status: "invalid",
+        reason: "artwork_sold",
+        id_artwork
       });
+
+      return res.apiResponse(
+        { message: "Artwork already sold" },
+        409
+      );
     }
 
+    /* =========================
+       CHECK EXISTING ORDER
+    ========================= */
     const existing = await Order.checkExistingOrder(id_buyer, id_artwork);
     if (existing) {
-      logger.warn(
-        `request_id=${rid} action=createOrder status=exists id_order=${existing.id_order}`
-      );
-      return res.json({
-        status: false,
-        message: "You already ordered this artwork",
+      logger.warn({
+        request_id,
+        action: "createOrder",
+        status: "exists",
         id_order: existing.id_order
       });
+
+      return res.apiResponse(
+        {
+          message: "You already ordered this artwork",
+          id_order: existing.id_order
+        },
+        409
+      );
     }
 
+    /* =========================
+       CREATE ORDER
+    ========================= */
     const id_order = await Order.insertOrder({
       id_buyer,
       total_price: art.price,
@@ -74,49 +108,65 @@ exports.create = async (req, res) => {
       price: art.price
     });
 
-    logger.info(
-      `request_id=${rid} action=createOrder status=success id_order=${id_order} id_buyer=${id_buyer}`
-    );
-
-    res.json({
-      status: true,
-      message: "Order created successfully",
-      id_order
+    logger.info({
+      request_id,
+      action: "createOrder",
+      status: "success",
+      id_order,
+      id_buyer
     });
+
+    return res.apiResponse(
+      {
+        message: "Order created successfully",
+        id_order
+      },
+      201
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=createOrder status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "createOrder",
+      status: "error",
+      error: error.message,
+      stack: error.stack
     });
+
+    return res.apiResponse(
+      { message: "Internal server error" },
+      500
+    );
   }
 };
-
 
 // =======================
 // MY ORDER AS BUYER
 // =======================
 exports.myAsBuyer = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { id_buyer } = req.query;
 
-  logger.info(
-    `request_id=${rid} action=myOrderBuyer status=start id_buyer=${id_buyer}`
-  );
+  logger.info({
+    request_id,
+    action: "myOrderBuyer",
+    status: "start",
+    query: { id_buyer }
+  });
 
   try {
     if (!id_buyer) {
-      logger.warn(
-        `request_id=${rid} action=myOrderBuyer status=invalid reason=missing_id`
-      );
-      return res.json({
-        status: false,
-        message: "id_buyer tidak boleh kosong",
-        data: []
+      logger.warn({
+        request_id,
+        action: "myOrderBuyer",
+        status: "invalid",
+        reason: "missing_id_buyer"
       });
+
+      return res.apiResponse(
+        { message: "id_buyer tidak boleh kosong", data: [] },
+        400
+      );
     }
 
     const orders = await Order.getMyOrders(id_buyer);
@@ -124,36 +174,41 @@ exports.myAsBuyer = async (req, res) => {
       o.images = o.images ? o.images.split(",") : [];
     });
 
-    logger.info(
-      `request_id=${rid} action=myOrderBuyer status=success total=${orders.length}`
-    );
-
-    res.json({
-      status: true,
-      data: orders
+    logger.info({
+      request_id,
+      action: "myOrderBuyer",
+      status: "success",
+      total: orders.length
     });
+
+    return res.apiResponse(orders, 200);
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=myOrderBuyer status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "myOrderBuyer",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
-
 
 // =======================
 // MY ORDER AS ADMIN
 // =======================
 exports.getAllOrdersAdmin = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
 
-  logger.info(
-    `request_id=${rid} action=listOrderAdmin status=start`
-  );
+  logger.info({
+    request_id,
+    action: "listOrderAdmin",
+    status: "start"
+  });
 
   try {
     const orders = await Order.getAllOrders();
@@ -161,74 +216,85 @@ exports.getAllOrdersAdmin = async (req, res) => {
       o.images = o.images ? o.images.split(",") : [];
     });
 
-    logger.info(
-      `request_id=${rid} action=listOrderAdmin status=success total=${orders.length}`
-    );
-
-    res.json({
-      status: true,
-      data: orders
+    logger.info({
+      request_id,
+      action: "listOrderAdmin",
+      status: "success",
+      total: orders.length
     });
+
+    return res.apiResponse(orders, 200);
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=listOrderAdmin status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "listOrderAdmin",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
-
 
 // =======================
 // MY ORDER AS CREATOR
 // =======================
 exports.myAsCreator = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { id_creator } = req.query;
 
-  logger.info(
-    `request_id=${rid} action=myOrderCreator status=start id_creator=${id_creator}`
-  );
+  logger.info({
+    request_id,
+    action: "myOrderCreator",
+    status: "start",
+    query: { id_creator }
+  });
 
   try {
     if (!id_creator) {
-      logger.warn(
-        `request_id=${rid} action=myOrderCreator status=invalid reason=missing_id_creator`
-      );
-      return res.json({
-        status: false,
-        message: "id_creator tidak boleh kosong",
-        data: []
+      logger.warn({
+        request_id,
+        action: "myOrderCreator",
+        status: "invalid",
+        reason: "missing_id_creator"
       });
+
+      return res.apiResponse(
+        { message: "id_creator tidak boleh kosong", data: [] },
+        400
+      );
     }
 
     const orders = await Order.getOrdersByCreator(id_creator);
-
     orders.forEach(o => {
       o.images = o.images ? o.images.split(",") : [];
     });
 
-    logger.info(
-      `request_id=${rid} action=myOrderCreator status=success id_creator=${id_creator} total=${orders.length}`
-    );
-
-    res.json({
-      status: true,
-      data: orders
+    logger.info({
+      request_id,
+      action: "myOrderCreator",
+      status: "success",
+      total: orders.length
     });
+
+    return res.apiResponse(orders, 200);
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=myOrderCreator status=error id_creator=${id_creator} error=${error.message}`
-    );
-
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "myOrderCreator",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
 
@@ -236,23 +302,22 @@ exports.myAsCreator = async (req, res) => {
 // ORDER DETAIL
 // =======================
 exports.detail = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { id_order } = req.query;
 
-  logger.info(
-    `request_id=${rid} action=orderDetail status=start id_order=${id_order}`
-  );
+  logger.info({
+    request_id,
+    action: "orderDetail",
+    status: "start",
+    query: { id_order }
+  });
 
   try {
     if (!id_order) {
-      logger.warn(
-        `request_id=${rid} action=orderDetail status=invalid reason=missing_id`
+      return res.apiResponse(
+        { message: "id_order tidak boleh kosong", data: [] },
+        400
       );
-      return res.json({
-        status: false,
-        message: "id_order tidak boleh kosong",
-        data: []
-      });
     }
 
     const orders = await Order.getOrderDetail(id_order);
@@ -260,181 +325,234 @@ exports.detail = async (req, res) => {
       o.images = o.images ? o.images.split(",") : [];
     });
 
-    logger.info(
-      `request_id=${rid} action=orderDetail status=success id_order=${id_order}`
-    );
-
-    res.json({
-      status: true,
-      data: orders
+    logger.info({
+      request_id,
+      action: "orderDetail",
+      status: "success"
     });
+
+    return res.apiResponse(orders, 200);
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=orderDetail status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "orderDetail",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
-
 
 // =======================
 // UPLOAD PAYMENT
 // =======================
 exports.uploadPayment = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
+  const { id_order, amount } = req.body;
+  const file = req.file;
+
+  logger.info({
+    request_id,
+    action: "uploadPayment",
+    status: "start",
+    payload: { id_order, amount }
+  });
 
   try {
-    const { id_order, amount } = req.body;
-    const file = req.file;
-
-    logger.info(
-      `request_id=${rid} action=uploadPayment status=start id_order=${id_order}`
-    );
-
     if (!id_order || !amount || !file) {
-      logger.warn(
-        `request_id=${rid} action=uploadPayment status=invalid`
+      return res.apiResponse(
+        { message: "Data tidak lengkap" },
+        400
       );
-      return res.status(400).json({
-        status: false,
-        message: "Data tidak lengkap"
-      });
     }
 
     const order = await Order.getOrder(id_order);
     if (!order) {
-      logger.warn(
-        `request_id=${rid} action=uploadPayment status=not_found id_order=${id_order}`
+      return res.apiResponse(
+        { message: "Order tidak ditemukan" },
+        404
       );
-      return res.status(404).json({
-        status: false,
-        message: "Order tidak ditemukan"
-      });
     }
 
     await Order.updatePaymentProof(id_order, amount, file.filename);
 
-    logger.info(
-      `request_id=${rid} action=uploadPayment status=success id_order=${id_order} amount=${amount}`
-    );
-
-    res.json({
-      status: true,
-      message: "Bukti pembayaran berhasil diupload"
+    logger.info({
+      request_id,
+      action: "uploadPayment",
+      status: "success",
+      id_order
     });
+
+    return res.apiResponse(
+      { message: "Bukti pembayaran berhasil diupload" },
+      200
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=uploadPayment status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "uploadPayment",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
-
 
 exports.acceptPayment = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { id_order } = req.body;
 
-  logger.info(
-    `request_id=${rid} action=acceptPayment status=start id_order=${id_order}`
-  );
+  logger.info({
+    request_id,
+    action: "acceptPayment",
+    status: "start",
+    payload: { id_order }
+  });
 
   try {
+    if (!id_order) {
+      return res.apiResponse(
+        { message: "id_order tidak boleh kosong" },
+        400
+      );
+    }
+
+    const order = await Order.getOrder(id_order);
+    if (!order) {
+      return res.apiResponse(
+        { message: "Order tidak ditemukan" },
+        404
+      );
+    }
+
     await Order.updateAfterPaymentAccepted(id_order);
 
-    logger.info(
-      `request_id=${rid} action=acceptPayment status=success id_order=${id_order}`
-    );
-
-    res.json({
-      status: true,
-      message: "Pembayaran berhasil di-ACC dan order diselesaikan"
+    logger.info({
+      request_id,
+      action: "acceptPayment",
+      status: "success",
+      id_order
     });
+
+    return res.apiResponse(
+      { message: "Pembayaran berhasil di-ACC dan order diselesaikan" },
+      200
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=acceptPayment status=error id_order=${id_order} error=${error.message}`
-    );
-
-    res.status(500).json({
-      status: false,
-      message: "Gagal memproses pembayaran"
+    logger.error({
+      request_id,
+      action: "acceptPayment",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Gagal memproses pembayaran" },
+      500
+    );
   }
 };
 
-
 exports.rejectPayment = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { id_order } = req.body;
 
-  logger.info(
-    `request_id=${rid} action=rejectPayment status=start id_order=${id_order}`
-  );
+  logger.info({
+    request_id,
+    action: "rejectPayment",
+    status: "start",
+    payload: { id_order }
+  });
 
   try {
-    await Order.updateStatus(id_order, 'rejected');
+    if (!id_order) {
+      return res.apiResponse(
+        { message: "id_order tidak boleh kosong" },
+        400
+      );
+    }
 
-    logger.info(
-      `request_id=${rid} action=rejectPayment status=success id_order=${id_order}`
-    );
+    const order = await Order.getOrder(id_order);
+    if (!order) {
+      return res.apiResponse(
+        { message: "Order tidak ditemukan" },
+        404
+      );
+    }
 
-    res.json({
-      status: true,
-      message: "Pembayaran berhasil ditolak"
+    await Order.updateStatus(id_order, "rejected");
+
+    logger.info({
+      request_id,
+      action: "rejectPayment",
+      status: "success",
+      id_order
     });
+
+    return res.apiResponse(
+      { message: "Pembayaran berhasil ditolak" },
+      200
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=rejectPayment status=error error=${error.message}`
-    );
-    res.status(500).json({
-      status: false,
-      message: "Server error"
+    logger.error({
+      request_id,
+      action: "rejectPayment",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Server error" },
+      500
+    );
   }
 };
 
 exports.downloadOrderArtwork = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const id_order = req.params.id;
 
+  logger.info({
+    request_id,
+    action: "downloadOrderArtwork",
+    status: "start",
+    params: { id_order }
+  });
+
   try {
-    logger.info(
-      `request_id=${rid} action=downloadOrderArtwork status=start id_order=${id_order}`
-    );
-
-    // 1️⃣ ambil order item
     const orderItem = await Order.getOrderItemByOrder(id_order);
-
     if (!orderItem) {
+      logger.warn({
+        request_id,
+        action: "downloadOrderArtwork",
+        status: "not_found",
+        id_order
+      });
+
       return res.status(404).json({
-        status: false,
-        message: "Order item not found",
+        message: "Order item not found"
       });
     }
 
-    const id_artwork = orderItem.id_artwork;
-
-    // 2️⃣ ambil image artwork
-    const images = await Artwork.getImagesByArtwork(id_artwork);
-
+    const images = await Artwork.getImagesByArtwork(orderItem.id_artwork);
     if (!images.length) {
       return res.status(404).json({
-        status: false,
-        message: "No artwork images found",
+        message: "No artwork images found"
       });
     }
 
-    // 3️⃣ path ORIGINAL FILE
     const originalPath = path.join(
       __dirname,
       "..",
@@ -443,7 +561,6 @@ exports.downloadOrderArtwork = async (req, res) => {
       "original"
     );
 
-    // 4️⃣ header ZIP
     res.setHeader(
       "Content-Disposition",
       `attachment; filename=order_${id_order}_artwork.zip`
@@ -453,41 +570,42 @@ exports.downloadOrderArtwork = async (req, res) => {
     const archive = archiver("zip", { zlib: { level: 9 } });
     archive.pipe(res);
 
-    // 5️⃣ masukin file
     for (const img of images) {
       const filename = path.basename(img.image_url);
       const filePath = path.join(originalPath, filename);
 
-      console.log("======== DEBUG ZIP ========");
-      console.log("DB filename :", filename);
-      console.log("OriginalPath:", originalPath);
-      console.log("Full path   :", filePath);
-      console.log("File exist? :", fs.existsSync(filePath));
-      console.log("===========================");
-      console.log("ZIP ADD:", filePath);
-
       if (fs.existsSync(filePath)) {
         archive.file(filePath, { name: filename });
       } else {
-        console.warn("FILE NOT FOUND:", filePath);
+        logger.warn({
+          request_id,
+          action: "downloadOrderArtwork",
+          status: "file_missing",
+          filePath
+        });
       }
     }
 
     await archive.finalize();
 
-    logger.info(
-      `request_id=${rid} action=downloadOrderArtwork status=success id_order=${id_order}`
-    );
+    logger.info({
+      request_id,
+      action: "downloadOrderArtwork",
+      status: "success",
+      id_order
+    });
 
-  } catch (err) {
-    logger.error(
-      `request_id=${rid} action=downloadOrderArtwork status=error error=${err.message}`
-    );
+  } catch (error) {
+    logger.error({
+      request_id,
+      action: "downloadOrderArtwork",
+      status: "error",
+      error: error.message
+    });
 
     if (!res.headersSent) {
       res.status(500).json({
-        status: false,
-        message: "Download failed",
+        message: "Download failed"
       });
     }
   }

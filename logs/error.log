@@ -1,25 +1,3 @@
-[2025-12-26 13:34:41] ERROR - request_id=eea981e7-596d-47e8-8477-e9f22146147d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:34:42] ERROR - request_id=31ec910e-4c82-4a86-9ae0-7602b11fc9e1 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:34:48] ERROR - request_id=590a3cb6-9b01-4d38-8b09-0a624fa4683d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:18] ERROR - request_id=3f5be65f-89b6-4f30-ae77-7f17a15c2d5c action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:21] ERROR - request_id=6d33fd6f-0db4-493c-99f8-40076c59e74d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:22] ERROR - request_id=afbbc43f-d55b-472d-957d-fb1e81002446 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:22] ERROR - request_id=a00e1698-91df-4aaf-b34d-3950aabe8a4b action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:22] ERROR - request_id=8c3b3482-2442-4f0e-a127-70b6ed2809a2 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:22] ERROR - request_id=2927d68d-f7a5-4be3-a521-0456e154deca action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:23] ERROR - request_id=f476f60a-e519-45bf-9763-6c1f285c2efa action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:23] ERROR - request_id=d6e92404-8d97-48b6-a7c9-8600154a6e94 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:23] ERROR - request_id=66a8c2a3-b251-47d0-843b-7442724f768d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:24] ERROR - request_id=0494a66e-b731-4878-95f5-1656d81c9635 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:24] ERROR - request_id=f9b073b5-c995-47aa-b4ef-0f20cd278bb7 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:24] ERROR - request_id=b9cc72ed-c20c-4c5d-81a9-d42721ff0843 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:24] ERROR - request_id=e3a64f76-0c03-444d-96d3-d50edff381e2 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:24] ERROR - request_id=6ade0718-333c-47a7-93ee-631ed6f8dc36 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:25] ERROR - request_id=31d68e71-5bb9-4ebc-a863-a75b228b9c7d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:25] ERROR - request_id=b5014d6d-965f-4835-869a-7d8fef63554f action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:26] ERROR - request_id=196848fe-441e-4d69-a97f-e7bbac5c1c0d action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:26] ERROR - request_id=d38ac450-f448-47b6-a2b6-7b939c6a6794 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:35:26] ERROR - request_id=9ba3a586-5599-4bcc-acb2-ee64787e85e6 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 13:36:26] ERROR - request_id=cab76ac8-641b-4b1c-9a00-fc3673a0fd41 action=downloadOrderArtwork status=error error=archiver is not defined
-[2025-12-26 14:16:15] ERROR - request_id=2962913e-06c6-4264-bdf1-19037440bcca action=register status=error error=Field 'name' doesn't have a default value
-[2025-12-26 14:18:49] ERROR - request_id=ca88e045-3b6b-450b-b483-af56ab07295f action=register status=error error=Field 'token_login' doesn't have a default value
+{"level":"error","message":{"action":"login","error":"res.apiResponse is not a function","request_id":"d86ff8f7-1211-408c-991b-c13a6ceddf30","status":"error"},"timestamp":"2025-12-29 12:13:40"}
+{"level":"error","message":{"action":"login","error":"res.apiResponse is not a function","request_id":"b69ed3fe-64d4-43e6-9049-8ff413c0abdd","status":"error"},"timestamp":"2025-12-29 12:13:54"}
+{"level":"error","message":{"action":"login","error":"res.apiResponse is not a function","request_id":"45ec1ebb-e475-45bb-ad24-a6539edc0fd3","status":"error"},"timestamp":"2025-12-29 12:14:02"}

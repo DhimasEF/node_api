@@ -9,44 +9,60 @@ const secret_key = "flystudio_secret_key";
 // LOGIN
 // =====================
 exports.login = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { username, password } = req.body;
 
-  logger.info(
-    `request_id=${rid} action=login status=start username=${username}`
-  );
+  logger.info({
+    request_id,
+    action: "login",
+    status: "start",
+    payload: { username }
+  });
 
   try {
     if (!username || !password) {
-      logger.warn(
-        `request_id=${rid} action=login status=invalid reason=missing_field`
-      );
-      return res.json({
-        status: false,
-        message: "Username dan password harus diisi"
+      logger.warn({
+        request_id,
+        action: "login",
+        status: "invalid",
+        reason: "missing_field"
       });
+
+      return res.apiResponse(
+        { message: "Username dan password harus diisi" },
+        400
+      );
     }
 
     const user = await User.getByUsername(username);
     if (!user) {
-      logger.warn(
-        `request_id=${rid} action=login status=not_found username=${username}`
-      );
-      return res.json({
-        status: false,
-        message: "User tidak ditemukan"
+      logger.warn({
+        request_id,
+        action: "login",
+        status: "not_found",
+        username
       });
+
+      return res.apiResponse(
+        { message: "User tidak ditemukan" },
+        404
+      );
     }
 
     const match = await bcrypt.compare(password, user.password);
     if (!match) {
-      logger.warn(
-        `request_id=${rid} action=login status=unauthorized reason=wrong_password username=${username}`
-      );
-      return res.json({
-        status: false,
-        message: "Password salah"
+      logger.warn({
+        request_id,
+        action: "login",
+        status: "unauthorized",
+        reason: "wrong_password",
+        user_id: user.id_user
       });
+
+      return res.apiResponse(
+        { message: "Password salah" },
+        401
+      );
     }
 
     const payload = {
@@ -59,25 +75,35 @@ exports.login = async (req, res) => {
     const token = jwt.sign(payload, secret_key, { expiresIn: "24h" });
     await User.updateToken(user.id_user, token);
 
-    logger.info(
-      `request_id=${rid} action=login status=success userId=${user.id_user} role=${user.role}`
-    );
-
-    return res.json({
-      status: true,
-      message: "Login berhasil",
-      token,
-      user: payload
+    logger.info({
+      request_id,
+      action: "login",
+      status: "success",
+      user_id: user.id_user,
+      role: user.role
     });
+
+    return res.apiResponse(
+      {
+        message: "Login berhasil",
+        token,
+        user: payload
+      },
+      200
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=login status=error error=${error.message}`
-    );
-    return res.status(500).json({
-      status: false,
-      message: "Terjadi kesalahan server"
+    logger.error({
+      request_id,
+      action: "login",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Terjadi kesalahan server" },
+      500
+    );
   }
 };
 
@@ -85,36 +111,47 @@ exports.login = async (req, res) => {
 // REGISTER
 // =====================
 exports.register = async (req, res) => {
-  const rid = req.requestId;
+  const request_id = req.requestId;
   const { username, password, email } = req.body;
 
-  logger.info(
-    `request_id=${rid} action=register status=start username=${username}`
-  );
+  logger.info({
+    request_id,
+    action: "register",
+    status: "start",
+    payload: { username, email }
+  });
 
   try {
     if (!username || !password) {
-      logger.warn(
-        `request_id=${rid} action=register status=invalid reason=missing_field`
-      );
-      return res.json({
-        status: false,
-        message: "Username dan password wajib diisi"
+      logger.warn({
+        request_id,
+        action: "register",
+        status: "invalid",
+        reason: "missing_field"
       });
+
+      return res.apiResponse(
+        { message: "Username dan password wajib diisi" },
+        400
+      );
     }
 
     const cleanUsername = username.trim();
-    const cleanEmail = email ? email.trim() : "";
+    const cleanEmail = email ? email.trim() : null;
 
     const exists = await User.checkUsernameExists(cleanUsername);
     if (exists) {
-      logger.warn(
-        `request_id=${rid} action=register status=exists username=${cleanUsername}`
-      );
-      return res.json({
-        status: false,
-        message: "Username sudah digunakan"
+      logger.warn({
+        request_id,
+        action: "register",
+        status: "exists",
+        username: cleanUsername
       });
+
+      return res.apiResponse(
+        { message: "Username sudah digunakan" },
+        409
+      );
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -126,26 +163,35 @@ exports.register = async (req, res) => {
       role: "user"
     });
 
-    logger.info(
-      `request_id=${rid} action=register status=success username=${cleanUsername}`
-    );
-
-    return res.json({
-      status: true,
-      message: "Registrasi berhasil",
-      data: {
-        username: cleanUsername,
-        email: cleanEmail
-      }
+    logger.info({
+      request_id,
+      action: "register",
+      status: "success",
+      username: cleanUsername
     });
+
+    return res.apiResponse(
+      {
+        message: "Registrasi berhasil",
+        user: {
+          username: cleanUsername,
+          email: cleanEmail
+        }
+      },
+      201
+    );
 
   } catch (error) {
-    logger.error(
-      `request_id=${rid} action=register status=error error=${error.message}`
-    );
-    return res.status(500).json({
-      status: false,
-      message: "Registrasi gagal"
+    logger.error({
+      request_id,
+      action: "register",
+      status: "error",
+      error: error.message
     });
+
+    return res.apiResponse(
+      { message: "Registrasi gagal" },
+      500
+    );
   }
 };
