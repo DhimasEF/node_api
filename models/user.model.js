@@ -35,6 +35,14 @@ const User = {
     return rows[0] || null;
   },
 
+  async getById(id_user) {
+    const [rows] = await db.query(
+      "SELECT avatar FROM users WHERE id_user = ?",
+      [id_user]
+    );
+    return rows[0] || null;
+  },
+
   // =====================
   // UPDATE USER
   // =====================

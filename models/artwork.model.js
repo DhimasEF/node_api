@@ -20,6 +20,7 @@ function groupArtwork(rows) {
         price: r.price,
         status: r.status,
         created_at: r.created_at,
+        total_comment: r.total_comment,
         images: [],
         tags: [],
         _imageSet: new Set(),
@@ -92,6 +93,11 @@ module.exports = {
     const sql = `
       SELECT 
         a.*, u.username, u.avatar,
+        (
+          SELECT COUNT(*) 
+          FROM comments c 
+          WHERE c.id_artwork = a.id_artwork
+        ) AS total_comment,
         ai.id_image, ai.image_url, ai.preview_url,
         t.id_tag, t.tag_name
       FROM artworks a
@@ -110,6 +116,11 @@ module.exports = {
     const sql = `
       SELECT 
         a.*, u.username, u.avatar,
+        (
+          SELECT COUNT(*) 
+          FROM comments c 
+          WHERE c.id_artwork = a.id_artwork
+        ) AS total_comment,
         ai.id_image, ai.image_url, ai.preview_url,
         t.id_tag, t.tag_name
       FROM artworks a
@@ -127,6 +138,11 @@ module.exports = {
     const sql = `
       SELECT 
         a.*, u.username, u.avatar,
+        (
+          SELECT COUNT(*) 
+          FROM comments c 
+          WHERE c.id_artwork = a.id_artwork
+        ) AS total_comment,
         ai.id_image, ai.image_url, ai.preview_url,
         t.id_tag, t.tag_name
       FROM artworks a
@@ -145,6 +161,11 @@ module.exports = {
     const sql = `
       SELECT 
         a.*, u.username, u.avatar,
+        (
+          SELECT COUNT(*) 
+          FROM comments c 
+          WHERE c.id_artwork = a.id_artwork
+        ) AS total_comment,
         ai.id_image, ai.image_url, ai.preview_url,
         t.id_tag, t.tag_name
       FROM artworks a
@@ -176,10 +197,15 @@ module.exports = {
   // GET DETAIL
   // =========================================
 
-  getDetail: async (id_artwork) => {
+  getDetail: async (id_artwork, id_user = null) => {
     const sql = `
       SELECT 
         a.*, u.username, u.avatar,
+        (
+          SELECT COUNT(*) 
+          FROM comments c 
+          WHERE c.id_artwork = a.id_artwork
+        ) AS total_comment,
         ai.id_image, ai.image_url, ai.preview_url,
         t.id_tag, t.tag_name
       FROM artworks a
@@ -189,8 +215,12 @@ module.exports = {
       LEFT JOIN artwork_tags t ON t.id_tag = tm.id_tag
       WHERE a.id_artwork = ?
     `;
-    const [rows] = await db.query(sql, [id_artwork]);
+    const [rows] = await db.query(sql, [id_user ?? 0, id_artwork]);
     const formatted = groupArtwork(rows);
+        // ⬇⬇⬇ INI DIA TEMPATNYA ⬇⬇⬇
+    if (formatted[0]) {
+      formatted[0].is_favorited = rows[0].is_favorited > 0;
+    }
     return formatted[0] || null;
   },
 

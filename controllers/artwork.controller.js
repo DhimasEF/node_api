@@ -6,7 +6,6 @@ const Artwork = require("../models/artwork.model");
 const logger = require("../utils/logger");
 const archiver = require("archiver");
 
-
 // Folder Upload
 const originalPath = path.join(__dirname, "..", "uploads", "artworks", "original");
 const previewPath = path.join(__dirname, "..", "uploads", "artworks", "preview");

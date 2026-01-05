@@ -17,7 +17,13 @@ app.set("appName", "Art Store");
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "Accept"]
+  allowedHeaders: [
+    "Content-Type",
+    "Authorization",
+    "x-client-ip",
+    "x-client-device",
+    "x-client-platform"
+  ],
 }));
 
 app.use(express.json());
@@ -154,6 +160,8 @@ app.use("/profil", require("./routes/profil.routes"));
 app.use("/user", require("./routes/user.routes"));
 app.use("/artwork", require("./routes/artwork.routes"));
 app.use("/order", require("./routes/order.routes"));
+// app.use("/favorite", require("./routes/favorite.routes"));
+app.use("/comment", require("./routes/comment.routes"));
 
 /* =========================
    STATIC FILES
