@@ -1,7 +1,7 @@
 const User = require('../models/user.model');
 const fs = require('fs');
 const path = require('path');
-const logger = require('../utils/logger');
+// const logger = require('../utils/logger');
 
 // ====================
 // GET PROFILE BY ID
@@ -10,23 +10,23 @@ exports.getProfile = async (req, res) => {
   const request_id = req.requestId;
   const userId = Number(req.params.id);
 
-  logger.info({
-    request_id,
-    action: "getProfile",
-    status: "start",
-    userId
-  });
+  // logger.info({
+  //   request_id,
+  //   action: "getProfile",
+  //   status: "start",
+  //   userId
+  // });
 
   try {
     const user = await User.getUserById(userId);
 
     if (!user) {
-      logger.warn({
-        request_id,
-        action: "getProfile",
-        status: "not_found",
-        userId
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "getProfile",
+      //   status: "not_found",
+      //   userId
+      // });
 
       return res.apiResponse(
         { message: "User tidak ditemukan" },
@@ -34,24 +34,24 @@ exports.getProfile = async (req, res) => {
       );
     }
 
-    logger.info({
-      request_id,
-      action: "getProfile",
-      status: "success",
-      userId,
-      username: user.username
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getProfile",
+    //   status: "success",
+    //   userId,
+    //   username: user.username
+    // });
 
     return res.apiResponse({ data: user }, 200);
 
   } catch (error) {
-    logger.error({
-      request_id,
-      action: "getProfile",
-      status: "error",
-      userId,
-      error: error.message
-    });
+    // logger.error({
+    //   request_id,
+    //   action: "getProfile",
+    //   status: "error",
+    //   userId,
+    //   error: error.message
+    // });
 
     return res.apiResponse(
       { message: "Database error" },
@@ -68,21 +68,21 @@ exports.updateProfile = async (req, res) => {
   const userId = Number(req.params.id);
   const data = req.body;
 
-  logger.info({
-    request_id,
-    action: "updateProfile",
-    status: "start",
-    userId
-  });
+  // logger.info({
+  //   request_id,
+  //   action: "updateProfile",
+  //   status: "start",
+  //   userId
+  // });
 
   if (!data || Object.keys(data).length === 0) {
-    logger.warn({
-      request_id,
-      action: "updateProfile",
-      status: "invalid",
-      userId,
-      reason: "empty_payload"
-    });
+    // logger.warn({
+    //   request_id,
+    //   action: "updateProfile",
+    //   status: "invalid",
+    //   userId,
+    //   reason: "empty_payload"
+    // });
 
     return res.apiResponse(
       { message: "Data tidak valid" },
@@ -103,12 +103,12 @@ exports.updateProfile = async (req, res) => {
     const updated = await User.updateUser(userId, updateData);
 
     if (!updated) {
-      logger.warn({
-        request_id,
-        action: "updateProfile",
-        status: "not_updated",
-        userId
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "updateProfile",
+      //   status: "not_updated",
+      //   userId
+      // });
 
       return res.apiResponse(
         { message: "Profil gagal diperbarui" },
@@ -116,12 +116,12 @@ exports.updateProfile = async (req, res) => {
       );
     }
 
-    logger.info({
-      request_id,
-      action: "updateProfile",
-      status: "success",
-      userId
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "updateProfile",
+    //   status: "success",
+    //   userId
+    // });
 
     return res.apiResponse(
       { message: "Profil berhasil diperbarui" },
@@ -129,13 +129,13 @@ exports.updateProfile = async (req, res) => {
     );
 
   } catch (error) {
-    logger.error({
-      request_id,
-      action: "updateProfile",
-      status: "error",
-      userId,
-      error: error.message
-    });
+    // logger.error({
+    //   request_id,
+    //   action: "updateProfile",
+    //   status: "error",
+    //   userId,
+    //   error: error.message
+    // });
 
     return res.apiResponse(
       { message: "Database error" },
@@ -160,21 +160,21 @@ exports.uploadAvatar = async (req, res) => {
   try {
     const { id_user, avatar_base64 } = req.body;
 
-    logger.info({
-      request_id,
-      action: "uploadAvatar",
-      status: "start",
-      id_user
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "uploadAvatar",
+    //   status: "start",
+    //   id_user
+    // });
 
     if (!id_user || !avatar_base64) {
-      logger.warn({
-        request_id,
-        action: "uploadAvatar",
-        status: "invalid",
-        id_user,
-        reason: "missing_data"
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "uploadAvatar",
+      //   status: "invalid",
+      //   id_user,
+      //   reason: "missing_data"
+      // });
 
       return res.apiResponse({ message: "Data tidak lengkap" }, 400);
     }
@@ -203,12 +203,12 @@ exports.uploadAvatar = async (req, res) => {
     if (!fs.existsSync(folder)) {
       fs.mkdirSync(folder, { recursive: true });
 
-      logger.info({
-        request_id,
-        action: "uploadAvatar",
-        status: "folder_created",
-        folder
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "uploadAvatar",
+      //   status: "folder_created",
+      //   folder
+      // });
     }
 
     const filepath = path.join(folder, filename);
@@ -220,12 +220,12 @@ exports.uploadAvatar = async (req, res) => {
     const updated = await User.updateUser(id_user, { avatar: filename });
 
     if (!updated) {
-      logger.warn({
-        request_id,
-        action: "uploadAvatar",
-        status: "db_failed",
-        id_user
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "uploadAvatar",
+      //   status: "db_failed",
+      //   id_user
+      // });
 
       return res.apiResponse(
         { message: "Gagal update avatar ke database" },
@@ -242,25 +242,25 @@ exports.uploadAvatar = async (req, res) => {
       if (fs.existsSync(oldPath)) {
         fs.unlinkSync(oldPath);
 
-        logger.info({
-          request_id,
-          action: "uploadAvatar",
-          status: "old_avatar_deleted",
-          file: oldAvatar
-        });
+        // logger.info({
+        //   request_id,
+        //   action: "uploadAvatar",
+        //   status: "old_avatar_deleted",
+        //   file: oldAvatar
+        // });
       }
     }
 
     // =========================
     // 6️⃣ Response sukses
     // =========================
-    logger.info({
-      request_id,
-      action: "uploadAvatar",
-      status: "success",
-      id_user,
-      file: filename
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "uploadAvatar",
+    //   status: "success",
+    //   id_user,
+    //   file: filename
+    // });
 
     return res.apiResponse(
       {
@@ -271,12 +271,12 @@ exports.uploadAvatar = async (req, res) => {
     );
 
   } catch (error) {
-    logger.error({
-      request_id,
-      action: "uploadAvatar",
-      status: "error",
-      error: error.message
-    });
+    // logger.error({
+    //   request_id,
+    //   action: "uploadAvatar",
+    //   status: "error",
+    //   error: error.message
+    // });
 
     return res.apiResponse(
       { message: "Gagal menyimpan avatar" },

@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const User = require("../models/user.model");
-const logger = require("../utils/logger");
+// const logger = require("../utils/logger");
 
 const secret_key = "flystudio_secret_key";
 
@@ -12,21 +12,21 @@ exports.login = async (req, res) => {
   const request_id = req.requestId;
   const { username, password } = req.body;
 
-  logger.info({
-    request_id,
-    action: "login",
-    status: "start",
-    payload: { username }
-  });
+  // logger.info({
+  //   request_id,
+  //   action: "login",
+  //   status: "start",
+  //   payload: { username }
+  // });
 
   try {
     if (!username || !password) {
-      logger.warn({
-        request_id,
-        action: "login",
-        status: "invalid",
-        reason: "missing_field"
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "login",
+      //   status: "invalid",
+      //   reason: "missing_field"
+      // });
 
       return res.apiResponse(
         { message: "Username dan password harus diisi" },
@@ -36,12 +36,12 @@ exports.login = async (req, res) => {
 
     const user = await User.getByUsername(username);
     if (!user) {
-      logger.warn({
-        request_id,
-        action: "login",
-        status: "not_found",
-        username
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "login",
+      //   status: "not_found",
+      //   username
+      // });
 
       return res.apiResponse(
         { message: "User tidak ditemukan" },
@@ -51,13 +51,13 @@ exports.login = async (req, res) => {
 
     const match = await bcrypt.compare(password, user.password);
     if (!match) {
-      logger.warn({
-        request_id,
-        action: "login",
-        status: "unauthorized",
-        reason: "wrong_password",
-        user_id: user.id_user
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "login",
+      //   status: "unauthorized",
+      //   reason: "wrong_password",
+      //   user_id: user.id_user
+      // });
 
       return res.apiResponse(
         { message: "Password salah" },
@@ -75,13 +75,13 @@ exports.login = async (req, res) => {
     const token = jwt.sign(payload, secret_key, { expiresIn: "24h" });
     await User.updateToken(user.id_user, token);
 
-    logger.info({
-      request_id,
-      action: "login",
-      status: "success",
-      user_id: user.id_user,
-      role: user.role
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "login",
+    //   status: "success",
+    //   user_id: user.id_user,
+    //   role: user.role
+    // });
 
     return res.apiResponse(
       {
@@ -93,12 +93,12 @@ exports.login = async (req, res) => {
     );
 
   } catch (error) {
-    logger.error({
-      request_id,
-      action: "login",
-      status: "error",
-      error: error.message
-    });
+    // logger.error({
+    //   request_id,
+    //   action: "login",
+    //   status: "error",
+    //   error: error.message
+    // });
 
     return res.apiResponse(
       { message: "Terjadi kesalahan server" },
@@ -114,12 +114,12 @@ exports.register = async (req, res) => {
   const request_id = req.requestId;
   const { username, password, email } = req.body;
 
-  logger.info({
-    request_id,
-    action: "register",
-    status: "start",
-    payload: { username, email }
-  });
+  // logger.info({
+  //   request_id,
+  //   action: "register",
+  //   status: "start",
+  //   payload: { username, email }
+  // });
 
   try {
     if (!username || !password) {
@@ -141,12 +141,12 @@ exports.register = async (req, res) => {
 
     const exists = await User.checkUsernameExists(cleanUsername);
     if (exists) {
-      logger.warn({
-        request_id,
-        action: "register",
-        status: "exists",
-        username: cleanUsername
-      });
+      // logger.warn({
+      //   request_id,
+      //   action: "register",
+      //   status: "exists",
+      //   username: cleanUsername
+      // });
 
       return res.apiResponse(
         { message: "Username sudah digunakan" },
@@ -163,12 +163,12 @@ exports.register = async (req, res) => {
       role: "user"
     });
 
-    logger.info({
-      request_id,
-      action: "register",
-      status: "success",
-      username: cleanUsername
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "register",
+    //   status: "success",
+    //   username: cleanUsername
+    // });
 
     return res.apiResponse(
       {
@@ -182,12 +182,12 @@ exports.register = async (req, res) => {
     );
 
   } catch (error) {
-    logger.error({
-      request_id,
-      action: "register",
-      status: "error",
-      error: error.message
-    });
+    // logger.error({
+    //   request_id,
+    //   action: "register",
+    //   status: "error",
+    //   error: error.message
+    // });
 
     return res.apiResponse(
       { message: "Registrasi gagal" },

@@ -1,15 +1,22 @@
-const { createLogger, format, transports } = require('winston');
+const winston = require('winston');
+const DBLoggerTransport = require('./dbLoggerTransport');
 
-const logger = createLogger({
+const logger = winston.createLogger({
   level: 'info',
-  format: format.combine(
-    format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
-    format.json()
+
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json() // 🔥 INI KUNCI
   ),
+
   transports: [
-    new transports.File({ filename: 'logs/error.log', level: 'error' }),
-    new transports.File({ filename: 'logs/combined.log' }),
-    new transports.Console()
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.json()
+      )
+    }),
+    new DBLoggerTransport()
   ]
 });
 

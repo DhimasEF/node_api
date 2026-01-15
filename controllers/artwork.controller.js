@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../config/db");
 const Artwork = require("../models/artwork.model");
-const logger = require("../utils/logger");
+// const logger = require("../utils/logger");
 const archiver = require("archiver");
 
 // Folder Upload
@@ -23,11 +23,11 @@ module.exports = {
   getAll: async (req, res) => {
     const request_id = req.requestId;
 
-    logger.info({
-      request_id,
-      action: "getArtworkAll",
-      status: "start"
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getArtworkAll",
+    //   status: "start"
+    // });
 
     try {
       const data = await Artwork.getAll();
@@ -37,22 +37,22 @@ module.exports = {
         i.tags ||= [];
       });
 
-      logger.info({
-        request_id,
-        action: "getArtworkAll",
-        status: "success",
-        total: data.length
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkAll",
+      //   status: "success",
+      //   total: data.length
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkAll",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkAll",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse({ message: "Server error" }, 500);
     }
@@ -71,22 +71,22 @@ module.exports = {
         i.tags ||= [];
       });
 
-      logger.info({
-        request_id,
-        action: "getArtworkAllAdmin",
-        status: "success",
-        total: data.length
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkAllAdmin",
+      //   status: "success",
+      //   total: data.length
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkAllAdmin",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkAllAdmin",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse({ message: "Server error" }, 500);
     }
@@ -95,11 +95,11 @@ module.exports = {
   getDraft: async (req, res) => {
     const request_id = req.requestId;
 
-    logger.info({
-      request_id,
-      action: "getArtworkDraft",
-      status: "start"
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getArtworkDraft",
+    //   status: "start"
+    // });
 
     try {
       const data = await Artwork.getDraft();
@@ -109,22 +109,22 @@ module.exports = {
         item.tags ||= [];
       });
 
-      logger.info({
-        request_id,
-        action: "getArtworkDraft",
-        status: "success",
-        total: data.length
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkDraft",
+      //   status: "success",
+      //   total: data.length
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkDraft",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkDraft",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse(
         { message: "Server error" },
@@ -137,12 +137,12 @@ module.exports = {
     const request_id = req.requestId;
     const id_user = req.params.id_user;
 
-    logger.info({
-      request_id,
-      action: "getArtworkByUser",
-      status: "start",
-      id_user
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getArtworkByUser",
+    //   status: "start",
+    //   id_user
+    // });
 
     try {
       const data = await Artwork.getByUser(id_user);
@@ -152,24 +152,24 @@ module.exports = {
         item.tags ||= [];
       });
 
-      logger.info({
-        request_id,
-        action: "getArtworkByUser",
-        status: "success",
-        id_user,
-        total: data.length
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkByUser",
+      //   status: "success",
+      //   id_user,
+      //   total: data.length
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkByUser",
-        status: "error",
-        id_user,
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkByUser",
+      //   status: "error",
+      //   id_user,
+      //   error: error.message
+      // });
 
       return res.apiResponse(
         { message: "Server error" },
@@ -181,11 +181,11 @@ module.exports = {
   getPending: async (req, res) => {
     const request_id = req.requestId;
 
-    logger.info({
-      request_id,
-      action: "getArtworkPending",
-      status: "start"
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getArtworkPending",
+    //   status: "start"
+    // });
 
     try {
       const data = await Artwork.getPending();
@@ -195,22 +195,22 @@ module.exports = {
         item.tags ||= [];
       });
 
-      logger.info({
-        request_id,
-        action: "getArtworkPending",
-        status: "success",
-        total: data.length
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkPending",
+      //   status: "success",
+      //   total: data.length
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkPending",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkPending",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse(
         { message: "Server error" },
@@ -226,23 +226,23 @@ module.exports = {
     const request_id = req.requestId;
     const id_artwork = req.params.id;
 
-    logger.info({
-      request_id,
-      action: "getArtworkDetail",
-      status: "start",
-      id_artwork
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "getArtworkDetail",
+    //   status: "start",
+    //   id_artwork
+    // });
 
     try {
       const data = await Artwork.getDetail(id_artwork);
 
       if (!data) {
-        logger.warn({
-          request_id,
-          action: "getArtworkDetail",
-          status: "not_found",
-          id_artwork
-        });
+        // logger.warn({
+        //   request_id,
+        //   action: "getArtworkDetail",
+        //   status: "not_found",
+        //   id_artwork
+        // });
 
         return res.apiResponse(
           { message: "Artwork tidak ditemukan" },
@@ -253,22 +253,22 @@ module.exports = {
       data.images ||= [];
       data.tags ||= [];
 
-      logger.info({
-        request_id,
-        action: "getArtworkDetail",
-        status: "success",
-        id_artwork
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "getArtworkDetail",
+      //   status: "success",
+      //   id_artwork
+      // });
 
       return res.apiResponse({ data }, 200);
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "getArtworkDetail",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "getArtworkDetail",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse({ message: "Server error" }, 500);
     }
@@ -281,12 +281,12 @@ module.exports = {
     const request_id = req.requestId;
     let conn;
 
-    logger.info({
-      request_id,
-      action: "uploadArtwork",
-      status: "start",
-      payload: { id_user: req.body.id_user }
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "uploadArtwork",
+    //   status: "start",
+    //   payload: { id_user: req.body.id_user }
+    // });
 
     try {
       const { id_user, title, description, price } = req.body;
@@ -358,12 +358,12 @@ module.exports = {
 
       await conn.commit();
 
-      logger.info({
-        request_id,
-        action: "uploadArtwork",
-        status: "success",
-        id_artwork
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "uploadArtwork",
+      //   status: "success",
+      //   id_artwork
+      // });
 
       return res.apiResponse(
         { message: "Artwork berhasil diupload", id_artwork },
@@ -373,12 +373,12 @@ module.exports = {
     } catch (error) {
       if (conn) await conn.rollback();
 
-      logger.error({
-        request_id,
-        action: "uploadArtwork",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "uploadArtwork",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse({ message: "Upload gagal" }, 500);
 
@@ -394,13 +394,13 @@ module.exports = {
     const request_id = req.requestId;
     const { id_artwork, status } = req.body;
 
-    logger.info({
-      request_id,
-      action: "updateArtworkStatus",
-      status: "start",
-      id_artwork,
-      new_status: status
-    });
+    // logger.info({
+    //   request_id,
+    //   action: "updateArtworkStatus",
+    //   status: "start",
+    //   id_artwork,
+    //   new_status: status
+    // });
 
     try {
       const allowed = ["approved", "rejected", "published", "draft"];
@@ -413,12 +413,12 @@ module.exports = {
 
       await Artwork.updateStatus(id_artwork, status);
 
-      logger.info({
-        request_id,
-        action: "updateArtworkStatus",
-        status: "success",
-        id_artwork
-      });
+      // logger.info({
+      //   request_id,
+      //   action: "updateArtworkStatus",
+      //   status: "success",
+      //   id_artwork
+      // });
 
       return res.apiResponse(
         { message: `Status artwork diubah ke ${status}` },
@@ -426,12 +426,12 @@ module.exports = {
       );
 
     } catch (error) {
-      logger.error({
-        request_id,
-        action: "updateArtworkStatus",
-        status: "error",
-        error: error.message
-      });
+      // logger.error({
+      //   request_id,
+      //   action: "updateArtworkStatus",
+      //   status: "error",
+      //   error: error.message
+      // });
 
       return res.apiResponse({ message: "Server error" }, 500);
     }

@@ -72,39 +72,41 @@ app.use((req, res, next) => {
 ========================= */
 app.use((req, res, next) => {
   res.apiResponse = (data = {}, statusCode = 200) => {
-    res.status(statusCode).json({
-      status: statusCode >= 200 && statusCode < 300,
 
+    const responseBody = {
+      status: statusCode >= 200 && statusCode < 300,
       message: data.message || null,
       token: data.token || null,
       user: data.user || null,
       data: data.data ?? data ?? null,
-
       meta: {
         app: req.app.get("appName"),
         request_id: req.requestId,
         timestamp: new Date().toISOString(),
-
         endpoint: {
           full: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
           method: req.method,
           params: req.params || {},
           query: req.query || {}
         },
-
         payload: {
           params: req.params || {},
           query: req.query || {},
           body: ["POST", "PUT", "PATCH"].includes(req.method) ? req.body : {}
         },
-
         server_response: req.serverContext
       }
-    });
+    };
+
+    // 🔥 PENTING: simpan ke locals
+    res.locals.apiResponse = responseBody;
+
+    res.status(statusCode).json(responseBody);
   };
 
   next();
 });
+
 
 /* =========================
    🔥 REQUEST & RESPONSE LOGGER
@@ -114,43 +116,35 @@ app.use((req, res, next) => {
 
   const startTime = Date.now();
 
-  logger.info({
-    type: "REQUEST",
-    request_id: req.requestId,
-    app: req.app.get("appName"),
-
-    endpoint: {
-      full: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
-      method: req.method
-    },
-
-    payload: {
-      params: req.params || {},
-      query: req.query || {},
-      body: ["POST", "PUT", "PATCH"].includes(req.method) ? req.body : {}
-    },
-
-    client: req.clientContext,
-    server_request: req.serverContext
-  });
-
-  const originalJson = res.json;
-  res.json = function (body) {
+  res.on('finish', () => {
     logger.info({
-      type: "RESPONSE",
       request_id: req.requestId,
       app: req.app.get("appName"),
-      status_code: res.statusCode,
-      duration_ms: Date.now() - startTime,
-      apiResponse: body,
-      server_response: { headers: res.getHeaders() }
-    });
+      endpointfull: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
+      // level: res.statusCode >= 400 ? 'error' : 'info',
 
-    return originalJson.call(this, body);
-  };
+      // endpoint: {
+      //   full: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
+      //   method: req.method
+      // },
+
+      payload: {
+        params: req.params || {},
+        query: req.query || {},
+        body: ["POST", "PUT", "PATCH"].includes(req.method) ? req.body : {}
+      },
+
+      serverresponse: req.serverContext,
+      apiresponse: res.locals.apiResponse || null,
+
+      status_code: res.statusCode,
+      duration_ms: Date.now() - startTime
+    });
+  });
 
   next();
 });
+
 
 /* =========================
    ROUTES
