@@ -109,36 +109,34 @@ app.use((req, res, next) => {
 
 
 /* =========================
-   🔥 REQUEST & RESPONSE LOGGER
+   🔥 REQUEST & RESPONSE LOGGER (NO STATUS / DURATION)
 ========================= */
 app.use((req, res, next) => {
   if (req.originalUrl.startsWith('/uploads')) return next();
 
-  const startTime = Date.now();
-
   res.on('finish', () => {
-    logger.info({
-      request_id: req.requestId,
-      app: req.app.get("appName"),
-      endpointfull: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
-      // level: res.statusCode >= 400 ? 'error' : 'info',
+    logger.log({
+      level: res.statusCode >= 400 ? 'error' : 'info',
 
-      // endpoint: {
-      //   full: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
-      //   method: req.method
-      // },
+      request_id: req.requestId,
+      appname: req.app.get("appName"),
+
+      endpointfull: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
 
       payload: {
         params: req.params || {},
         query: req.query || {},
-        body: ["POST", "PUT", "PATCH"].includes(req.method) ? req.body : {}
+        body: ["POST", "PUT", "PATCH"].includes(req.method)
+          ? req.body
+          : {}
       },
 
-      serverresponse: req.serverContext,
-      apiresponse: res.locals.apiResponse || null,
+      serverresponse: req.serverContext || null,
 
-      status_code: res.statusCode,
-      duration_ms: Date.now() - startTime
+      apiresponse: res.locals.apiResponse ?? {
+        status: res.statusCode < 400,
+        message: null
+      }
     });
   });
 

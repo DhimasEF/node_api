@@ -61,7 +61,7 @@ module.exports = {
   getAllAdmin: async (req, res) => {
     const request_id = req.requestId;
 
-    logger.info({ request_id, action: "getArtworkAllAdmin", status: "start" });
+    // logger.info({ request_id, action: "getArtworkAllAdmin", status: "start" });
 
     try {
       const data = await Artwork.getAllAdmin();

@@ -1,5 +1,5 @@
 const Transport = require('winston-transport');
-const db = require('../config/db');
+const logDb = require('../config/logDb');
 
 class DBLoggerTransport extends Transport {
   log(info, callback) {
@@ -7,8 +7,18 @@ class DBLoggerTransport extends Transport {
 
     const sql = `
       INSERT INTO api_logs
-      (timestamp, request_id, level, payload, serverresponse, apiresponse, appname, endpointfull)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      (
+        log_time,
+        request_id,
+        level,
+        payload,
+        serverresponse,
+        apiresponse,
+        appname,
+        endpointfull,
+        host_backend
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
     const values = [
@@ -19,10 +29,11 @@ class DBLoggerTransport extends Transport {
       info.serverresponse ? JSON.stringify(info.serverresponse) : null,
       info.apiresponse ? JSON.stringify(info.apiresponse) : null,
       info.appname || null,
-      info.endpointfull || null
+      info.endpointfull || null,
+      info.host_backend || 'Nodejs',
     ];
 
-    db.query(sql, values, (err) => {
+    logDb.query(sql, values, (err) => {
       if (err) console.error('DB LOG ERROR:', err);
     });
 
