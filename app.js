@@ -4,7 +4,7 @@ const PORT = 3000;
 const cors = require("cors");
 const db = require("./config/db");
 const { v4: uuidv4 } = require('uuid');
-const logger = require('./utils/logger');
+const { safeLog } = require('./utils/logger');
 
 /* =========================
    APP CONFIG
@@ -28,6 +28,11 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+  req._startTime = process.hrtime.bigint(); // nanosecond
+  next();
+});
 
 /* =========================
    REQUEST ID
@@ -115,29 +120,43 @@ app.use((req, res, next) => {
   if (req.originalUrl.startsWith('/uploads')) return next();
 
   res.on('finish', () => {
-    logger.log({
-      level: res.statusCode >= 400 ? 'error' : 'info',
+    try {
+      const endTime = process.hrtime.bigint();
+      const durationMs = Number(endTime - req._startTime) / 1_000_000;
 
-      request_id: req.requestId,
-      appname: req.app.get("appName"),
+      safeLog({
+        level: res.statusCode >= 500 ? 'error'
+            : res.statusCode >= 400 ? 'warn'
+            : 'info',
 
-      endpointfull: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
+        request_id: req.requestId,
+        appname: req.app.get("appName"),
 
-      payload: {
-        params: req.params || {},
-        query: req.query || {},
-        body: ["POST", "PUT", "PATCH"].includes(req.method)
-          ? req.body
-          : {}
-      },
+        endpointfull: `${req.protocol}://${req.get("host")}${req.originalUrl}`,
 
-      serverresponse: req.serverContext || null,
+        payload: {
+          params: req.params || {},
+          query: req.query || {},
+          body: ["POST", "PUT", "PATCH"].includes(req.method)
+            ? req.body
+            : {}
+        },
 
-      apiresponse: res.locals.apiResponse ?? {
-        status: res.statusCode < 400,
-        message: null
-      }
-    });
+        serverresponse: req.serverContext || null,
+
+        apiresponse: res.locals.apiResponse ?? {
+          status: res.statusCode < 400,
+          message: null
+        },
+          // 🔥 INI YANG BIKIN durationMs DIPAKAI
+        response_time: Math.round(durationMs),
+        status_code: res.statusCode,
+
+        host_backend: 'Nodejs'
+      });
+     } catch (err) {
+       console.warn('⚠️ LOGGER FAILURE:', err.message);
+     }
   });
 
   next();
